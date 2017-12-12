@@ -1,0 +1,7 @@
+# Service\-Linked Roles<a name="slrconcept"></a>
+
+[Service\-linked roles](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html?icmpid=docs_iam_console#iam-term-service-linked-role) are predefined IAM permissions that allow AWS SSO to delegate and enforce which users have SSO access to specific AWS accounts in your AWS organization\. The service enables this functionality by provisioning a service\-linked role in every AWS account within its organization\. The service then allows other AWS services like AWS SSO to leverage those roles to perform service\-related tasks\. For more information, see [AWS Organizations and Service\-Linked Roles](http://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html#orgs_integrate_services-using_slrs)\.
+
+During the process to [Enable AWS SSO](step1.md) for the first time, the AWS Organizations service grants AWS SSO the necessary permissions to create IAM roles in any of its AWS accounts\. AWS SSO doesn't create roles in any of the AWS accounts at this point\. It only creates a service\-linked role in an AWS account after you have used the AWS SSO console to specify which account you want to assign SSO access to\. For more information, see [Manage SSO to Your AWS Accounts](manage-your-accounts.md)\.
+
+Service\-linked roles that are created in each AWS account are named `AWSServiceRoleForSSO`\. For more information, see [Using Service\-Linked Roles for AWS SSO](using-service-linked-roles.md)\.
