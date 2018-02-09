@@ -2,7 +2,7 @@
 
 Before you can set up AWS SSO, you must meet the following requirements:
 
-+ You must have first set up the AWS Organizations service and have **All features** set to enabled\. You must also have access to the AWS Organizations master account credentials\. These credentials are required to enable AWS SSO\. For more information, see [Creating and Managing an AWS Organizations](http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org.html) in the *AWS Organizations User Guide*\.
++ You must have first set up the AWS Organizations service and have **All features** set to enabled\. You must also have access to the AWS Organizations master account credentials\. These credentials are required to enable AWS SSO\. For more information, see [Creating and Managing an AWS Organization](http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org.html) in the *AWS Organizations User Guide*\.
 
 + You must have an existing Microsoft Active Directory \(AD\) set up in AWS Directory Service that you can connect to AWS SSO\. This AWS Microsoft AD directory determines which pool of users has SSO access to the user portal\. You can connect only one AWS Microsoft AD directory at a time\. However, you can change it to a different AWS Microsoft AD directory at any time\. For more information, see [Create a Microsoft AD Directory](http://docs.aws.amazon.com/directoryservice/latest/admin-guide/create_directory.html) in the *AWS Directory Service Administration Guide*\.
 

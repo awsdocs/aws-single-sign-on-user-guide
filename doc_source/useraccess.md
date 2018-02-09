@@ -2,7 +2,7 @@
 
 You can set up SSO access to one or more AWS accounts in your AWS organization by granting permissions to only those users who require it\. You can assign users permissions to these AWS accounts based on common job functions or use custom permissions to meet your specific security requirements\. For example, you can grant database administrators broad permissions to Amazon RDS in development accounts but limit their permissions in production accounts\. AWS SSO configures all the necessary user permissions in your AWS accounts automatically\.
 
-## Assign Access to Users or Groups<a name="assignusers"></a>
+## Assign User Access<a name="assignusers"></a>
 
 Use the following procedure to assign SSO access to users and groups in your connected directory and use permission sets to determine their level of access\.
 
@@ -17,7 +17,13 @@ Make sure that the AWS SSO console is using the US East \(N\. Virginia\) \(us\-e
 
 1. Choose **AWS accounts**\.
 
-1. Under the **AWS organization** tab, select the AWS accounts to which you want to assign access\. Then choose **Assign users**\. 
+1. Under the **AWS organization** tab, in the list of AWS accounts, choose an account to which you want to assign access\.
+**Note**  
+If you see a check box in the table that is disabled, this represents the master account for your AWS organization and is by design\. Please see the next step for more details\.
+
+1. On the AWS account details page, choose **Assign users**\. 
+**Note**  
+If the **Assign users** button is disabled it indicates that this account is the master account for your AWS organization\. You can only assign SSO access to users in member accounts\. For more information about the different account types, see [AWS Organizations Terminology and Concepts](http://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html) in the *AWS Organizations User Guide*\. 
 
 1. On the **Select users or groups** page, type a user or group name and choose **Search connected directory**\. Once you have selected all the accounts that you want to assign access to, choose **Next: Permission sets**\. You can specify multiple users or groups by selecting the applicable accounts as they appear in search results\. 
 

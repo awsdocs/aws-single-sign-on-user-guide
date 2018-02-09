@@ -1,4 +1,4 @@
-# Connect AWS SSO to an On\-Premises Active Directory \(Optional\)<a name="connectawsad"></a>
+# Connect AWS SSO to an On\-Premises Active Directory<a name="connectawsad"></a>
 
 If you want users in your on\-premises Active Directory to also have SSO access to AWS accounts and cloud applications in the AWS SSO user portal, AWS Directory Service has the following two options available:
 

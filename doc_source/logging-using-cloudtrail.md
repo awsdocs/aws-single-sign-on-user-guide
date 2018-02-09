@@ -96,7 +96,7 @@ You can also aggregate AWS SSO log files from multiple AWS regions and multiple 
 
 A trail is a configuration that enables delivery of events as log files to an Amazon S3 bucket that you specify\. CloudTrail log files contain one or more log entries\. An event represents a single request from any source and includes information about the requested action, the date and time of the action, request parameters, and so on\. CloudTrail log files are not an ordered stack trace of the public API calls, so they do not appear in any specific order\. 
 
-The following example shows a CloudTrail log entry for an administrative action that took place in the AWS SSO console:
+The following example shows a CloudTrail log entry for an administrator \(samadams@example\.com\) that took place in the AWS SSO console:
 
 ```
 {
@@ -105,11 +105,11 @@ The following example shows a CloudTrail log entry for an administrative action 
          "eventVersion":"1.05",
          "userIdentity":{
             "type":"IAMUser",
-            "principalId":"AIDAJAIENLMUXNexample",
-            "arn":"arn:aws:iam::08966example:user/bobsmith",
+            "principalId":"AIDAJAIENLMexample",
+            "arn":"arn:aws:iam::08966example:user/samadams",
             "accountId":"08966example",
-            "accessKeyId":"AKIAILIJM2KN4example",
-            "userName":"bobsmith"
+            "accessKeyId":"AKIAIIJM2K4example",
+            "userName":"samadams"
          },
          "eventTime":"2017-11-29T22:39:43Z",
          "eventSource":"sso.amazonaws.com",
@@ -134,7 +134,7 @@ The following example shows a CloudTrail log entry for an administrative action 
 }
 ```
 
-The following example shows a CloudTrail log entry for an end\-user action that took place in the AWS SSO user portal:
+The following example shows a CloudTrail log entry for an end\-user \(bobsmith@example\.com\) action that took place in the AWS SSO user portal:
 
 ```
 {
@@ -143,7 +143,7 @@ The following example shows a CloudTrail log entry for an end\-user action that 
          "eventVersion":"1.05",
          "userIdentity":{
             "type":"Unknown",
-            "principalId":"example.com//S-1-5-21-1238658986-3652759393-4233131409-1126",
+            "principalId":"example.com//S-1-5-21-1122334455-3652759393-4233131409-1126",
             "accountId":"08966example",
             "userName":"bobsmith@example.com"
          },

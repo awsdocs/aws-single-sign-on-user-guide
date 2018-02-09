@@ -1,4 +1,4 @@
-# Map Attributes in AWS SSO to Attributes in Your Connected Directory \(Optional\)<a name="mapssoattributestocdattributes"></a>
+# Map Attributes in AWS SSO to Attributes in Your Connected Directory<a name="mapssoattributestocdattributes"></a>
 
 You can use the following procedure to specify how your user attributes in AWS SSO should map to corresponding attributes in your connected directory\.
 
@@ -8,6 +8,8 @@ You can use the following procedure to specify how your user attributes in AWS S
 
 1. Choose **Connected directory**\.
 
-1. Under **Attribute Mappings**, choose **Edit attribute mappings**\.
+1. Under **Attribute mappings**, choose **Edit attribute mappings**\.
 
-1. On the **Attribute Mappings** page, find the application attribute you want to map and then type a value in the text box\.
+1. On the **Edit attribute mappings** page, find the attribute in AWS SSO that you want to map and then type a value in the text box\. For example, you might want to map the AWS SSO user attribute **`email`** to the connected directory attribute **`${dir:windowsUpn}`**\.
+
+1. Choose **Save changes**\.

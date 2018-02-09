@@ -17,3 +17,6 @@ The following sections explain how to configure user access to your third\-party
 
 + [Cloud Applications](saasapps.md)
 + [Custom SAML 2\.0 Applications](samlapps.md)
++ [Assign User Access](assignuserstoapp.md)
++ [Remove User Access](removeaccessfromapp.md)
++ [Map Attributes in Your Application to AWS SSO Attributes](mapawsssoattributestoapp.md)

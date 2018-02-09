@@ -12,7 +12,7 @@ Users follow a simple sign\-in process:
 
 Permission sets terminology is only used in the AWS SSO console; in the user portal, users instead see these as IAM roles\.
 
-To use AWS SSO with AWS Organizations, you must first [Enable AWS SSO](step1.md), which grants AWS SSO the capability to create [Service\-Linked Roles](slrconcept.md) in each account in your AWS organization\. These roles are not created until after you [Assign Access to Users or Groups](useraccess.md#assignusers) for a given account\.
+To use AWS SSO with AWS Organizations, you must first [Enable AWS SSO](step1.md), which grants AWS SSO the capability to create [Service\-Linked Roles](slrconcept.md) in each account in your AWS organization\. These roles are not created until after you [Assign User Access](useraccess.md#assignusers) for a given account\.
 
 You can also connect an AWS account that is not part of your organization by setting up the account as a custom SAML application in AWS SSO\. In this scenario, you provision and manage the IAM roles and trust relationships that are required to enable SSO access\. For more information on how to do this, see [Add and Configure a Custom SAML 2\.0 Application](samlapps.md#addconfigcustomapp)\.
 

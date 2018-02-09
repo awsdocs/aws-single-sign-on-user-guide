@@ -6,6 +6,6 @@ Depending on which directory type you are trying to set up, follow one of the pr
 
 + [Connect AWS SSO to an AWS Microsoft AD Directory](connectonpremad.md)
 
-+ [Connect AWS SSO to an On\-Premises Active Directory \(Optional\)](connectawsad.md)
++ [Connect AWS SSO to an On\-Premises Active Directory](connectawsad.md)
 
 For more information about supported directory types, see [Manage Your Connected Directory](manage-connected-directory.md)\.

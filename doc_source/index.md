@@ -1,7 +1,7 @@
 # AWS Single Sign-On User Guide
 
 -----
-*****Copyright &copy; 2017 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; 2018 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -29,9 +29,9 @@ Amazon's trademarks and trade dress may not be used in
    + [Service-Linked Roles](slrconcept.md)
 + [Manage Your Connected Directory](manage-connected-directory.md)
    + [Connect AWS SSO to an AWS Microsoft AD Directory](connectonpremad.md)
-   + [Connect AWS SSO to an On-Premises Active Directory (Optional)](connectawsad.md)
-   + [Map Attributes in AWS SSO to Attributes in Your Connected Directory (Optional)](mapssoattributestocdattributes.md)
+   + [Connect AWS SSO to an On-Premises Active Directory](connectawsad.md)
    + [Disconnect a Directory](howtodisconnectdirectory.md)
+   + [Map Attributes in AWS SSO to Attributes in Your Connected Directory](mapssoattributestocdattributes.md)
 + [Manage SSO to Your AWS Accounts](manage-your-accounts.md)
    + [Single Sign-On Access](useraccess.md)
    + [Permission Sets](permissionsets.md)
@@ -39,6 +39,9 @@ Amazon's trademarks and trade dress may not be used in
 + [Manage SSO to Your Applications](manage-your-applications.md)
    + [Cloud Applications](saasapps.md)
    + [Custom SAML 2.0 Applications](samlapps.md)
+   + [Assign User Access](assignuserstoapp.md)
+   + [Remove User Access](removeaccessfromapp.md)
+   + [Map Attributes in Your Application to AWS SSO Attributes](mapawsssoattributestoapp.md)
 + [Authentication and Access Control for AWS SSO](iam-auth-access.md)
    + [Overview of Managing Access Permissions to Your AWS SSO Resources](iam-auth-access-overview.md)
    + [Using Identity-Based Policies (IAM Policies) for AWS SSO](iam-auth-access-using-id-policies.md)

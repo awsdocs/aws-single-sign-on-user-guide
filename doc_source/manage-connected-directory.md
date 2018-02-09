@@ -9,6 +9,6 @@ AWS SSO does not support SAMBA4\-based Simple AD as a connected directory\.
 
 
 + [Connect AWS SSO to an AWS Microsoft AD Directory](connectonpremad.md)
-+ [Connect AWS SSO to an On\-Premises Active Directory \(Optional\)](connectawsad.md)
-+ [Map Attributes in AWS SSO to Attributes in Your Connected Directory \(Optional\)](mapssoattributestocdattributes.md)
++ [Connect AWS SSO to an On\-Premises Active Directory](connectawsad.md)
 + [Disconnect a Directory](howtodisconnectdirectory.md)
++ [Map Attributes in AWS SSO to Attributes in Your Connected Directory](mapssoattributestocdattributes.md)
