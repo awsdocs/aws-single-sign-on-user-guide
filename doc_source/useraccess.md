@@ -1,6 +1,9 @@
 # Single Sign\-On Access<a name="useraccess"></a>
 
-You can set up SSO access to one or more AWS accounts in your AWS organization by granting permissions to only those users who require it\. You can assign users permissions to these AWS accounts based on common job functions or use custom permissions to meet your specific security requirements\. For example, you can grant database administrators broad permissions to Amazon RDS in development accounts but limit their permissions in production accounts\. AWS SSO configures all the necessary user permissions in your AWS accounts automatically\.
+You can assign users in your connected directory permissions to master or member AWS accounts in your AWS Organizations organization based on [common job functions](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html)\. Or you can use custom permissions to meet your specific security requirements\. For example, you can grant database administrators broad permissions to Amazon RDS in development accounts but limit their permissions in production accounts\. AWS SSO configures all the necessary user permissions in your AWS accounts automatically\.
+
+**Note**  
+Only the IAM account root user or a user who has the **AWSSSOMasterAccountAdministrator** IAM policy attached can grant users in your connected directory permissions to the master AWS account\. For more information on how to delegate these permissions, see [Delegate Who Can Assign SSO Access to Users in the Master Account](#howtodelegatessoaccess)\.
 
 ## Assign User Access<a name="assignusers"></a>
 
@@ -13,21 +16,17 @@ To simplify administration of access permissions, we recommended that you assign
 
 1. Open the [AWS SSO console](https://console.aws.amazon.com/singlesignon)\.
 **Note**  
-Make sure that the AWS SSO console is using the US East \(N\. Virginia\) \(us\-east\-1\) Region where your AWS Microsoft AD directory is located before you move to the next step\.
+Make sure that the AWS SSO console is using the US East \(N\. Virginia\) \(us\-east\-1\) Region where your AWS Managed Microsoft AD directory is located before you move to the next step\.
 
 1. Choose **AWS accounts**\.
 
 1. Under the **AWS organization** tab, in the list of AWS accounts, choose an account to which you want to assign access\.
-**Note**  
-If you see a check box in the table that is disabled, this represents the master account for your AWS organization and is by design\. Please see the next step for more details\.
 
 1. On the AWS account details page, choose **Assign users**\. 
-**Note**  
-If the **Assign users** button is disabled it indicates that this account is the master account for your AWS organization\. You can only assign SSO access to users in member accounts\. For more information about the different account types, see [AWS Organizations Terminology and Concepts](http://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html) in the *AWS Organizations User Guide*\. 
 
 1. On the **Select users or groups** page, type a user or group name and choose **Search connected directory**\. Once you have selected all the accounts that you want to assign access to, choose **Next: Permission sets**\. You can specify multiple users or groups by selecting the applicable accounts as they appear in search results\. 
 
-1. On the **Select permission sets** page, select the permission sets that you want to apply to the user or group from the table\. Then choose **Finish**\. You can optionally choose to **Create a new permission set** if none of the permissions in the table meet your needs\. For detailed instructions, see [Create Permission Set](permissionsets.md#howtocreatepermissionset)\. 
+1. On the **Select permission sets** page, select the permission sets that you want to apply to the user or group from the table\. Then choose **Finish**\. You can optionally choose to **Create a new permission set** if none of the permissions in the table meets your needs\. For detailed instructions, see [Create Permission Set](permissionsets.md#howtocreatepermissionset)\. 
 
 1. Choose **Finish** to begin the process of configuring your AWS account\.
 **Note**  
@@ -50,3 +49,19 @@ Use this procedure when you need to remove SSO access to an AWS account for a pa
 1. On the **Details** page for the AWS account, under **Assigned users and groups**, locate the user or group in the table\. Then choose **Remove access**\.
 
 1. In the **Remove access** dialog box, confirm the user or group name\. Then choose **Remove access**\. 
+
+## Delegate Who Can Assign SSO Access to Users in the Master Account<a name="howtodelegatessoaccess"></a>
+
+Assigning single sign\-on access to the master account using the AWS SSO console is a privileged action\. By default, only an AWS account root user, or a user who has the **AWSSSOMasterAccountAdministrator** AWS managed policy attached, can assign SSO access to the master account\. The **AWSSSOMasterAccountAdministrator** provides manage SSO access to the master account within an AWS Organizations organization\.
+
+Use the following steps to delegate permissions to manage SSO access to users in your directory\.
+
+**To grant permissions to manage SSO access to users in your directory**
+
+1. Sign in to the AWS SSO console as a root user of the master account or with another IAM user who has IAM administrator permissions to the master account\.
+
+1. Use the procedure [Create Permission Set](permissionsets.md#howtocreatepermissionset) to create a permission set\. When you get to step 5c, select the option **Attach AWS managed policies**\. In the list of IAM policies that appear in the table, choose the **AWSSSOMasterAccountAdministrator** AWS managed policy\. This policy grants permissions to any user who will be assigned access to this permission set in the future\.
+
+1. Use the procedure [Assign User Access](#assignusers) to assign the appropriate users to the permission set that you just created\.
+
+1. Communicate the following to the assigned users: When they sign in to the user portal and select the **AWS Account** icon, they must choose the appropriate IAM role name to be authenticated with the permissions that you just delegated\.

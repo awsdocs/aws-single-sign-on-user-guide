@@ -1,10 +1,35 @@
 # Cloud Applications<a name="saasapps"></a>
 
-AWS SSO has built\-in support for commonly used cloud applications, such as Adobe Creative Cloud, AppDynamics, Box, Confluence, Domo, Dropbox, G Suite, GitHub, GoToMeeting, Jira, NewRelic, Office 365, PagerDuty, Salesforce, ServiceNow, Slack, SumoLogic, Tableau, Workplace by Facebook, ZenDesk, and Zoom\.
+You can use the AWS SSO application configuration wizard to include built\-in SAML integrations to many popular cloud applications, such as Salesforce, Box, and Office 365\. For a complete list of applications that you can add from the wizard, see [Supported Applications](#saasapps-supported)\.
 
 Most cloud applications come with detailed instructions on how to set up the trust between AWS SSO and the application's service provider\. You can find these instructions on the cloud applications configuration page during the setup process and after the application has been set up\. Once the application has been configured, you can then assign access to the groups or users that require it\.
 
-## Add and Configure a Cloud Application<a name="addconfigsaasapp"></a>
+## Supported Applications<a name="saasapps-supported"></a>
+
+AWS SSO has built\-in support for the following commonly used cloud applications\.
+
+
+****  
+
+|  |  |  |  | 
+| --- |--- |--- |--- |
+|  Adobe Creative Cloud  | DruvalnSync | NewRelic | Syncplicity | 
+|  AppDynamics  | Egnyte | Office 365 | Tableau | 
+| BambooHR | Engagedly | OpsGenie | TalentLMS | 
+| Bonusly | Expensify | PagerDuty | Trello | 
+| Box | Freshdesk | ProdPad | UserEcho | 
+| Citrix ShareFile | G Suite | PurelyHR | UserVoice | 
+| ClickTime | GitHub | Salesforce | WeekDone | 
+| Convo | GoToMeeting | Samanage | Workplace by Facebook | 
+| Deputy | IdeaScale | ScreenSteps | ZenDesk | 
+| Deskpro | Igloo | ServiceNow | Zoho | 
+| DigiCert | Jitbit | Slack | Zoom | 
+| DocuSign | Keeper Security | Sli\.do | 4me | 
+| Dome9 | Kudos | SmartSheet |  | 
+| Domo | LiquidFiles | SugarCRM |  | 
+| Dropbox | Lucidchart | SumoLogic |  | 
+
+## Add and Configure a Cloud Application<a name="saasapps-addconfigapp"></a>
 
 Use this procedure when you need to set up a SAML trust relationship between AWS SSO and your cloud application's service provider\. Before you begin this procedure, make sure you have the service provider's metadata exchange file so that you can more efficiently set up the trust\. If you do not have this file, you can still use this procedure to configure it manually\.
 

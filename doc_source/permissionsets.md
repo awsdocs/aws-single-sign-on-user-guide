@@ -17,13 +17,11 @@ Use this procedure to create a permission set based on a custom permissions poli
 1. Choose **Create permission set**\.
 
 1. In the **Create new permission set** dialog box, choose from one of the following options, and then follow the instructions provided under that option:
-
    + **Use an existing job function policy**
 
      1. Under **Select job function policy**, select one of the default IAM job function policies in the list\. For more information, see [AWS Managed Policies for Job Functions](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html)\.
 
      1. Choose **Create**\.
-
    + **Create a custom permission set**
 
      1. Under **Create a custom permission set**, type a name that will identify this permission set in AWS SSO\. This name will also appear as an IAM role in the user portal for any users who have access to it\.

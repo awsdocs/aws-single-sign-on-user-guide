@@ -1,6 +1,6 @@
 # Custom SAML 2\.0 Applications<a name="samlapps"></a>
 
-AWS SSO also supports applications that allow identity federation using SAML 2\.0\. In the console, you set these up by choosing **Custom SAML 2\.0 application** from the application selector\. Most of the steps for configuring a custom SAML application are the same as configuring a cloud application\. 
+You can use the AWS SSO application configuration wizard to add support for applications that allow identity federation using Security Assertion Markup Language \(SAML\) 2\.0\. In the console, you set these up by choosing **Custom SAML 2\.0 application** from the application selector\. Most of the steps for configuring a custom SAML application are the same as configuring a cloud application\. 
 
 However, you also need to provide additional SAML attribute mappings for a custom SAML application so that AWS SSO knows how to populate the SAML assertion correctly for your application\. You can provide this additional SAML attribute mapping when you are setting up the application for the first time\. You can also provide SAML attribute mappings on the application detail page that is accessible from the AWS SSO console\.
 

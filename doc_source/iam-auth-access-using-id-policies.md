@@ -6,11 +6,8 @@ This topic provides examples of permissions policies that an account administrat
 We recommend that you first review the introductory topics that explain the basic concepts and options available for you to manage access to your AWS SSO resources\. For more information, see [Overview of Managing Access Permissions to Your AWS SSO Resources](iam-auth-access-overview.md)\.
 
 The sections in this topic cover the following:
-
 + [Permissions Required to Use the AWS SSO Console](#requiredpermissionsconsole)
-
 + [AWS Managed \(Predefined\) Policies for AWS SSO](#accesscontrolmanagedpolicies)
-
 + [Customer Managed Policy Examples](#policyexample)
 
 The following shows an example of a permissions policy\.
@@ -56,9 +53,7 @@ The following shows an example of a permissions policy\.
 ```
 
 The policy includes the following:
-
 + The first statement grants permission to manage profile associations to users and groups within your directory\. It also grants permission to read all of the AWS SSO resources\.
-
 + The second statement grants permissions to search the directory for users and groups\. This is required before you can create profile associations\. 
 
 The policy doesn't specify the `Principal` element because in an identity\-based policy you don't specify the principal who gets the permission\. When you attach a policy to a user, the user is the implicit principal\. When you attach a permission policy to an IAM role, the principal identified in the role's trust policy gets the permissions\.
@@ -77,7 +72,7 @@ AWS addresses many common use cases by providing standalone IAM policies that ar
 
 In this section, you can find example user policies that grant permissions for various AWS SSO actions\. 
 
-
+**Topics**
 + [Example 1: Allow a User to Set Up and Enable AWS SSO](#policyexamplesetupenable)
 + [Example 2: Allow a User to Manage Your AWS SSO Connected Directory](#policyexamplemanageconnecteddirectory)
 + [Example 3: Allow a User to Manage Applications in AWS SSO](#policyexamplemanageapplication)

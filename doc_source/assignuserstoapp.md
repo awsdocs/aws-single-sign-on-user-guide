@@ -9,7 +9,7 @@ To help simplify administration of access permissions, we recommended that you a
 
 1. Open the [AWS SSO console](https://console.aws.amazon.com/singlesignon)\.
 **Note**  
-Make sure that the AWS SSO console is using the US East \(N\. Virginia\) Region where your AWS Microsoft AD directory is located before you move to the next step\.
+Make sure that the AWS SSO console is using the US East \(N\. Virginia\) Region where your AWS Managed Microsoft AD directory is located before you move to the next step\.
 
 1. Choose **Applications**\.
 

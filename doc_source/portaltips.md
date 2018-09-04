@@ -1,0 +1,6 @@
+# Tips for Using the Portal<a name="portaltips"></a>
+
+Like any business tool or application that you use on a daily basis, the user portal might not work as you expected\. If that happens, try these tips:
++ Occasionally, you may need to sign out and sign back in to the user portal\. This might be necessary to access new applications that your administrator recently assigned to you\. This is not required, however, because all new applications are refreshed every hour\.
++ When you sign in to the user portal, you can open any of the applications listed in the portal by choosing the application’s icon\. After you are done using the application, you can either close the application or sign out of the user portal\. Closing the application signs you out of that application only\. Any other applications that you have opened from the user portal remain open and running\. 
++ Before you can sign in as a different user, you must first sign out of the user portal\. Signing out from the portal completely removes your credentials from the browser session\.

@@ -11,55 +11,35 @@ For information about other services that support service\-linked roles, see [AW
 AWS SSO uses the service\-linked role named **AWSServiceRoleForSSO** to grant AWS SSO permissions to manage AWS resources, including IAM roles, policies, and SAML IdP on your behalf\.
 
 The AWSServiceRoleForSSO service\-linked role trusts the following services to assume the role:
-
 + `AWS SSO`
 
 The AWSServiceRoleForSSO service\-linked role permissions policy allows AWS SSO to complete the following on roles on the path “/aws\-reserved/sso\.amazonaws\.com/” and with the name prefix “AWSReservedSSO\_”:
-
 + `iam:AttachRolePolicy`
-
 + `iam:CreateRole`
-
 + `iam:DeleteRole`
-
 + `iam:DeleteRolePolicy`
-
 + `iam:DetachRolePolicy`
-
 + `iam:GetRole`
-
 + `iam:ListRolePolicies`
-
 + `iam:PutRolePolicy`
-
 + `iam:ListAttachedRolePolicies`
 
 The AWSServiceRoleForSSO service\-linked role permissions policy allows AWS SSO to complete the following on SAML providers with name prefix as “AWSSSO\_”:
-
 + `iam:CreateSAMLProvider`
-
 + `iam:GetSAMLProvider`
-
 + `iam:UpdateSAMLProvider`
-
 + `iam:DeleteSAMLProvider`
 
 The AWSServiceRoleForSSO service\-linked role permissions policy allows AWS SSO to complete the following on all organizations:
-
 + `organizations:DescribeAccount`
-
 + `organizations:DescribeOrganization`
-
 + `organizations:ListAccounts`
 
 The AWSServiceRoleForSSO service\-linked role permissions policy allows AWS SSO to complete the following on all IAM roles \(\*\):
-
 + `iam:listRoles`
 
 The AWSServiceRoleForSSO service\-linked role permissions policy allows AWS SSO to complete the following on “arn:aws:iam::\*:role/aws\-service\-role/sso\.amazonaws\.com/AWSServiceRoleForSSO”:
-
 + `iam:GetServiceLinkedRoleDeletionStatus`
-
 + `iam:DeleteServiceLinkedRole`
 
 You must configure permissions to allow an IAM entity \(such as a user, group, or role\) to create, edit, or delete a service\-linked role\. For more information, see [Service\-Linked Role Permissions](http://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#service-linked-role-permissions) in the *IAM User Guide*\.
