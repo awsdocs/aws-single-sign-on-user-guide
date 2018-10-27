@@ -1,7 +1,19 @@
-# Connect AWS SSO to an On\-Premises Active Directory<a name="connectawsad"></a>
+# Connect AWS SSO to an AWS Managed Microsoft AD Directory<a name="connectawsad"></a>
 
-If you want users in your on\-premises Active Directory to also have SSO access to AWS accounts and cloud applications in the AWS SSO user portal, AWS Directory Service has the following two options available:
-+ **Create a two\-way trust relationship** – Two\-way trust relationships created between AWS Managed Microsoft AD and an on\-premises Active Directory enable on\-premises users to sign in with their corporate credentials to various AWS services and business applications\. One\-way trusts will not work with AWS SSO\. For more information about setting up a two\-way trust, see [When to Create a Trust Relationship](http://docs.aws.amazon.com/directoryservice/latest/admin-guide/setup_trust.html) in the *AWS Directory Service Administration Guide*\.
-+ **Create an AD Connector** – AD Connector is a directory gateway that can redirect directory requests to your on\-premises Active Directory without caching any information in the cloud\. For more information, see [Connect to a Directory](http://docs.aws.amazon.com/directoryservice/latest/admin-guide/connect_directory.html) in the *AWS Directory Service Administration Guide*\.
+Use the following procedure to connect an AWS Managed Microsoft AD directory that is managed by AWS Directory Service to AWS SSO\. 
+
+**To connect AWS SSO to AWS Managed Microsoft AD**
+
+1. Open the [AWS SSO console](https://console.aws.amazon.com/singlesignon)\.
 **Note**  
-AWS SSO does not work with SAMBA4\-based Simple AD directories\.
+Make sure that the AWS SSO console is using one of the regions where your AWS Managed Microsoft AD directory is located in before you move to the next step\.
+
+1. From the **Dashboard**, choose **Manage your directory**
+
+1. On the **Directory** page, do the following:
+
+   1. Under **Available directories**, select the AWS Managed Microsoft AD directory you want AWS SSO to connect to\.
+
+   1. Under **User portal URL**, type the prefix to use for the user portal sign\-in URL\.
+
+1. Choose **Connect directory**\.

@@ -13,21 +13,36 @@ AWS SSO has built\-in support for the following commonly used cloud applications
 
 |  |  |  |  | 
 | --- |--- |--- |--- |
-|  Adobe Creative Cloud  | DruvalnSync | NewRelic | Syncplicity | 
-|  AppDynamics  | Egnyte | Office 365 | Tableau | 
-| BambooHR | Engagedly | OpsGenie | TalentLMS | 
-| Bonusly | Expensify | PagerDuty | Trello | 
-| Box | Freshdesk | ProdPad | UserEcho | 
-| Citrix ShareFile | G Suite | PurelyHR | UserVoice | 
-| ClickTime | GitHub | Salesforce | WeekDone | 
-| Convo | GoToMeeting | Samanage | Workplace by Facebook | 
-| Deputy | IdeaScale | ScreenSteps | ZenDesk | 
-| Deskpro | Igloo | ServiceNow | Zoho | 
-| DigiCert | Jitbit | Slack | Zoom | 
-| DocuSign | Keeper Security | Sli\.do | 4me | 
-| Dome9 | Kudos | SmartSheet |  | 
-| Domo | LiquidFiles | SugarCRM |  | 
-| Dropbox | Lucidchart | SumoLogic |  | 
+| Adobe Creative Cloud | Dropbox | Lucidchart | UserEcho | 
+| Aha | DruvalnSync | MangoApps | UserVoice | 
+| AnswerHub | EduBrite | NewRelic | Velpic | 
+| AppDynamics | Egnyte | Office 365 | VictorOps | 
+| Assembla | eLeaP | OpsGenie | WeekDone | 
+| Atlassian | Engagedly | PagerDuty | WhosOnLocation | 
+| BambooHR | Envoy | Panopta | Workplace by Facebook | 
+| BenSelect | Evernote | ProdPad | Workstars | 
+| Bitglass | Expensify | PurelyHR | xMatters | 
+| BMCRemedyforce | EZOfficeInventory | RingCentral | Zendesk | 
+| Bonusly | Freshdesk | Salesforce | Zoho | 
+| Box | FreshService | Samanage | Zoom | 
+| BugSnag | Front | ScaleFT |  | 
+| CakeHR | G Suite | ScreenSteps |  | 
+| CiscoMeraki | GitHub | ServiceNow |  | 
+| CiscoUmbrella | GitLab | Slack |  | 
+| Citrix ShareFile | GoToMeeting | Sli\.do |  | 
+| Clarizen | Grovo | Smartsheet |  | 
+| ClickTime | Humanity | SnapEngage |  | 
+| CloudPassage | IdeaScale | SugarCRM |  | 
+| Convo | Igloo | SumoLogic |  | 
+| DataDog | JamaSoftware | SurveyMonkey |  | 
+| Deputy | JFrog Artifactory | Syncplicity |  | 
+| Deskpro | Jitbit | Tableau |  | 
+| DigiCert | join\.me | TalentLMS |  | 
+| Dmarcian | Keeper Security | TargetProcess |  | 
+| Docebo | Klipfolio | TextMagic |  | 
+| DocuSign | Kudos | ThousandEyes |  | 
+| Dome9 | LiquidFiles | TitanFile |  | 
+| Domo | LogMeInRescue | Trello |  | 
 
 ## Add and Configure a Cloud Application<a name="saasapps-addconfigapp"></a>
 
@@ -49,6 +64,8 @@ Use this procedure when you need to set up a SAML trust relationship between AWS
 **Note**  
 You will need these files later when you set up the cloud application from the service provider's website\. Follow the instructions from that provider\. 
 
-1. Under **Application metadata**, next to **Application certificate**, choose **Browse** to upload the service provider's certificate\. This certificate is required to establish a secure connection between AWS SSO and the service provider\.
+1. Under **Application properties**, you can optionally specify additional properties for the **Application start URL**, **Relay State**, and **Session Duration**\. For more information, see [Application Properties](appproperties.md)\.
+
+1. Under **Application metadata**, provide the **Application ACS URL** and **Application SAML audience** values\.
 
 1. Choose **Save changes** to save the configuration\.

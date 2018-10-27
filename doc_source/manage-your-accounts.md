@@ -22,3 +22,4 @@ You can also connect an AWS account that is not part of your organization by set
 + [Single Sign\-On Access](useraccess.md)
 + [Permission Sets](permissionsets.md)
 + [IAM Identity Provider](idp.md)
++ [Service\-Linked Roles](slrconcept.md)

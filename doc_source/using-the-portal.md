@@ -8,7 +8,9 @@ Contact your administrator or help desk to request additional access in the foll
 
 **Topics**
 + [Tips for Using the Portal](portaltips.md)
++ [How to Accept the Invitation to Join AWS SSO](howtoactivateaccount.md)
 + [How to Sign In to the User Portal](howtosignin.md)
 + [How to Sign Out of the User Portal](howtosignout.md)
 + [How to Search for an AWS Account or Application](howtosearchforapp.md)
++ [How to Reset Your Password](howtoresetpassword.md)
 + [How to Get Credentials of an IAM Role for Use with CLI Access to an AWS Account](howtogetcredentials.md)

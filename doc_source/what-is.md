@@ -8,15 +8,19 @@ AWS SSO provides the following features:
 
 **Integration with AWS Organizations**
 
-AWS SSO is integrated deeply with AWS Organizations and AWS API operations, unlike other cloud native SSO solutions\. AWS SSO natively integrates with AWS Organizations, enumerates all your AWS accounts, and if you have organized your accounts under organizational units \(OUs\) you will see them displayed that way within the AWS SSO console\. This enables you to quickly discover your AWS accounts, deploy common sets of permissions, and manage access from a central location\.
+AWS SSO is integrated deeply with AWS Organizations and AWS API operations, unlike other cloud native SSO solutions\. AWS SSO natively integrates with AWS Organizations and enumerates all your AWS accounts\. If you have organized your accounts under organizational units \(OUs\) you will see them displayed that way within the AWS SSO console\. That way you can quickly discover your AWS accounts, deploy common sets of permissions, and manage access from a central location\.
 
 **SSO access to your AWS accounts and cloud applications**
 
 AWS SSO makes it simple for you to manage SSO across all your AWS accounts, cloud applications, and custom SAML 2\.0–based applications\. without custom scripts or third\-party SSO solutions\. Use the AWS SSO console to quickly assign which users should have one\-click access to only the applications that you've authorized for their personalized end\-user portal\.
 
-**Use your existing corporate identities**
+**Create and manage users and groups in AWS SSO**
 
-AWS SSO is integrated with Microsoft AD through the AWS Directory Service\. That means your employees can sign in to your AWS SSO user portal using their corporate Active Directory credentials\. To grant Active Directory users access to accounts and applications, you simply add them to the appropriate Active Directory groups\. For example, you can grant the DevOps group SSO access to your production AWS accounts\. Users added to the DevOps group are then granted SSO access to these AWS accounts automatically\. This automation makes it easy to on\-board new users and give existing users access to new accounts and applications quickly\.
+When you enable the service for the first time, we create a default directory for you in AWS SSO\. You can use this directory to manage your users and groups directly in the console\. Or, if you prefer, you can connect to an existing AWS Managed Microsoft AD directory and manage your users with standard Active Directory management tools provided in Windows Server\. If you choose to manage your users in AWS SSO, you can quickly create users and then easily organize them into groups, all within the console\.
+
+**Leverage your existing corporate identities**
+
+AWS SSO is integrated with Microsoft AD through the AWS Directory Service\. That means your employees can sign in to your AWS SSO user portal using their corporate Active Directory credentials\. To grant Active Directory users access to accounts and applications, you simply add them to the appropriate Active Directory groups\. For example, you can grant the DevOps group SSO access to your production AWS accounts\. Users added to the DevOps group are then granted SSO access to these AWS accounts automatically\. This automation makes it easy to onboard new users and give existing users access to new accounts and applications quickly\.
 
 **Compatible with commonly used cloud applications**
 

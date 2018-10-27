@@ -5,6 +5,4 @@ You'll get more out of AWS Single Sign\-On if you become familiar with key conce
 **Topics**
 + [SAML Federation](samlfederationconcept.md)
 + [User Authentications](authconcept.md)
-+ [Attribute Mappings](attributemappingsconcept.md)
 + [Permission Sets](permissionsetsconcept.md)
-+ [Service\-Linked Roles](slrconcept.md)

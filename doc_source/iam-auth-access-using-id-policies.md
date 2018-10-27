@@ -66,7 +66,7 @@ If you create an IAM policy that is more restrictive than the minimum required p
 
 ## AWS Managed \(Predefined\) Policies for AWS SSO<a name="accesscontrolmanagedpolicies"></a>
 
-AWS addresses many common use cases by providing standalone IAM policies that are created and administered by AWS\. Managed policies grant necessary permissions for common use cases so you can avoid having to investigate what permissions are needed\. For more information, see [AWS Managed Policies](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#aws-managed-policies) in the *IAM User Guide*\.
+AWS addresses many common use cases by providing standalone IAM policies that are created and administered by AWS\. Managed policies grant necessary permissions for common use cases so you can avoid having to investigate what permissions are needed\. For more information, see [AWS Managed Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#aws-managed-policies) in the *IAM User Guide*\.
 
 ## Customer Managed Policy Examples<a name="policyexample"></a>
 
@@ -79,6 +79,7 @@ In this section, you can find example user policies that grant permissions for v
 + [Example 4: Allow a User to Manage Permissions for Your AWS Accounts in AWS SSO](#policyexamplemanageaccount)
 + [Example 5: Allow a User to Manage Access for Your Applications in AWS SSO](#policyexamplemanageapplicationaccess)
 + [Example 6: Allow a User to Find Which Cloud Applications Are Preintegrated with AWS SSO](#policyexamplefindapplication)
++ [Example 7: Allow a User to Add Users and Groups in AWS SSO](#policyexampleaddusersgroups)
 
 ### Example 1: Allow a User to Set Up and Enable AWS SSO<a name="policyexamplesetupenable"></a>
 
@@ -281,4 +282,23 @@ The following permissions policy grants permissions to allow a user to locate wh
 11.       }
 12.    ]
 13. }
+```
+
+### Example 7: Allow a User to Add Users and Groups in AWS SSO<a name="policyexampleaddusersgroups"></a>
+
+The following permissions policy grants permissions to allow a user to open the AWS SSO console and add users and groups in the directory that AWS SSO provides by default\.
+
+```
+ 1. {
+ 2.    "Version":"2012-10-17",
+ 3.    "Statement":[
+ 4.       {
+ 5.          "Effect":"Allow",
+ 6.          "Action": [
+ 7.                 "sso-directory:*"
+ 8.                   ],
+ 9.          "Resource":"*"
+10.       }
+11.    ]
+12. }
 ```

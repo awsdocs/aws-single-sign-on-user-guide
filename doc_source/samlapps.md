@@ -24,6 +24,8 @@ Use this procedure when you need to set up a SAML trust relationship between AWS
 **Note**  
 You will need these files later when you set up the custom application from the service provider's website\. 
 
-1. Under **Application metadata**, next to **Application certificate**, choose **Browse** to upload the service provider's certificate\. This certificate is required to establish a secure connection between AWS SSO and the service provider\.
+1. Under **Application properties**, you can optionally specify additional properties for the **Application start URL**, **Relay State** and **Session Duration**\. For more information, see [Application Properties](appproperties.md)\.
+
+1. Under **Application metadata**, provide the **Application ACS URL** and **Application SAML audience** values\.
 
 1. Choose **Save changes** to save the configuration\.
