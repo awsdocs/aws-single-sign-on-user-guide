@@ -6,6 +6,8 @@ By this time, you should have been provided a specific sign\-in URL to the user 
 
 1. In your browser window, paste in the sign\-in URL that you were provided\. Then press **Enter**\. We recommend that you bookmark this link to the portal now so that you can quickly access it later\.
 
-1. Sign in using your standard company user name and password\. 
+1. Sign in using your standard company user name and password\. If you are prompted for a **Verification code**, check your email and then copy and paste the code into the sign\-in page\.
+**Note**  
+Verification codes are typically sent through email, but the delivery method can vary\. Check with your administrator for details\.
 
 1. Once signed in, you can access any AWS account and application that appears in the portal\. Simply choose an icon\. 

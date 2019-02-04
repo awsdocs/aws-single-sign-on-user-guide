@@ -12,7 +12,7 @@ Use the following procedure to repair your identity provider in case it was dele
 
 1. Choose **AWS accounts**\.
 
-1. In the table select the AWS account that is associated with the identity provider that you want to repair\.
+1. In the table, select the AWS account that is associated with the identity provider that you want to repair\.
 
 1. On the AWS account details page, under **IAM identity provider**, choose **Repair identity provider**\.
 

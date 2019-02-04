@@ -1,7 +1,7 @@
 # AWS Single Sign-On User Guide
 
 -----
-*****Copyright &copy; 2018 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; 2019 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -42,6 +42,11 @@ Amazon's trademarks and trade dress may not be used in
 + [Manage SSO to Your AWS Accounts](manage-your-accounts.md)
    + [Single Sign-On Access](useraccess.md)
    + [Permission Sets](permissionsets.md)
+      + [Create Permission Set](howtocreatepermissionset.md)
+      + [Configure Permission Set Properties](permproperties.md)
+         + [Set Session Duration](howtosessionduration.md)
+         + [Set Relay State](howtopermrelaystate.md)
+      + [Delete Permission Sets](howtoremovepermissionset.md)
    + [IAM Identity Provider](idp.md)
    + [Service-Linked Roles](slrconcept.md)
 + [Manage SSO to Your Applications](manage-your-applications.md)
@@ -63,6 +68,9 @@ Amazon's trademarks and trade dress may not be used in
    + [How to Search for an AWS Account or Application](howtosearchforapp.md)
    + [How to Reset Your Password](howtoresetpassword.md)
    + [How to Get Credentials of an IAM Role for Use with CLI Access to an AWS Account](howtogetcredentials.md)
++ [Enable Two-Step Verification](enable-two-step-verification.md)
+   + [How to Enable Two-Step Verification](how-to-enable-two-step.md)
+   + [How to Disable Two-Step Verification](how-to-disable-two-step.md)
 + [Logging AWS SSO API Calls with AWS CloudTrail](logging-using-cloudtrail.md)
 + [Limits in AWS SSO](limits.md)
 + [Troubleshooting AWS SSO Issues](troubleshooting.md)

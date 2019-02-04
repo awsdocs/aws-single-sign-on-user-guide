@@ -8,6 +8,9 @@ Most cloud applications come with detailed instructions on how to set up the tru
 
 AWS SSO has built\-in support for the following commonly used cloud applications\.
 
+**Note**  
+AWS Support engineers can assist customers who have Business and Enterprise support plans with some integration tasks that involve third\-party software\. For a current list of supported platforms and applications, see [Third\-Party Software Support](https://aws.amazon.com/premiumsupport/faqs/#what3rdParty) on the *AWS Support Features* page\.
+
 
 ****  
 

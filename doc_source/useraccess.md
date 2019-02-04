@@ -26,7 +26,7 @@ Make sure that the AWS SSO console is using the US East \(N\. Virginia\) \(us\-e
 
 1. On the **Select users or groups** page, type a user or group name and choose **Search connected directory**\. Once you have selected all the accounts that you want to assign access to, choose **Next: Permission sets**\. You can specify multiple users or groups by selecting the applicable accounts as they appear in search results\. 
 
-1. On the **Select permission sets** page, select the permission sets that you want to apply to the user or group from the table\. Then choose **Finish**\. You can optionally choose to **Create a new permission set** if none of the permissions in the table meets your needs\. For detailed instructions, see [Create Permission Set](permissionsets.md#howtocreatepermissionset)\. 
+1. On the **Select permission sets** page, select the permission sets that you want to apply to the user or group from the table\. Then choose **Finish**\. You can optionally choose to **Create a new permission set** if none of the permissions in the table meets your needs\. For detailed instructions, see [Create Permission Set](howtocreatepermissionset.md)\. 
 
 1. Choose **Finish** to begin the process of configuring your AWS account\.
 **Note**  
@@ -44,7 +44,7 @@ Use this procedure when you need to remove SSO access to an AWS account for a pa
 
 1. Choose **AWS accounts**\.
 
-1. In the table select the AWS account with the user or group whose access you want to remove\.
+1. In the table, select the AWS account with the user or group whose access you want to remove\.
 
 1. On the **Details** page for the AWS account, under **Assigned users and groups**, locate the user or group in the table\. Then choose **Remove access**\.
 
@@ -60,7 +60,7 @@ Use the following steps to delegate permissions to manage SSO access to users in
 
 1. Sign in to the AWS SSO console as a root user of the master account or with another IAM user who has IAM administrator permissions to the master account\.
 
-1. Use the procedure [Create Permission Set](permissionsets.md#howtocreatepermissionset) to create a permission set\. When you get to step 5c, select the option **Attach AWS managed policies**\. In the list of IAM policies that appear in the table, choose the **AWSSSOMasterAccountAdministrator** AWS managed policy\. This policy grants permissions to any user who will be assigned access to this permission set in the future\.
+1. Use the procedure [Create Permission Set](howtocreatepermissionset.md) to create a permission set\. When you get to step 5c, select the option **Attach AWS managed policies**\. In the list of IAM policies that appear in the table, choose the **AWSSSOMasterAccountAdministrator** AWS managed policy\. This policy grants permissions to any user who will be assigned access to this permission set in the future\.
 
 1. Use the procedure [Assign User Access](#assignusers) to assign the appropriate users to the permission set that you just created\.
 
