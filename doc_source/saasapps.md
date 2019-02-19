@@ -37,7 +37,7 @@ AWS Support engineers can assist customers who have Business and Enterprise supp
 | ClickTime | Humanity | SnapEngage |  | 
 | CloudPassage | IdeaScale | SugarCRM |  | 
 | Convo | Igloo | SumoLogic |  | 
-| DataDog | JamaSoftware | SurveyMonkey |  | 
+| Datadog | JamaSoftware | SurveyMonkey |  | 
 | Deputy | JFrog Artifactory | Syncplicity |  | 
 | Deskpro | Jitbit | Tableau |  | 
 | DigiCert | join\.me | TalentLMS |  | 
