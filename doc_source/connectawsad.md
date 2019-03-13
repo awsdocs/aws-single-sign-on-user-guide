@@ -6,7 +6,7 @@ Use the following procedure to connect an AWS Managed Microsoft AD directory tha
 
 1. Open the [AWS SSO console](https://console.aws.amazon.com/singlesignon)\.
 **Note**  
-Make sure that the AWS SSO console is using one of the regions where your AWS Managed Microsoft AD directory is located in before you move to the next step\.
+Make sure that the AWS SSO console is using one of the regions where your AWS Managed Microsoft AD directory is located before you move to the next step\.
 
 1. From the **Dashboard**, choose **Manage your directory**
 

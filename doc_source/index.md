@@ -72,6 +72,7 @@ Amazon's trademarks and trade dress may not be used in
    + [How to Enable Two-Step Verification](how-to-enable-two-step.md)
    + [How to Disable Two-Step Verification](how-to-disable-two-step.md)
 + [Logging AWS SSO API Calls with AWS CloudTrail](logging-using-cloudtrail.md)
++ [AWS SSO Region Availability](regions.md)
 + [Limits in AWS SSO](limits.md)
 + [Troubleshooting AWS SSO Issues](troubleshooting.md)
 + [Document History](doc-history.md)
