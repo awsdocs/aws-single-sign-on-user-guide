@@ -19,12 +19,14 @@ When CloudTrail logging is enabled in your AWS account, API calls made to AWS SS
 The following actions are supported:
 + `AssociateDirectory`
 + `AssociateProfile`
++ `CompleteVirtualMfaDeviceRegistration`
 + `CreateApplicationInstance`
 + `CreateApplicationInstanceCertificate`
 + `CreatePermissionSet`
 + `CreateProfile`
 + `DeleteApplicationInstance`
 + `DeleteApplicationInstanceCertificate`
++ `DeleteMfaDeviceForUser`
 + `DeletePermissionsPolicy`
 + `DeletePermissionSet`
 + `DeleteProfile`
@@ -33,6 +35,7 @@ The following actions are supported:
 + `DisassociateProfile`
 + `GetApplicationInstance`
 + `GetApplicationTemplate`
++ `GetMfaDeviceManagementForDirectory`
 + `GetPermissionSet`
 + `GetSSOStatus`
 + `ImportApplicationInstanceServiceProviderMetadata`
@@ -40,11 +43,13 @@ The following actions are supported:
 + `ListApplicationInstanceCertificates`
 + `ListApplicationTemplates`
 + `ListDirectoryAssociations`
++ `ListMfaDevicesForUser`
 + `ListPermissionSets`
 + `ListProfileAssociations`
 + `ListProfiles`
 + `PutPermissionsPolicy`
 + `StartSSO`
++ `StartVirtualMfaDeviceRegistration`
 + `UpdateApplicationInstanceActiveCertificate`
 + `UpdateApplicationInstanceDisplayData`
 + `UpdateApplicationInstanceServiceProviderConfiguration`

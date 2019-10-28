@@ -14,51 +14,67 @@ AWS Support engineers can assist customers who have Business and Enterprise supp
 
 |  |  |  |  |  | 
 | --- |--- |--- |--- |--- |
-| 10000ft | DigiCert | Image Relay | Robin | Vtiger | 
-| 4me | dmarcian | iSpring | Rollbar | Way We Do | 
-| 7Geese | Docebo | IT Glue | Room Booking System | Weekdone | 
-| Accredible | DocuSign | Jama Software | Salesforce | WhosOnLocation | 
-| Adobe Creative Cloud | Dome9 | Jamf | Samanage | Workplace by Facebook | 
-| Aha | Domo | JFrog Artifactory | ScaleFT | Workstars | 
-| AlertOps | Drift | Jira | ScreenSteps | Wrike | 
-| AnswerHub | Dropbox | Jitbit | ServiceNow | xMatters | 
-| AppDynamics | Druva inSync | join\.me | Slack | Yodeck | 
-| AppFollow | Duo | Kanbanize | Slemma | Zendesk | 
-| Asana | EduBrite | Keeper Security | Sli\.do | Ziflow | 
-| Assembla | Egnyte | Kintone | Small Improvements | Zillable | 
-| Atlassian | eLeaP | Klipfolio | Smartsheet | Zoho | 
-| BambooHR | Engagedly | KnowledgeOwl | SnapEngage | Zoom | 
-| BenSelect | Envoy | Kudos | Split\.io |  | 
-| BitaBIZ | Evernote | LiquidFiles | Spotinst |  | 
-| Bitglass | Expensify | LiquidPlanner | SproutVideo |  | 
-| BlueJeans | Expiration Reminder | Litmos | Stackify |  | 
-| BMC Remedyforce | EZOfficeInventory | LiveChat | Status Hero |  | 
-| Bonusly | EZRentOut | LogMeInRescue | StatusCast |  | 
-| Box | Fastly | Lucidchart | StatusDashboard |  | 
-| Breezy HR | FileCloud Online | ManageEngine | StatusHub |  | 
-| Buddy Punch | Flock | MangoApps | Statuspage |  | 
-| Bugsnag | Formstack | Miro | StoriesOnBoard |  | 
-| Buildkite | Freshdesk | MockFlow | Stormboard |  | 
-| CakeHR | Freshservice | New Relic | SugarCRM |  | 
-| Chartio | Front | Nuclino | Sumo Logic |  | 
-| Circonus | G Suite | Office 365 | SurveyGizmo |  | 
-| Cisco Webex | Github | Opsgenie | SurveyMonkey |  | 
-| Cisco Meraki | Gitlab | Pacific Timesheet | Syncplicity |  | 
-| Cisco Umbrella | Glasscubes | PagerDuty | Tableau |  | 
-| Citrix ShareFile | GorillaStack | Panopta | TalentLMS |  | 
-| Clarizen | GoToMeeting | Panorama9 | Targetprocess |  | 
-| ClickTime | GoToTraining | ParkMyCloud | TextMagic |  | 
-| CloudAMQP | GoToWebinar | Peakon | ThousandEyes |  | 
-| CloudPassage | Grovo | PhraseApp | Tinfoil Security |  | 
-| CMNTY | HackerOne | Pipedrive | TitanFile |  | 
-| Confluence | HackerRank | Pivotal Tracker | Trakdesk |  | 
-| Convo | Heap | ProdPad | Trello |  | 
-| Coralogix | Help Scout | Proto\.io | Uptime\.com |  | 
-| Datadog | Honey | Proxyclick | Uptrends |  | 
-| Declaree | Hosted Graphite | PurelyHR | UserEcho |  | 
-| Deputy | Humanity | Recognize | UserVoice |  | 
-| Deskpro | IdeaScale | RescueAssist | Velpic |  | 
-| Deskradar | Igloo | RingCentral | VictorOps |  | 
+| 10000ft | Cybozu Mailwise | HappyFox | PhraseApp | Splunk Cloud | 
+| 4me | Cybozu Office | Heap | PipeDrive | Splunk Enterprise | 
+| 7Geese | Cybozu\.com | HelloSign | Pivotal Tracker | Spotinst | 
+| Abstract | Dashlane | Helpdocs\.io | PlanMyLeave | SproutVideo | 
+| Accredible | Databricks | HelpScout | PolicyIQ | Squadcast | 
+| Adobe Connect | Datadog | HighGear | ProcessPlan | Stackify | 
+| Adobe Creative Cloud | Declaree | Hightail | ProdPad | Status Hero | 
+| Adobe Sign | Deputy | Honey | Proto\.io | StatusCast | 
+| Aha | DeskPro | Honeycomb\.io | Proxyclick | StatusDashboard | 
+| Airbrake | Deskradar | HostedGraphite | PurelyHR | StatusHub | 
+| AlertOps | Detectify | HubSpot | Quip | Statuspage | 
+| AlertSite | Digicert | Humanity | Rapid7 Insight products | StoriesOnBoard | 
+| Amazon Business | Dmarcian | IdeaScale | Recognize | Stormboard | 
+| Amazon WorkLink | Docebo | Igloo | Redash\.io | SugarCRM | 
+| Andfrankly | DocuSign | ImageRelay | Redlock | SumoLogic | 
+| AnswerHub | Dome9 | iSpring | RescueAssist | SurveyGizmo | 
+| AppDynamics | Domo | IT Glue | RingCentral | SurveyMonkey | 
+| AppFollow | Drift | JamaSoftware | Roadmunk | Syncplicity | 
+| Area 1 | Dropbox | Jamf | Robin | Tableau | 
+| Asana | DruvaInSync | Jenkins | Rollbar | Tableau Server | 
+| Assembla | Duo | JFrog Artifactory | Room Booking System | TalentLMS | 
+| Atlassian | Dynatrace | Jira | Salesforce | TargetProcess | 
+| Automox | EduBrite | Jitbit | Salesforce Service Cloud | TeamSupport | 
+| BambooHR | Egnyte | Jive | Samanage | Tenable\.io | 
+| BenSelect | eLeaP | join\.me | SAP BW | TextMagic | 
+| BitaBIZ | Engagedly | Kanbanize | SAP Cloud Platform | ThousandEyes | 
+| Bitglass | Envoy | Keeper Security | SAP CRM ABAP | TinfoilSecurity | 
+| BlueJeans | Evernote | Kentik | SAP CRM Java | TitanFile | 
+| BMCRemedyforce | ExpenseIn | Kintone | SAP Enterprise Portal Java | TOPdesk Operator | 
+| Bonusly | Expensify | Klipfolio | SAP ERP ABAP | TOPdesk Self Service Desk | 
+| Box | Expiration Reminder | KnowledgeOwl | SAP EWM ABAP | Trakdesk | 
+| Brandfolder | External AWS Account | Kudos | SAP Fiori ABAP | Trello | 
+| Breezy HR | EZOfficeInventory | LiquidFiles | SAP GRC Access Control ABAP | Trend Micro Deep Security | 
+| Buddy Punch | EZRentOut | LiquidPlanner | SAP LMS | Uptime\.com | 
+| Bugsee | Fastly | Litmos | SAP Netweaver ABAP | Uptrends | 
+| BugSnag | Federated Directory | LiveChat | SAP Netweaver Java | UserEcho | 
+| Buildkite | FileCloud | LogMeInRescue | SAP S4 ABAP | UserVoice | 
+| Bynder | FireHydrant | Lucidchart | SAP Solution Manager ABAP | Velpic | 
+| CakeHR | Fivetran | ManageEngine | SAP Solution Manager Java | Veracode | 
+| Canvas | Flock | MangoApps | SAP SRM ABAP | VictorOps | 
+| Chartio | FogBugz | Marketo | SAP xMII Java | vtiger | 
+| Chatwork | Formstack | Metricly | ScaleFT | WayWeDo | 
+| Circonus | Fossa | Miro | Scalyr | WeekDone | 
+| Cisco Webex | Freedcamp | MockFlow | ScreenSteps | WhosOnLocation | 
+| CiscoMeraki | Freshdesk | Mode Analytics | Seeit | Wordbee | 
+| CiscoUmbrella | FreshService | Moodle | Sentry\.io | Workable | 
+| CitrixShareFile | Front | MuleSoft Anypoint | ServiceNow | Workfront | 
+| Clarizen | G Suite | MyWebTimeSheets | SimpleMDM | Workplace by Facebook | 
+| ClickTime | GitBook | N2F Expense Reports | Skeddly | Workstars | 
+| Cloud CMS | Github | NewRelic | Skilljar | Wrike | 
+| Cloud Conformity | GitLab | Nuclino | Slack | xMatters | 
+| CloudAMQP | Glasscubes | Office365 | Slemma | XperienceHR | 
+| CloudCheckr | GlassFrog | OnDMARC | Sli\.do | Yodeck | 
+| CloudEndure | GorillaStack | OpenVoice | Small Improvements | Zendesk | 
+| CloudPassage | GoToAssist | OpsGenie | Smartsheet | Zephyr | 
+| CMNTY | GoToMeeting | Pacific Timesheet | SnapEngage | Ziflow | 
+| CoderPad | GoToTraining | PagerDuty | Snowflake | Zillable | 
+| Confluence | GoToWebinar | Panopta | SonarQube | Zoho | 
+| Convo | Grovo | Panorama9 | SparkPost | Zoho One | 
+| Coralogix | HackerOne | ParkMyCloud | Spinnaker | Zoom | 
+| Cybozu Garoon | HackerRank | Peakon | Split\.io |  | 
 
 ## Add and Configure a Cloud Application<a name="saasapps-addconfigapp"></a>
 

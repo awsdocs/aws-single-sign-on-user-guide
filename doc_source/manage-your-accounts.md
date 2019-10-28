@@ -12,7 +12,7 @@ Users follow a simple sign\-in process:
 
 1. Users who are assigned multiple permission sets choose which IAM role to use\.
 
-Permission sets are a way to centrally define permissions centrally in AWS SSO so that they can be applied to all of your AWS accounts\. These permission sets are provisioned to each AWS account as an IAM role\. The user portal gives users the ability to retrieve temporary credentials for the IAM role of a given AWS account so they can use it for short\-term access to the AWS CLI\. For more information, see [How to Get Credentials of an IAM Role for Use with CLI Access to an AWS Account](howtogetcredentials.md)\.
+Permission sets are a way to define permissions centrally in AWS SSO so that they can be applied to all of your AWS accounts\. These permission sets are provisioned to each AWS account as an IAM role\. The user portal gives users the ability to retrieve temporary credentials for the IAM role of a given AWS account so they can use it for short\-term access to the AWS CLI\. For more information, see [How to Get Credentials of an IAM Role for Use with CLI Access to an AWS Account](howtogetcredentials.md)\.
 
 To use AWS SSO with AWS Organizations, you must first [Enable AWS SSO](step1.md), which grants AWS SSO the capability to create [Service\-Linked Roles](slrconcept.md) in each account in your AWS organization\. These roles are not created until after you [Assign User Access](useraccess.md#assignusers) for a given account\.
 

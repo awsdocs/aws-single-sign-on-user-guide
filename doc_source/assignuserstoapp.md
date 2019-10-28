@@ -4,6 +4,7 @@ Use the following procedure to assign users SSO access to cloud applications or 
 
 **Note**  
 To help simplify administration of access permissions, we recommend that you assign access directly to groups rather than to individual users\. With groups you can grant or deny permissions to groups of users, rather than having to apply those permissions to each individual\. If a user moves to a different organization, you simply move that user to a different group\. The user then automatically receives the permissions that are needed for the new organization\.
+When assigning user access to applications, AWS SSO does not currently support users being added to nested groups\. If a user is added to a nested group, they may receive a “You do not have any applications” message during sign\-in\. Assignments must be made against the immediate group the user is a member of\.
 
 **To assign access to users or groups**
 

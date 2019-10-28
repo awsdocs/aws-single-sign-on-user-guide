@@ -1,11 +1,12 @@
 # Document History<a name="doc-history"></a>
 
 The following table describes the documentation for this release of AWS Single Sign\-On\.
-+ **Latest documentation update:** January 16, 2019
++ **Latest documentation update:** October 24, 2019
 
 | Change | Description | Date | 
 | --- |--- |--- |
-| [New setting to add two\-step verification](https://docs.aws.amazon.com/singlesignon/latest/userguide/enable-two-step-verification.html) | Added content on how to enable two\-step verification for users\. | January 16, 2019 | 
+| [New MFA settings](https://docs.aws.amazon.com/singlesignon/latest/userguide/enable-mfa.html) | Removed two\-step verification topic and added new MFA topic in it's place\. | October 24, 2019 | 
+| [New setting to add two\-step verification](https://docs.aws.amazon.com/singlesignon/latest/userguide/enable-mfa.html) | Added content on how to enable two\-step verification for users\. | January 16, 2019 | 
 | [Support for session duration on AWS accounts](https://docs.aws.amazon.com/singlesignon/latest/userguide/howtosessionduration.html) | Added content on how to set the session duration for an AWS account\. | October 30, 2018 | 
 | [New option to use AWS SSO directory](https://docs.aws.amazon.com/singlesignon/latest/userguide/manage-your-directory.html) | Added content for choosing either AWS SSO directory or connecting to an existing AD directory\. | October 17, 2018 | 
 | [Support for relay state and session duration on applications](https://docs.aws.amazon.com/singlesignon/latest/userguide/appproperties.html) | Added content about relay state and session duration for cloud applications\. | October 10, 2018 | 
