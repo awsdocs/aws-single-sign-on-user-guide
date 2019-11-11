@@ -16,17 +16,15 @@ For an ongoing record of events in your AWS account, including events for AWS SS
 
 When CloudTrail logging is enabled in your AWS account, API calls made to AWS SSO actions are tracked in log files\. AWS SSO records are written together with other AWS service records in a log file\. CloudTrail determines when to create and write to a new file based on a time period and file size\.
 
-The following actions are supported:
+The following AWS SSO CloudTrail actions are supported:
 + `AssociateDirectory`
 + `AssociateProfile`
-+ `CompleteVirtualMfaDeviceRegistration`
 + `CreateApplicationInstance`
 + `CreateApplicationInstanceCertificate`
 + `CreatePermissionSet`
 + `CreateProfile`
 + `DeleteApplicationInstance`
 + `DeleteApplicationInstanceCertificate`
-+ `DeleteMfaDeviceForUser`
 + `DeletePermissionsPolicy`
 + `DeletePermissionSet`
 + `DeleteProfile`
@@ -43,13 +41,12 @@ The following actions are supported:
 + `ListApplicationInstanceCertificates`
 + `ListApplicationTemplates`
 + `ListDirectoryAssociations`
-+ `ListMfaDevicesForUser`
 + `ListPermissionSets`
 + `ListProfileAssociations`
 + `ListProfiles`
++ `PutMfaDeviceManagementForDirectory`
 + `PutPermissionsPolicy`
 + `StartSSO`
-+ `StartVirtualMfaDeviceRegistration`
 + `UpdateApplicationInstanceActiveCertificate`
 + `UpdateApplicationInstanceDisplayData`
 + `UpdateApplicationInstanceServiceProviderConfiguration`
@@ -59,6 +56,31 @@ The following actions are supported:
 + `UpdateApplicationInstanceSecurityConfiguration`
 + `UpdateDirectoryAssociation`
 + `UpdateProfile`
+
+The following AWS SSO Directory CloudTrail actions are supported:
++ `AddMemberToGroup`
++ `CompleteVirtualMfaDeviceRegistration`
++ `CreateAlias`
++ `CreateGroup`
++ `CreateUser`
++ `DeleteGroup`
++ `DeleteMfaDeviceForUser`
++ `DeleteUser`
++ `DescribeDirectory`
++ `DescribeGroups`
++ `DescribeUsers`
++ `DisableUser`
++ `EnableUser`
++ `ListGroupsForUser`
++ `ListMembersInGroup`
++ `ListMfaDevicesForUser`
++ `RemoveMemberFromGroup`
++ `SearchGroups`
++ `SearchUsers`
++ `StartVirtualMfaDeviceRegistration`
++ `UpdateGroup`
++ `UpdatePassword`
++ `UpdateUser`
 
 Every log entry contains information about who generated the request\. The identity information in the log helps you determine whether the request was made by an AWS account root user or with IAM user credentials\. You can also learn whether the request was made with temporary security credentials for a role or federated user or by another AWS service\. For more information, see the [CloudTrail userIdentity Element](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-user-identity.html)\.
 

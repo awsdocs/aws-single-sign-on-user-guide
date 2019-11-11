@@ -78,6 +78,7 @@ Amazon's trademarks and trade dress may not be used in
    + [How to Disable MFA](how-to-disable-mfa.md)
    + [How to Register an MFA Device](how-to-register-device.md)
    + [How to Allow Users to Register Their Own MFA Devices](how-to-allow-user-registration.md)
++ [Integrating AWS CLI with AWS SSO](integrating-aws-cli.md)
 + [Logging AWS SSO API Calls with AWS CloudTrail](logging-using-cloudtrail.md)
 + [AWS SSO Region Availability](regions.md)
 + [Limits in AWS SSO](limits.md)
