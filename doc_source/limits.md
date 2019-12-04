@@ -34,17 +34,17 @@ The following tables describe limits within AWS SSO\.
 
 \* Users within their Active Directory can belong to many directory groups\. However within AWS SSO, they can have up to 1500 of their Active Directory groups assigned for using applications\.
 
-## AWS SSO Directory Limits<a name="ssodirectorylimits"></a>
+## AWS SSO Identity Store Limits<a name="ssodirectorylimits"></a>
 
 
 | Resource | Default Limit | 
 | --- | --- | 
 |  Number of unique groups that can be assigned \*  | 100 | 
-|  Number of AWS SSO directories that you can have at a time  | 1 | 
-|  Maximum number of users supported in AWS SSO  | 500 | 
-| Maximum number of groups supported in AWS SSO | 100 | 
+|  Number of AWS SSO stores that you can have at a time  | 1 | 
+|  Maximum number of users supported in AWS SSO  | 50000 | 
+| Maximum number of groups supported in AWS SSO | 10000 | 
 
-\* Users within an AWS SSO directory can have up to 100 of their groups assigned for using applications\.
+\* Users within an AWS SSO store can have up to 100 of their groups assigned for using applications\.
 
 ## Additional Limits<a name="additionallimits"></a>
 

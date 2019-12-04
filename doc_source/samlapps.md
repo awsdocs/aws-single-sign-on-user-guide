@@ -14,7 +14,7 @@ Use this procedure when you need to set up a SAML trust relationship between AWS
 
 1. In the **Select an application** dialog box, select **Custom SAML 2\.0 application** from the list\. Then choose **Configure application**\. 
 
-1. On the **Configure <Custom app name>** page, under **Details**, type a **Display name** for the application, such as **MyApp**\.
+1. On the **Configure <Custom app name>** page, under **Details**, enter a **Display name** for the application, such as **MyApp**\.
 
 1. Under **AWS SSO metadata**, do the following:
 

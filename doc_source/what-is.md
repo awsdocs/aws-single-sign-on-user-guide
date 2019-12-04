@@ -1,6 +1,6 @@
 # What Is AWS Single Sign\-On?<a name="what-is"></a>
 
-AWS Single Sign\-On is a cloud\-based single sign\-on \(SSO\) service that makes it easy to centrally manage SSO access to all of your AWS accounts and cloud applications\. Specifically, it helps you manage SSO access and user permissions across all your AWS accounts in AWS Organizations\. AWS SSO also helps you manage access and permissions to commonly used third\-party software as a service \(SaaS\) applications as well as custom applications that support Security Assertion Markup Language \(SAML\) 2\.0\. AWS SSO includes a user portal where your end\-users can find and access all their assigned AWS accounts, cloud applications, and custom applications in one place\. 
+AWS Single Sign\-On is a cloud\-based single sign\-on \(SSO\) service that makes it easy to centrally manage SSO access to all of your AWS accounts and cloud applications\. Specifically, it helps you manage SSO access and user permissions across all your AWS accounts in AWS Organizations\. AWS SSO also helps you manage access and permissions to commonly used third\-party software as a service \(SaaS\) applications, AWS SSO\-integrated applications as well as custom applications that support Security Assertion Markup Language \(SAML\) 2\.0\. AWS SSO includes a user portal where your end\-users can find and access all their assigned AWS accounts, cloud applications, and custom applications in one place\. 
 
 ## AWS SSO Features<a name="features"></a>
 
@@ -12,11 +12,11 @@ AWS SSO is integrated deeply with AWS Organizations and AWS API operations, unli
 
 **SSO access to your AWS accounts and cloud applications**
 
-AWS SSO makes it simple for you to manage SSO across all your AWS accounts, cloud applications, and custom SAML 2\.0–based applications\. without custom scripts or third\-party SSO solutions\. Use the AWS SSO console to quickly assign which users should have one\-click access to only the applications that you've authorized for their personalized end\-user portal\.
+AWS SSO makes it simple for you to manage SSO across all your AWS accounts, cloud applications, AWS SSO\-integrated applications, and custom SAML 2\.0–based applications, without custom scripts or third\-party SSO solutions\. Use the AWS SSO console to quickly assign which users should have one\-click access to only the applications that you've authorized for their personalized end\-user portal\.
 
 **Create and manage users and groups in AWS SSO**
 
-When you enable the service for the first time, we create a default directory for you in AWS SSO\. You can use this directory to manage your users and groups directly in the console\. Or, if you prefer, you can connect to an existing AWS Managed Microsoft AD directory and manage your users with standard Active Directory management tools provided in Windows Server\. If you choose to manage your users in AWS SSO, you can quickly create users and then easily organize them into groups, all within the console\.
+When you enable the service for the first time, we create a default store for you in AWS SSO\. You can use this store to manage your users and groups directly in the console\. Or, if you prefer, you can connect to an existing AWS Managed Microsoft AD directory and manage your users with standard Active Directory management tools provided in Windows Server\. You can also provision users and groups from an external identity provider into AWS SSO and manage access permissions in the AWS SSO console\. If you choose to manage your users in AWS SSO, you can quickly create users and then easily organize them into groups, all within the console\.
 
 **Leverage your existing corporate identities**
 

@@ -6,7 +6,7 @@ In AWS SSO you can customize the user experience by configuring the following ad
 
 You use an application start URL to start the federation process with your application\. The typical use is for an application that supports only service provider \(SP\)\-initiated binding\.
 
-The following steps and diagram illustrates the application start URL authentication workflow when a user chooses an application in the user portal:
+The following steps and diagram illustrate the application start URL authentication workflow when a user chooses an application in the user portal:
 
 1. The user’s browser redirects the authentication request using the value for the application start URL \(in this case https://example\.com\)\.
 

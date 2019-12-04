@@ -57,20 +57,26 @@ The following AWS SSO CloudTrail actions are supported:
 + `UpdateDirectoryAssociation`
 + `UpdateProfile`
 
-The following AWS SSO Directory CloudTrail actions are supported:
+The following AWS SSO identity store CloudTrail actions are supported:
 + `AddMemberToGroup`
 + `CompleteVirtualMfaDeviceRegistration`
 + `CreateAlias`
++ `CreateExternalIdPConfigurationForDirectory` 
 + `CreateGroup`
 + `CreateUser`
++ `DeleteExternalIdPConfigurationForDirectory`
 + `DeleteGroup`
 + `DeleteMfaDeviceForUser`
 + `DeleteUser`
 + `DescribeDirectory`
 + `DescribeGroups`
 + `DescribeUsers`
++ `DisableExternalIdPConfigurationForDirectory`
 + `DisableUser`
++ `EnableExternalIdPConfigurationForDirectory`
 + `EnableUser`
++ `GetAWSSPConfigurationForDirectory`
++ `ListExternalIdPConfigurationsForDirectory`
 + `ListGroupsForUser`
 + `ListMembersInGroup`
 + `ListMfaDevicesForUser`
@@ -78,9 +84,11 @@ The following AWS SSO Directory CloudTrail actions are supported:
 + `SearchGroups`
 + `SearchUsers`
 + `StartVirtualMfaDeviceRegistration`
++ `UpdateExternalIdPConfigurationForDirectory` 
 + `UpdateGroup`
 + `UpdatePassword`
 + `UpdateUser`
++ `VerifyEmail`
 
 Every log entry contains information about who generated the request\. The identity information in the log helps you determine whether the request was made by an AWS account root user or with IAM user credentials\. You can also learn whether the request was made with temporary security credentials for a role or federated user or by another AWS service\. For more information, see the [CloudTrail userIdentity Element](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-user-identity.html)\.
 
@@ -88,7 +96,7 @@ You can create a trail and store your log files in your Amazon S3 bucket for as 
 
 To be notified of log file delivery, configure CloudTrail to publish Amazon SNS notifications when new log files are delivered\. For more information, see [Configuring Amazon SNS Notifications for CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/getting_notifications_top_level.html)\.
 
-You can also aggregate AWS SSO log files from multiple AWS regions and multiple AWS accounts into a single Amazon S3 bucket\. For more information, see [Receiving CloudTrail Log Files from Multiple Regions](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/receive-cloudtrail-log-files-from-multiple-regions.html) and [Receiving CloudTrail Log Files from Multiple Accounts](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-receive-logs-from-multiple-accounts.html)\.
+You can also aggregate AWS SSO log files from multiple AWS Regions and multiple AWS accounts into a single Amazon S3 bucket\. For more information, see [Receiving CloudTrail Log Files from Multiple Regions](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/receive-cloudtrail-log-files-from-multiple-regions.html) and [Receiving CloudTrail Log Files from Multiple Accounts](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-receive-logs-from-multiple-accounts.html)\.
 
 ## Understanding AWS SSO Log File Entries<a name="understanding-sso-entries"></a>
 

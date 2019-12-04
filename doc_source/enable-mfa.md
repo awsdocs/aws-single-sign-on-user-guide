@@ -28,7 +28,7 @@ Authentication methods help you determine the level of security that you want to
 + **Disabled**
 
 **Note**  
-You can configure AWS SSO to use a connected directory and decide to choose either the **Context\-aware** or **Always\-on** option\. In these cases, your users must sign in to the user portal using the down\-level logon name format \(DOMAIN\\UserName\)\. This restriction does not apply when you are using an AWS SSO directory\. With an AWS SSO directory, users can sign in using either their down\-level logon name format or their UPN logon name format \([UserName@Corp\.Example\.com](mailto:UserName@Corp.Example.com)\)\. For general information about sign\-in formats, see [User Name Formats](https://docs.microsoft.com/en-us/windows/desktop/secauthn/user-name-formats) on the Microsoft documentation website\.
+You can configure AWS SSO to use a connected directory and decide to choose either the **Context\-aware** or **Always\-on** option\. In these cases, your users must sign in to the user portal using the down\-level logon name format \(DOMAIN\\UserName\)\. This restriction does not apply when you are using an AWS SSO store\. With an AWS SSO store, users can sign in using either their down\-level logon name format or their UPN logon name format \([UserName@Corp\.Example\.com](mailto:UserName@Corp.Example.com)\)\. For general information about sign\-in formats, see [User Name Formats](https://docs.microsoft.com/en-us/windows/desktop/secauthn/user-name-formats) on the Microsoft documentation website\.
 
 ### Context\-Aware<a name="context-aware"></a>
 

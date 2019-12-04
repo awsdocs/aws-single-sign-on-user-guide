@@ -1,4 +1,4 @@
-# Register a Device for Use With Multi\-Factor Authentication<a name="user-device-registration"></a>
+# How to Register a Device for Use with Multi\-Factor Authentication<a name="user-device-registration"></a>
 
 Use the following procedure within the user portal to register your new device for multi\-factor authentication \(MFA\)\.
 

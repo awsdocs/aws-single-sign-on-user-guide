@@ -15,4 +15,4 @@ Use the following procedure to allow your users to self\-register their own MFA 
 1. Choose **Save Changes**\.
 
 **Note**  
-After you set up self\-registration for your users, you may want to send them a link to the procedure [Register a Device for Use With Multi\-Factor Authentication](user-device-registration.md)\. This topic provides instructions on how to set up their own MFA devices\.
+After you set up self\-registration for your users, you may want to send them a link to the procedure [How to Register a Device for Use with Multi\-Factor Authentication](user-device-registration.md)\. This topic provides instructions on how to set up their own MFA devices\.

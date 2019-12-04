@@ -86,7 +86,7 @@ Use this procedure when you need to set up a SAML trust relationship between AWS
 
 1. In the **Select an application** dialog box, select the application you want to add from the list\. Then choose **Add**\. 
 
-1. On the **Configure <application name>** page, under **Details**, type a **Display name** for the application, such as **Salesforce**\.
+1. On the **Configure <application name>** page, under **Details**, enter a **Display name** for the application, such as **Salesforce**\.
 
 1. Under **AWS SSO metadata**, do the following:
 
