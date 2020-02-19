@@ -92,16 +92,16 @@ The following permissions policy grants permissions to allow a user to open the 
  4.       {
  5.          "Effect":"Allow",
  6.          "Action": [
- 7.                 sso:StartSSO,
- 8.                 sso:GetSSOStatus
+ 7.                 "sso:StartSSO",
+ 8.                 "sso:GetSSOStatus"
  9.                   ],
 10.          "Resource":"*"
 11.       }, 
 12.       {
 13.          "Effect":"Allow",
 14.          "Action": [
-15.                 organizations:DescribeAccount,
-16.                 organizations:EnableAWSServiceAccess
+15.                 "organizations:DescribeAccount",
+16.                 "organizations:EnableAWSServiceAccess"
 17.                   ],
 18.          "Resource":"*"
 19. 
@@ -121,17 +121,17 @@ The following permissions policy grants permissions to a user to manage your con
  4.       {
  5.          "Effect":"Allow",
  6.          "Action": [
- 7.                 sso:AssociateDirectory,
- 8.                 sso:DisassociateDirectory,
- 9.                 sso:ListDirectoryAssociations,
-10.                 sso:UpdateDirectoryAssociation
+ 7.                 "sso:AssociateDirectory",
+ 8.                 "sso:DisassociateDirectory",
+ 9.                 "sso:ListDirectoryAssociations",
+10.                 "sso:UpdateDirectoryAssociation"
 11.                   ],
 12.          "Resource":"*"
 13.       },
 14.       {
 15.          "Effect":"Allow",
 16.          "Action": [
-17.                 ds:DescribeDirectories
+17.                 "ds:DescribeDirectories"
 18.                   ],
 19.          "Resource":"*"
 20.       }
@@ -150,28 +150,28 @@ The following permissions policy grants permissions to allow a user to create an
  4.       {
  5.          "Effect":"Allow",
  6.          "Action": [
- 7.                 sso:ListApplicationTemplates,
- 8.                 sso:GetApplicationTemplate
- 9.                 sso:ListApplicationInstances,
-10.                 sso:GetApplicationInstance,
-11.                 sso:CreateApplicationInstance,
-12.                 sso:UpdateApplicationInstanceStatus,
-13.                 sso:UpdateApplicationInstanceDisplayData,
-14.                 sso:UpdateApplicationInstanceServiceProviderConfiguration,
-15.                 sso:UpdateApplicationInstanceResponseConfiguration,
-16.                 sso:UpdateApplicationInstanceResponseSchemaConfiguration,
-17.                 sso:UpdateApplicationInstanceSecurityConfiguration,
-18.                 sso:DeleteApplicationInstance,
-19.                 sso:ImportApplicationInstanceServiceProviderMetadata,
-20.                 sso:CreateProfile,
-21.                 sso:UpdateProfile,
-22.                 sso:DeleteProfile,
-23.                 sso:GetProfile,
-24.                 sso:ListProfiles,
-25.                 sso:ListApplicationInstanceCertificates,
-26.                 sso:CreateApplicationInstanceCertificate,
-27.                 sso:UpdateApplicationInstanceActiveCertificate,
-28.                 sso:DeleteApplicationInstanceCertificate
+ 7.                 "sso:ListApplicationTemplates",
+ 8.                 "sso:GetApplicationTemplate"
+ 9.                 "sso:ListApplicationInstances",
+10.                 "sso:GetApplicationInstance",
+11.                 "sso:CreateApplicationInstance",
+12.                 "sso:UpdateApplicationInstanceStatus",
+13.                 "sso:UpdateApplicationInstanceDisplayData",
+14.                 "sso:UpdateApplicationInstanceServiceProviderConfiguration",
+15.                 "sso:UpdateApplicationInstanceResponseConfiguration",
+16.                 "sso:UpdateApplicationInstanceResponseSchemaConfiguration",
+17.                 "sso:UpdateApplicationInstanceSecurityConfiguration",
+18.                 "sso:DeleteApplicationInstance",
+19.                 "sso:ImportApplicationInstanceServiceProviderMetadata",
+20.                 "sso:CreateProfile",
+21.                 "sso:UpdateProfile",
+22.                 "sso:DeleteProfile",
+23.                 "sso:GetProfile",
+24.                 "sso:ListProfiles",
+25.                 "sso:ListApplicationInstanceCertificates",
+26.                 "sso:CreateApplicationInstanceCertificate",
+27.                 "sso:UpdateApplicationInstanceActiveCertificate",
+28.                 "sso:DeleteApplicationInstanceCertificate"
 29.                   ],
 30.          "Resource":"*"
 31.       }
@@ -190,44 +190,44 @@ The following permissions policy grants permissions to allow a user to create an
  4.       {
  5.          "Effect":"Allow",
  6.          "Action": [
- 7.                 sso:ListApplicationInstances,
- 8.                 sso:GetApplicationInstance,
- 9.                 sso:CreateApplicationInstance,
-10.                 sso:UpdateApplicationInstanceStatus,
-11.                 sso:UpdateApplicationInstanceDisplayData,
-12.                 sso:UpdateApplicationInstanceServiceProviderConfiguration,
-13.                 sso:UpdateApplicationInstanceResponseConfiguration,
-14.                 sso:UpdateApplicationInstanceResponseSchemaConfiguration,
-15.                 sso:UpdateApplicationInstanceSecurityConfiguration,
-16.                 sso:DeleteApplicationInstance,
-17.                 sso:ImportApplicationInstanceServiceProviderMetadata,
-18.                 sso:CreateProfile,
-19.                 sso:UpdateProfile,
-20.                 sso:DeleteProfile,
-21.                 sso:GetProfile,
-22.                 sso:ListProfiles,
-23.                 sso:ListApplicationInstanceCertificates,
-24.                 sso:CreateApplicationInstanceCertificate,
-25.                 sso:UpdateApplicationInstanceActiveCertificate,
-26.                 sso:DeleteApplicationInstanceCertificate,
-27.                 sso:CreatePermissionSet,
-28.                 sso:GetPermissionSet,
-29.                 sso:ListPermissionSets,
-30.                 sso:DeletePermissionSet,
-31.                 sso:PutPermissionsPolicy,
-32.                 sso:DeletePermissionsPolicy,
-33.                 sso:DescribePermissionsPolicies,
-34.                 sso:GetTrust,
-35.                 sso:CreateTrust,
-36.                 sso:UpdateTrust,
-37.                 sso:DeleteTrust
+ 7.                 "sso:ListApplicationInstances",
+ 8.                 "sso:GetApplicationInstance",
+ 9.                 "sso:CreateApplicationInstance",
+10.                 "sso:UpdateApplicationInstanceStatus",
+11.                 "sso:UpdateApplicationInstanceDisplayData",
+12.                 "sso:UpdateApplicationInstanceServiceProviderConfiguration",
+13.                 "sso:UpdateApplicationInstanceResponseConfiguration",
+14.                 "sso:UpdateApplicationInstanceResponseSchemaConfiguration",
+15.                 "sso:UpdateApplicationInstanceSecurityConfiguration",
+16.                 "sso:DeleteApplicationInstance",
+17.                 "sso:ImportApplicationInstanceServiceProviderMetadata",
+18.                 "sso:CreateProfile",
+19.                 "sso:UpdateProfile",
+20.                 "sso:DeleteProfile",
+21.                 "sso:GetProfile",
+22.                 "sso:ListProfiles",
+23.                 "sso:ListApplicationInstanceCertificates",
+24.                 "sso:CreateApplicationInstanceCertificate",
+25.                 "sso:UpdateApplicationInstanceActiveCertificate",
+26.                 "sso:DeleteApplicationInstanceCertificate",
+27.                 "sso:CreatePermissionSet",
+28.                 "sso:GetPermissionSet",
+29.                 "sso:ListPermissionSets",
+30.                 "sso:DeletePermissionSet",
+31.                 "sso:PutPermissionsPolicy",
+32.                 "sso:DeletePermissionsPolicy",
+33.                 "sso:DescribePermissionsPolicies",
+34.                 "sso:GetTrust",
+35.                 "sso:CreateTrust",
+36.                 "sso:UpdateTrust",
+37.                 "sso:DeleteTrust"
 38.                   ],
 39.          "Resource":"*"
 40.       }, 
 41.       {
 42.          "Effect":"Allow",
 43.          "Action": [
-44.                 organizations:DescribeOrganization
+44.                 "organizations:DescribeOrganization"
 45.                   ],
 46.          "Resource":"*"
 47.       }
@@ -246,17 +246,17 @@ The following permissions policy grants permissions to allow a user to manage wh
  4.       {
  5.          "Effect":"Allow",
  6.          "Action": [
- 7.                 sso:ListApplicationInstances,
- 8.                 sso:ListProfileAssociations,
- 9.                 sso:AssociateProfile,
-10.                 sso:DisassociateProfile
+ 7.                 "sso:ListApplicationInstances",
+ 8.                 "sso:ListProfileAssociations",
+ 9.                 "sso:AssociateProfile",
+10.                 "sso:DisassociateProfile"
 11.                   ],
 12.          "Resource":"*"
 13.       },
 14.       {
 15.          "Effect":"Allow",
 16.          "Action": [
-17.                 ds:DescribeDirectories
+17.                 "ds:DescribeDirectories"
 18.                   ],
 19.          "Resource":"*"
 20.       }
@@ -275,8 +275,8 @@ The following permissions policy grants permissions to allow a user to locate wh
  4.       {
  5.          "Effect":"Allow",
  6.          "Action": [
- 7.                 sso:ListApplicationTemplates,
- 8.                 sso:GetApplicationTemplate
+ 7.                 "sso:ListApplicationTemplates",
+ 8.                 "sso:GetApplicationTemplate"
  9.                   ],
 10.          "Resource":"*"
 11.       }
