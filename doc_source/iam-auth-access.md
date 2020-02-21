@@ -1,4 +1,4 @@
-# Authentication and Access Control for AWS SSO<a name="iam-auth-access"></a>
+# Identity and Access Management for AWS SSO<a name="iam-auth-access"></a>
 
 Access to AWS SSO requires credentials that AWS can use to authenticate your requests\. Those credentials must have permissions to access AWS resources, such as an AWS SSO application\. 
 

@@ -1,7 +1,7 @@
 # AWS Single Sign-On User Guide
 
 -----
-*****Copyright &copy; 2019 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -37,6 +37,8 @@ Amazon's trademarks and trade dress may not be used in
       + [Edit User Properties](edituser.md)
       + [Disable a User](disableuser.md)
       + [Reset a User Password](resetuserpwd.md)
+      + [Password Requirements for the AWS SSO Identity Store](password-requirements.md)
+      + [Supported User and Group Attributes](supported-attributes.md)
    + [Connect to Your Microsoft AD Directory](manage-your-identity-source-ad.md)
       + [Connect AWS SSO to an AWS Managed Microsoft AD Directory](connectawsad.md)
       + [Connect AWS SSO to an On-Premises Active Directory](connectonpremad.md)
@@ -67,10 +69,6 @@ Amazon's trademarks and trade dress may not be used in
    + [Assign User Access](assignuserstoapp.md)
    + [Remove User Access](removeaccessfromapp.md)
    + [Map Attributes in Your Application to AWS SSO Attributes](mapawsssoattributestoapp.md)
-+ [Authentication and Access Control for AWS SSO](iam-auth-access.md)
-   + [Overview of Managing Access Permissions to Your AWS SSO Resources](iam-auth-access-overview.md)
-   + [Using Identity-Based Policies (IAM Policies) for AWS SSO](iam-auth-access-using-id-policies.md)
-   + [Using Service-Linked Roles for AWS SSO](using-service-linked-roles.md)
 + [Using the User Portal](using-the-portal.md)
    + [Tips for Using the Portal](portaltips.md)
    + [How to Accept the Invitation to Join AWS SSO](howtoactivateaccount.md)
@@ -85,8 +83,16 @@ Amazon's trademarks and trade dress may not be used in
    + [How to Disable MFA](how-to-disable-mfa.md)
    + [How to Register an MFA Device](how-to-register-device.md)
    + [How to Allow Users to Register Their Own MFA Devices](how-to-allow-user-registration.md)
++ [Security in AWS Single Sign-On](security.md)
+   + [Identity and Access Management for AWS SSO](iam-auth-access.md)
+      + [Overview of Managing Access Permissions to Your AWS SSO Resources](iam-auth-access-overview.md)
+      + [Using Identity-Based Policies (IAM Policies) for AWS SSO](iam-auth-access-using-id-policies.md)
+      + [Using Service-Linked Roles for AWS SSO](using-service-linked-roles.md)
+   + [Logging and Monitoring in AWS Single Sign-On](incident-response.md)
+   + [Compliance Validation for AWS Single Sign-On](sso-compliance.md)
+   + [Resilience in AWS Single Sign-On](disaster-recovery-resiliency.md)
+   + [Infrastructure Security in AWS Single Sign-On](infrastructure-security.md)
 + [Integrating AWS CLI with AWS SSO](integrating-aws-cli.md)
-+ [Logging AWS SSO API Calls with AWS CloudTrail](logging-using-cloudtrail.md)
 + [AWS SSO Region Availability](regions.md)
 + [Limits in AWS SSO](limits.md)
 + [Troubleshooting AWS SSO Issues](troubleshooting.md)

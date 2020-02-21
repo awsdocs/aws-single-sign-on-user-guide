@@ -15,7 +15,7 @@ The following tables describe limits within AWS SSO\.
 | Resource | Default Limit | 
 | --- | --- | 
 | Maximum number of permission sets in AWS SSO | 500 | 
-| Number of permission sets allowed per AWS account | 20 | 
+| Number of permission sets allowed per AWS account | 50 | 
 |  Number of references to AWS managed policies per permission set  | 10 | 
 | Number of inline policies per permission set | 1 | 
 | Maximum size of inline policy per permission set | 10,000 bytes | 

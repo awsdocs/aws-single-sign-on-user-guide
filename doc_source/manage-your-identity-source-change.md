@@ -12,7 +12,7 @@ You can change where you store users at any time\. Use the following procedure t
 
 1. On the **Change identity source** page, select the source you want to switch to, and then choose **Next**\. If you are switching to a Microsoft AD directory, you must choose the available directory from the provided menu\. 
 **Important**  
-Changing a source removes all user assignments that were previously assigned\. You must manually reapply these once you have successfully changed your source\.
+Changing your source to or from Active Directory removes all existing user and group assignments\. You must manually reapply assignments after you have successfully changed your source\.
 
 1. Choose **Next: Review**\.
 
