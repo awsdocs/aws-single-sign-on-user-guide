@@ -41,7 +41,7 @@ The following table lists all AWS SSO attributes that are supported and that can
 | $\{user:AD\_GUID\} | 
 | $\{user:email\} | 
 | $\{user:familyName\} | 
-| $\{user:firstName\} | 
+| $\{user:givenName\} | 
 | $\{user:middleName\} | 
 | $\{user:name\} | 
 | $\{user:preferredUsername\} | 
