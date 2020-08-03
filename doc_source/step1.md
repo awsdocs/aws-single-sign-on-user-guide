@@ -1,6 +1,6 @@
 # Enable AWS SSO<a name="step1"></a>
 
-When you open the AWS SSO console for the first time, you are prompted to enable AWS SSO before you can start managing it\. If you have already chosen this option, you can skip this step\. If not, use the procedure below to enable it now\. Once enabled, AWS SSO is granted the necessary permissions to create IAM service\-linked roles in any of the AWS accounts within your AWS organization\. No service\-linked roles are created at this time\. AWS SSO creates these roles later during the process of setting up SSO access to your AWS accounts \(see [Set Up SSO to Your AWS Accounts](step3.md)\)\.
+When you open the AWS SSO console for the first time, you are prompted to enable AWS SSO before you can start managing it\. If you have already chosen this option, you can skip this step\. If not, use the procedure below to enable it now\. Once enabled, AWS SSO creates a [service\-linked role](using-service-linked-roles.md) in all accounts within the organization in AWS Organizations\. AWS SSO also creates the same service\-linked role in every account that is subsequently added to your organization\. This role allows AWS SSO to access each account's resources on your behalf\. 
 
 **To enable AWS SSO**
 

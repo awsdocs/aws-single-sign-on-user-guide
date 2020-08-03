@@ -98,6 +98,11 @@ The following AWS SSO identity store CloudTrail actions are supported:
 + `UpdateUser`
 + `VerifyEmail`
 
+The following AWS SSO OIDC CloudTrail actions are supported:
++ `RegisterClient`
++ `StartDeviceAuthorization`
++ `CreateToken`
+
 Every log entry contains information about who generated the request\. The identity information in the log helps you determine whether the request was made by an AWS account root user or with IAM user credentials\. You can also learn whether the request was made with temporary security credentials for a role or federated user or by another AWS service\. For more information, see the [CloudTrail userIdentity Element](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-user-identity.html)\.
 
 You can create a trail and store your log files in your Amazon S3 bucket for as long as you want\. You can also define Amazon S3 lifecycle rules to archive or delete log files automatically\. By default, your log files are encrypted with Amazon S3 server\-side encryption \(SSE\)\.
@@ -175,6 +180,50 @@ The following example shows a CloudTrail log entry for an end\-user \(bobsmith@e
          "recipientAccountId":"08966example"
       }
    ]
+}
+```
+
+The following example shows a CloudTrail log entry for an end\-user \(bobsmith@example\.com\) action that took place in AWS SSO OIDC:
+
+```
+{
+      "eventVersion": "1.05",
+      "userIdentity": {
+        "type": "Unknown",
+        "principalId": "example.com//S-1-5-21-1122334455-3652759393-4233131409-1126",
+        "accountId": "08966example",
+        "userName": "bobsmith@example.com"
+      },
+      "eventTime": "2020-06-16T01:31:15Z",
+      "eventSource": "sso.amazonaws.com",
+      "eventName": "CreateToken",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.0",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36",
+      "requestParameters": {
+        "clientId": "clientid1234example",
+        "clientSecret": "HIDDEN_DUE_TO_SECURITY_REASONS",
+        "grantType": "urn:ietf:params:oauth:grant-type:device_code",
+        "deviceCode": "devicecode1234example"
+      },
+      "responseElements": {
+        "accessToken": "HIDDEN_DUE_TO_SECURITY_REASONS",
+        "tokenType": "Bearer",
+        "expiresIn": 28800,
+        "refreshToken": "HIDDEN_DUE_TO_SECURITY_REASONS",
+        "idToken": "HIDDEN_DUE_TO_SECURITY_REASONS"
+      },
+      "eventID": "09a6e1a9-50e5-45c0-9f08-e6ef5089b262",
+      "readOnly": false,
+      "resources": [
+        {
+          "accountId": "08966example",
+          "type": "IdentityStoreId",
+          "ARN": "d-1234example"
+        }
+      ],
+      "eventType": "AwsApiCall",
+      "recipientAccountId": "08966example"
 }
 ```
 

@@ -20,7 +20,9 @@ Make sure that the AWS SSO console is using the Region where your AWS Managed Mi
 
 1. Choose **AWS accounts**\.
 
-1. Under the **AWS organization** tab, in the list of AWS accounts, choose an account to which you want to assign access\.
+1. Under the **AWS organization** tab, in the list of AWS accounts, choose one or more accounts to which you want to assign access\.
+**Note**  
+The AWS SSO Console supports selecting up to 10 AWS accounts at a time per permission set when assigning user access\. If you need to assign more than 10 AWS accounts to the same set of users, repeat this procedure for the additional accounts, selecting the same users and permission set when prompted\.
 
 1. On the AWS account details page, choose **Assign users**\. 
 

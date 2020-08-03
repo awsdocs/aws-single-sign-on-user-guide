@@ -20,6 +20,9 @@ Before you enable MFA, consider the following information:
 + Do not use the option **Require Them to Provide a One\-Time Password Sent by Email** if your users must sign in to the user portal to access their email\. For example, your users might use Office 365 on the user portal to read their email\. In this case, users would not be able to retrieve the verification code and would be unable to sign in to the user portal\. For more information, see [Require Them to Provide a One\-Time Password Sent by Email](#require-otp)\.
 + If you are already using RADIUS MFA that you configured with AWS Directory Service, then you do not need to enable MFA within AWS SSO\. MFA is an alternative to RADIUS MFA for Microsoft Active Directory users of AWS SSO\. For more information, see [RADIUS MFA](#about-radius)\.
 
+**Note**  
+MFA in AWS SSO is not supported for use by [external identity providers](https://docs.aws.amazon.com/singlesignon/latest/userguide/manage-your-identity-source-idp.html)\. 
+
 ## Authentication Methods<a name="mfa-methods"></a>
 
 Authentication methods help you determine the level of security that you want to enforce across all your users during sign\-in\. MFA has the following methods available:
@@ -65,6 +68,9 @@ If your authentication method is set to **Context\-aware** a user might select t
 ### Require Them to Provide a One\-Time Password Sent by Email<a name="require-otp"></a>
 
 Use this option when you want to have verification codes sent to users by email\. Because email is not bound to a specific device, this option does not meet the bar for industry\-standard multi\-factor authentication\. But it does improve security over having a password alone\. Email verification will only be requested if a user has not registered an MFA device\. If the **Context\-aware** authentication method has been enabled, the user will have the opportunity to mark the device on which they receive the email as trusted\. Afterward they will not be required to verify an email code on future logins from that device, browser, and IP address combination\.
+
+**Note**  
+If you are using Active Directory as your SSO enabled Identity source, the email address used will always be based on the AD ‘`email`’ attribute\. Custom AD attribute mappings will not override this behavior\. 
 
 ## RADIUS MFA<a name="about-radius"></a>
 

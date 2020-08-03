@@ -32,7 +32,7 @@ Use this procedure to create a permission set based on a custom permissions poli
 
      1. If you chose **Attach AWS managed policies**, under **Attach AWS Managed policies**, select up to 10 job\-related or service\-specific AWS managed policies from the list\. 
 
-     1. If you chose **Create a custom permissions policy**, under **Create a custom permissions policy**, paste in a policy document with your preferred permissions\. For a list of example policies to use for delegating AWS SSO tasks, see [Customer Managed Policy Examples](iam-auth-access-using-id-policies.md#policyexample)\.
+     1. If you chose **Create a custom permissions policy**, under **Create a custom permissions policy**, paste in a policy document with your preferred permissions\.
 
         For more information about the access policy language, see [Overview of Policies](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html) in the *IAM User Guide*\. To test the effects of this policy before applying your changes, use the [IAM policy simulator](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_testing-policies.html)\.
 
