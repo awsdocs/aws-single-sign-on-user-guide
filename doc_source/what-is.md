@@ -29,3 +29,11 @@ AWS SSO supports commonly used cloud applications such as Salesforce, Box, and O
 **Easy to set up and monitor usage**
 
 With AWS SSO, you can enable a highly available SSO service with just a few clicks\. There is no additional infrastructure to deploy or AWS account to set up\. AWS SSO is a highly available and a completely secure infrastructure that scales to your needs and does not require software or hardware to manage\. AWS SSO records all sign\-in activity in AWS CloudTrail, giving you the visibility to monitor and audit SSO activity in one place\. 
+
+**Co\-exists with existing IAM users, roles, and policies**
+
+Enabling AWS SSO, including enabling AWS Organizations, has no impact on the users, roles, or policies that you’re already managing in IAM\. You can continue to use your existing access management processes and tools as your organization adopts AWS SSO\.
+
+**No\-cost identity management**
+
+You can add any AWS account managed using AWS Organizations to AWS SSO\. Both AWS SSO and AWS Organizations are available at no additional cost\. 

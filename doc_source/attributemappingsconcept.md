@@ -57,13 +57,15 @@ The following table shows the default mappings for user attributes in AWS SSO to
 | User attribute in AWS SSO  | Maps to this attribute in your Microsoft AD directory | 
 | --- | --- | 
 | AD\_GUID | $\{dir:guid\} | 
-| email | $\{dir:windowsUpn\} | 
+| email \* | $\{dir:windowsUpn\} | 
 | familyName | $\{dir:lastname\} | 
 | givenName | $\{dir:firstname\} | 
 | middleName | $\{dir:initials\} | 
 | name | $\{dir:displayname\} | 
 | preferredUsername | $\{dir:displayname\} | 
 | subject | $\{dir:windowsUpn\} | 
+
+\* The email attribute in AWS SSO must be unique within the directory\. Otherwise, the JIT login process could fail\.
 
 You can change the default mappings or add more attributes to the SAML assertion based on your requirements\. For example, assume that your cloud application requires the users email in the `User.Email` SAML attribute\. In addition, assume that email messages are stored in the `windowsUpn` attribute in your Microsoft AD directory\. To achieve this mapping, you must make changes in the following two places in the AWS SSO console:
 

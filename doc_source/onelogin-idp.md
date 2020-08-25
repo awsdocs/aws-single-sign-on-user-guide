@@ -18,7 +18,7 @@ Before you begin deploying SCIM, we recommend that you first review the [Conside
 You will need the following before you can get started:
 + A OneLogin account\. If you do not have an existing account, you may be able to obtain a free trial or developer account from the [OneLogin website](https://www.onelogin.com/free-trial)\.
 + An AWS SSO\-enabled account \([free](https://aws.amazon.com/single-sign-on/)\)\. For more information, see [Enable AWS SSO](https://docs.aws.amazon.com/singlesignon/latest/userguide/step1.html)\.
-+ A SAML connection from your OneLogin account to AWS SSO\. For more information, see [Connect to Your External Identity Provider](manage-your-identity-source-idp.md)\.
++ A SAML connection from your OneLogin account to AWS SSO\. For more information, see [Enabling Single Sign\-On Between OneLogin and AWS](https://aws.amazon.com/blogs/apn/enabling-single-sign-on-between-onelogin-and-aws/) on the AWS Partner Network Blog\.
 
 ## Step 1: Enable Provisioning in AWS SSO<a name="onelogin-step1"></a>
 
@@ -44,7 +44,7 @@ You have now set up provisioning in the AWS SSO console\. Now you need to do the
 
 ## Step 2: Configure Provisioning in OneLogin<a name="onelogin-step2"></a>
 
-Use the following procedure in the OneLogin admin console to enable integration between AWS SSO and the AWS Single Sign\-On app\. This procedure assumes you have already configured the AWS Single Sign\-On application in OneLogin for SAML authentication\. If you have not yet created this SAML connection, please do so before proceeding and then return here to complete the SCIM provisioning process\. For more information about creating a SAML connection, see [Connect to Your External Identity Provider](manage-your-identity-source-idp.md)\.
+Use the following procedure in the OneLogin admin console to enable integration between AWS SSO and the AWS Single Sign\-On app\. This procedure assumes you have already configured the AWS Single Sign\-On application in OneLogin for SAML authentication\. If you have not yet created this SAML connection, please do so before proceeding and then return here to complete the SCIM provisioning process\. For more information about configuring SAML with OneLogin, see [Enabling Single Sign\-On Between OneLogin and AWS](https://aws.amazon.com/blogs/apn/enabling-single-sign-on-between-onelogin-and-aws/) on the AWS Partner Network Blog\.
 
 **To configure provisioning in OneLogin**
 

@@ -35,6 +35,8 @@ The AWS SSO Console supports selecting up to 10 AWS accounts at a time per permi
 If this is the first time you have assigned SSO access to this AWS account, this process creates a service\-linked role in the account\. For more information, see [Using Service\-Linked Roles for AWS SSO](using-service-linked-roles.md)\.
 **Important**  
 The user assignment process may take a few minutes to complete\. It is important that you leave this page open until the process successfully completes\.
+**Note**  
+Starting on August 31st 2020, if you need to grant users or groups permissions to operate in the AWS Organizations master account, because it is a highly privileged account, there are additional security restrictions which require you to have the [IAMFullAccess](https://console.aws.amazon.com/iam/home#policies/arn:aws:iam::aws:policy/IAMFullAccess) policy or equivalent permissions before you can set this up\. These additional security restrictions are not required for any of the member accounts in your AWS organization\.
 
 ## Remove User Access<a name="howtoremoveaccess"></a>
 
