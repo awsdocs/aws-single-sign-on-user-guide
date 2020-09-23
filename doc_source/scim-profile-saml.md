@@ -12,7 +12,9 @@ The SAML protocol however does not provide a way to query the IdP to learn about
 
 ## SCIM Profile<a name="scim-profile"></a>
 
-AWS SSO provides support for the System for Cross\-domain Identity Management \(SCIM\) v2\.0 standard\. SCIM keeps your AWS SSO identities in sync with identities from your IdP\. This includes any provisioning, updates, and deprovisioning of users between your IdP and AWS SSO\. For more information about how to implement SCIM, see [Automatic Provisioning](provision-automatically.md)\. 
+AWS SSO provides support for the System for Cross\-domain Identity Management \(SCIM\) v2\.0 standard\. SCIM keeps your AWS SSO identities in sync with identities from your IdP\. This includes any provisioning, updates, and deprovisioning of users between your IdP and AWS SSO\.
+
+For more information about how to implement SCIM, see [Automatic Provisioning](provision-automatically.md)\. For additional details about AWS SSO’s SCIM implementation, see the [AWS SSO SCIM Implementation Developer Guide](https://docs.aws.amazon.com/singlesignon/latest/developerguide/what-is-scim.html)\.
 
 **Topics**
 + [SAML 2\.0 Implementation](#samlfederationconcept)

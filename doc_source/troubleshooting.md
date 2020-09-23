@@ -30,7 +30,7 @@ When reviewing IAM Roles in an account, you may notice role names beginning with
 'Cannot perform the operation on the protected role 'AWSReservedSSO_RoleName_Here' - this role is only modifiable by AWS'
 ```
 
-These roles can only be modified from the AWS SSO Administrator console, which is in the AWS Master account of AWS Organizations\. Once modified, you can then push the changes down to the AWS accounts that it is assigned to\.
+These roles can only be modified from the AWS SSO Administrator console, which is in the master account of AWS Organizations\. Once modified, you can then push the changes down to the AWS accounts that it is assigned to\.
 
 ## Directory users cannot reset their password<a name="issue5"></a>
 
@@ -60,3 +60,14 @@ This issue can occur if you’re using System for Cross\-domain Identity Managem
 To restore AWS account access in this case, you can remove access for the old user or group from the AWS account\(s\) where it was originally assigned, and then reassign access back to the user or group\. This updates the permission set with the correct identifier for the new user or group\. Similarly, to restore application access, you can remove access for the user or group from the assigned users list for that application, then add the user or group back again\.
 
 You can also check to see if AWS CloudTrail recorded the failure by searching your CloudTrail logs for SCIM synchronization events that reference the name of the user or group in question\.
+
+## Error 'An unexpected error has occurred' when an SSO user tries to sign in using an external identity provider<a name="issue7"></a>
+
+This error may occur for multiple reasons, but one common reason is a mis\-match between the user information carried in the SAML request, and the information for the user in AWS SSO\.
+
+In order for an AWS SSO user to sign in successfully when using an external IdP as the identity source, the following must be true:
++ The SAML nameID format \(configured at your identity provider\) must be ‘email’
++ The nameID value must be a properly \(RFC2822\)\-formatted string \(user@domain\.com\)
++ The nameID value must exactly match the username of an existing user in AWS SSO \(it doesn’t matter if the email address in AWS SSO matches or not – the inbound match is based on username\)
+
+Note that AWS SSO does not perform “just in time” creation of users or groups for new users or groups via SAML federation\. This means that the user must be pre\-created in AWS SSO, either manually or via automatic provisioning, in order to sign in to AWS SSO\.

@@ -14,10 +14,10 @@ Use the following procedure to modify the relay state URL for a given permission
 
 1. Choose the **Permission sets** tab\.
 
-1. Choose the name of the permission set that will have the new relay state URL\.
+1. Choose the name of the permission set where you want to change the new relay state URL\.
 
-1. On the **Permissions** tab, choose **Edit**\.
+1. On the **Permissions** tab, under the **General** section, choose **Edit**\.
 
-1. On the **Edit general permission settings** page, next to **Relay state**, type a URL value for any of the AWS services, and then choose **Continue**\.
+1. Next to **Relay state**, type a URL value for any of the AWS services, and then choose **Continue**\.
 
 1. Select the AWS accounts in the list that you want the new relay state value to apply to, and then choose **Reprovision**\.

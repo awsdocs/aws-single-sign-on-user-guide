@@ -1,4 +1,4 @@
-# Logging and Monitoring in AWS Single Sign\-On<a name="incident-response"></a>
+# Logging and Monitoring in AWS Single Sign\-On<a name="security-logging-and-monitoring"></a>
 
 As a best practice, you should monitor your organization to ensure that changes are logged\. This helps you to ensure that any unexpected change can be investigated and unwanted changes can be rolled back\. AWS Single Sign\-On currently supports two AWS services that help you monitor your organization and the activity that happens within it\.
 
@@ -25,45 +25,53 @@ For an ongoing record of events in your AWS account, including events for AWS SS
 When CloudTrail logging is enabled in your AWS account, API calls made to AWS SSO actions are tracked in log files\. AWS SSO records are written together with other AWS service records in a log file\. CloudTrail determines when to create and write to a new file based on a time period and file size\.
 
 The following AWS SSO CloudTrail actions are supported:
-+ `AssociateDirectory`
-+ `AssociateProfile`
-+ `CreateApplicationInstance`
-+ `CreateApplicationInstanceCertificate`
-+ `CreatePermissionSet`
-+ `CreateProfile`
-+ `DeleteApplicationInstance`
-+ `DeleteApplicationInstanceCertificate`
-+ `DeletePermissionsPolicy`
-+ `DeletePermissionSet`
-+ `DeleteProfile`
-+ `DescribePermissionsPolicies`
-+ `DisassociateDirectory`
-+ `DisassociateProfile`
-+ `GetApplicationInstance`
-+ `GetApplicationTemplate`
-+ `GetMfaDeviceManagementForDirectory`
-+ `GetPermissionSet`
-+ `GetSSOStatus`
-+ `ImportApplicationInstanceServiceProviderMetadata`
-+ `ListApplicationInstances`
-+ `ListApplicationInstanceCertificates`
-+ `ListApplicationTemplates`
-+ `ListDirectoryAssociations`
-+ `ListPermissionSets`
-+ `ListProfileAssociations`
-+ `ListProfiles`
-+ `PutMfaDeviceManagementForDirectory`
-+ `PutPermissionsPolicy`
-+ `StartSSO`
-+ `UpdateApplicationInstanceActiveCertificate`
-+ `UpdateApplicationInstanceDisplayData`
-+ `UpdateApplicationInstanceServiceProviderConfiguration`
-+ `UpdateApplicationInstanceStatus`
-+ `UpdateApplicationInstanceResponseConfiguration`
-+ `UpdateApplicationInstanceResponseSchemaConfiguration`
-+ `UpdateApplicationInstanceSecurityConfiguration`
-+ `UpdateDirectoryAssociation`
-+ `UpdateProfile`
+
+
+****  
+
+| Console APIs | Public APIs | 
+| --- | --- | 
+| AssociateDirectory | AttachManagedPolicyToPermissionSet | 
+| AssociateProfile | CreateAccountAssignment | 
+| CreateApplicationInstance | CreatePermissionSet | 
+| CreateApplicationInstanceCertificate | DeleteAccountAssignment | 
+| CreatePermissionSet | DeleteInlinePolicyFromPermissionSet | 
+| CreateProfile | DeletePermissionSet | 
+| DeleteApplicationInstance | DescribeAccountAssignmentCreationStatus | 
+| DeleteApplicationInstanceCertificate | DescribeAccountAssignmentDeletionStatus  | 
+| DeletePermissionsPolicy | DescribePermissionSet | 
+| DeletePermissionSet | DescribePermissionSetProvisioningStatus | 
+| DeleteProfile | DetachManagedPolicyFromPermissionSet | 
+| DescribePermissionsPolicies | GetInlinePolicyForPermissionSet | 
+| DisassociateDirectory | ListAccountAssignmentCreationStatus | 
+| DisassociateProfile | ListAccountAssignmentDeletionStatus | 
+| GetApplicationInstance | ListAccountAssignments | 
+| GetApplicationTemplate | ListAccountsForProvisionedPermissionSet | 
+| GetMfaDeviceManagementForDirectory | ListInstances | 
+| GetPermissionSet | ListManagedPoliciesInPermissionSet | 
+| GetSSOStatus | ListPermissionSetProvisioningStatus | 
+| ImportApplicationInstanceServiceProviderMetadata | ListPermissionSets | 
+| ListApplicationInstances | ListPermissionSetsProvisionedToAccount | 
+| ListApplicationInstanceCertificates | ListTagsForResource | 
+| ListApplicationTemplates | ProvisionPermissionSet | 
+| ListDirectoryAssociations | PutInlinePolicyToPermissionSet | 
+| ListPermissionSets | TagResource | 
+| ListProfileAssociations | UntagResource | 
+| ListProfiles | UpdatePermissionSet | 
+| PutMfaDeviceManagementForDirectory |  | 
+| PutPermissionsPolicy |  | 
+| StartSSO |  | 
+| UpdateApplicationInstanceActiveCertificate |  | 
+| UpdateApplicationInstanceDisplayData |  | 
+| UpdateApplicationInstanceServiceProviderConfiguration |  | 
+| UpdateApplicationInstanceStatus |  | 
+| UpdateApplicationInstanceResponseConfiguration |  | 
+| UpdateApplicationInstanceResponseSchemaConfiguration |  | 
+| UpdateApplicationInstanceSecurityConfiguration |  | 
+| UpdateDirectoryAssociation |  | 
+| UpdateProfile |  | 
+
+For more information about AWS SSO’s public APIs, see the [AWS Single Sign\-On API Reference Guide](https://docs.aws.amazon.com/singlesignon/latest/APIReference/welcome.html)\.
 
 The following AWS SSO identity store CloudTrail actions are supported:
 + `AddMemberToGroup`

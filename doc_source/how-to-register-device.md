@@ -6,11 +6,9 @@ Use the following procedure to set up a new MFA device for access by a specific 
 
 1. Open the [AWS SSO console](https://console.aws.amazon.com/singlesignon)\.
 
-1. In the left navigation pane, choose **Directory**\.
+1. In the left navigation pane, choose **Users**\. and then choose a user in the list\.
 
-1. On the **Users** tab, choose a user in the list\.
-
-1. On the user’s **Details** page, under **Multi\-factor authentication \(MFA\) devices**, choose **Register MFA device**\.
+1. Choose the **MFA devices** tab, and then choose **Register MFA device**\.
 
 1. On the **Device name** page, type a friendly name for the new MFA device, and then choose **Next**\. If you have enabled the option to allow users to manage their own devices, this user will see this friendly name in the user portal\.
 

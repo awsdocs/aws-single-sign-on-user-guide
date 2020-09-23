@@ -10,7 +10,8 @@ This documentation helps you understand how to apply the shared responsibility m
 
 **Topics**
 + [Identity and Access Management for AWS SSO](iam-auth-access.md)
-+ [Logging and Monitoring in AWS Single Sign\-On](incident-response.md)
++ [AWS SSO Console and API Authorization](security-authorization.md)
++ [Logging and Monitoring in AWS Single Sign\-On](security-logging-and-monitoring.md)
 + [Compliance Validation for AWS Single Sign\-On](sso-compliance.md)
 + [Resilience in AWS Single Sign\-On](disaster-recovery-resiliency.md)
 + [Infrastructure Security in AWS Single Sign\-On](infrastructure-security.md)

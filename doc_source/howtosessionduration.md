@@ -19,10 +19,10 @@ Once a permission set has been created, you can later update it to apply a new s
 
 1. Choose the **Permission sets** tab\.
 
-1. Choose the name of the permission set that will have the new session duration\.
+1. Choose the name of the permission set where you want to change the new session duration time\.
 
-1. On the **Permissions** tab, next to **Session duration**, choose **Edit**\.
+1. On the **Permissions** tab, under the **General** section, choose **Edit**\.
 
-1. On the **Edit session duration** page, next to **New session duration**, choose a new session length value, and then choose **Continue**\.
+1. Next to **Session duration**, choose a new session length value, and then choose **Continue**\.
 
-1. Select the AWS accounts in the list that you want the new session duration value to apply to, and then choose **Reapply permission set**\.
+1. Select the AWS accounts in the list that you want the new session duration value to apply to, and then choose **Reprovision**\.

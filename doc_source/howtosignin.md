@@ -14,3 +14,7 @@ Once you have been signed\-in, your user portal session will be valid for 8 hour
 Verification codes are typically sent through email, but the delivery method can vary\. Check with your administrator for details\.
 
 1. Once signed in, you can access any AWS account and application that appears in the portal\. Simply choose an icon\. 
+
+## Trusted Devices<a name="howtosignin-trusted-devices"></a>
+
+Once you select the option **This is a trusted device** from the sign\-in page, AWS SSO will consider all future sign\-ins from that device as authorized\. This means that AWS SSO will not present an option to enter in an MFA code as long as your are using that trusted device\. However, there are some exceptions\. These include signing in from a new browser, or when your device has been issued an unknown IP address\.
