@@ -1,4 +1,4 @@
-# Password Requirements for the AWS SSO Identity Store<a name="password-requirements"></a>
+# Password requirements for the AWS SSO identity store<a name="password-requirements"></a>
 
 When you create an AWS SSO identity store, a default password policy is created and applied to the store\. Users who sign in to the user portal must adhere to the requirements in this policy when they set or change their password\. The default password policy includes the following requirements:
 + Passwords are case\-sensitive

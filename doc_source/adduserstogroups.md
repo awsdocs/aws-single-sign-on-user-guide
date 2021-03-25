@@ -1,4 +1,4 @@
-# Add Users to Groups<a name="adduserstogroups"></a>
+# Add users to groups<a name="adduserstogroups"></a>
 
 Use the following procedure to add users as members of a group that you previously created in your AWS SSO store\.
 

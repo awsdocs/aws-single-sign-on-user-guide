@@ -1,4 +1,4 @@
-# How to Disable MFA<a name="how-to-disable-mfa"></a>
+# Disable MFA<a name="how-to-disable-mfa"></a>
 
 Use the following procedure to disable MFA in the AWS SSO console\.
 
@@ -10,6 +10,6 @@ Use the following procedure to disable MFA in the AWS SSO console\.
 
 1. On the **Settings** page, choose **Configure**\.
 
-1. On the **Configure authentication** page, choose **Never \(disabled\)**\.
+1. On the **Multi\-factor authentication \(MFA\)** page, choose **Never \(disabled\)**\.
 
-1. Choose **Save Changes**\.
+1. Choose **Save changes**\.

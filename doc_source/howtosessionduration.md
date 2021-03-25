@@ -1,6 +1,6 @@
-# Set Session Duration<a name="howtosessionduration"></a>
+# Set session duration<a name="howtosessionduration"></a>
 
-For each [permission set](https://docs.aws.amazon.com/singlesignon/latest/userguide/permissionsetsconcept.html), you can specify a session duration to control the length of time that a user can be signed in to an AWS account\. When the specified duration has elapsed, AWS logs the user out of the session\. 
+For each [permission set](https://docs.aws.amazon.com/singlesignon/latest/userguide/permissionsetsconcept.html), you can specify a session duration to control the length of time that a user can be signed in to an AWS account\. When the specified duration has elapsed, AWS signs the user out of the session\. 
 
 When you create a new permission set, the session duration is set to 1 hour \(in seconds\) by default\. The minimum session duration is 1 hour, and can be set to a maximum of 12 hours\. AWS SSO automatically creates IAM roles in each assigned account for each permission set, and configures these roles with a maximum session duration of 12 hours\.
 

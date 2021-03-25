@@ -1,4 +1,4 @@
-# Users, Groups, and Provisioning<a name="users-groups-provisioning"></a>
+# Users, groups, and provisioning<a name="users-groups-provisioning"></a>
 
 AWS SSO manages access to all your AWS Organizations accounts, AWS SSO\-integrated applications, and other business applications that support the Security Assertion Markup Language \(SAML\) 2\.0 standard\.
 
@@ -14,4 +14,4 @@ Groups are a logical combination of users that you define\. You can create group
 
 You can create users and groups directly in AWS SSO, or work with users and groups you have in Active Directory or an external identity provider\. In order for AWS SSO to assign users and groups for permissions in an AWS SSO account, AWS SSO must first be aware of the users and groups\. Similarly, AWS SSO\-integrated applications can work with users and groups for which AWS SSO is aware\. Provisioning is the process of making user and group information available for use by AWS SSO and AWS SSO\-integrated applications\.
 
-Provisioning in AWS SSO varies based on the identity source you use\. For more information, see [Manage Your Identity Source](manage-your-identity-source.md)\.
+Provisioning in AWS SSO varies based on the identity source you use\. For more information, see [Manage your identity source](manage-your-identity-source.md)\.

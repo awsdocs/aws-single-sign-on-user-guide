@@ -1,4 +1,4 @@
-# AWS SSO Console and API Authorization<a name="security-authorization"></a>
+# AWS SSO console and API authorization<a name="security-authorization"></a>
 
 Existing AWS SSO console APIs support dual authorization\. If you have existing AWS SSO instances that were created prior to October 15th 2020, you can use the following table to determine which API operations now map to newer API operations that were released after that date\.
 
@@ -7,7 +7,7 @@ SSO Instances created before October 15th 2020 will honor both old and new API a
 
 ****  
 
-| Operation name | API actions used before October 15th, 2020 | API actions used after October 15th, 2020 | 
+| Operation name | API actions used before october 15th, 2020 | API actions used after october 15th, 2020 | 
 | --- | --- | --- | 
 | AssociateProfile | AssociateProfile | CreateAccountAssignment | 
 | AttachManagedPolicy | PutPermissionsPolicy | AttachManagedPolicyToPermissionSet | 

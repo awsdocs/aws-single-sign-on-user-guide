@@ -1,8 +1,8 @@
-# What Is AWS Single Sign\-On?<a name="what-is"></a>
+# What is AWS Single Sign\-On?<a name="what-is"></a>
 
 AWS Single Sign\-On is a cloud\-based single sign\-on \(SSO\) service that makes it easy to centrally manage SSO access to all of your AWS accounts and cloud applications\. Specifically, it helps you manage SSO access and user permissions across all your AWS accounts in AWS Organizations\. AWS SSO also helps you manage access and permissions to commonly used third\-party software as a service \(SaaS\) applications, AWS SSO\-integrated applications as well as custom applications that support Security Assertion Markup Language \(SAML\) 2\.0\. AWS SSO includes a user portal where your end\-users can find and access all their assigned AWS accounts, cloud applications, and custom applications in one place\. 
 
-## AWS SSO Features<a name="features"></a>
+## AWS SSO features<a name="features"></a>
 
 AWS SSO provides the following features:
 

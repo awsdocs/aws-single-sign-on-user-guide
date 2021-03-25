@@ -1,4 +1,4 @@
-# Disable a User<a name="disableuser"></a>
+# Disable a user<a name="disableuser"></a>
 
 When you disable a user, you cannot edit their user details, reset their password, add the user to a group, or view their group membership\. Use the following procedure to disable a user in your AWS SSO store\. 
 
@@ -10,7 +10,7 @@ When you disable a user, you cannot edit their user details, reset their passwor
 
 1. Choose the user you want to disable\.
 
-1. On the user **Details** page, choose **Disable user**\.
+1. On the user details page, choose **Disable user**\.
 
 1. On the **Disable user** dialog, choose **Disable user**\.
 **Note**  

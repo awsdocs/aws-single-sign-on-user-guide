@@ -1,8 +1,8 @@
-# Application Properties<a name="appproperties"></a>
+# Application properties<a name="appproperties"></a>
 
 In AWS SSO you can customize the user experience by configuring the following additional application properties\. 
 
-## Application Start URL<a name="starturl"></a>
+## Application start URL<a name="starturl"></a>
 
 You use an application start URL to start the federation process with your application\. The typical use is for an application that supports only service provider \(SP\)\-initiated binding\.
 
@@ -15,13 +15,13 @@ The following steps and diagram illustrate the application start URL authenticat
 1. AWS SSO then sends an `HTML` `POST` with a `SAMLResponse` back to the application\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/singlesignon/latest/userguide/images/app_properties_start_url.png)
 
-## Relay State<a name="relaystate"></a>
+## Relay state<a name="relaystate"></a>
 
 During the federation authentication process, the relay state redirects users within the application\. For SAML 2\.0, this value is passed, unmodified, to the application\. After the application properties are configured, AWS SSO sends the relay state value along with a SAML response to the application\. 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/singlesignon/latest/userguide/images/app_properties_relay_state.png)
 
-## Session Duration<a name="sessionduration"></a>
+## Session duration<a name="sessionduration"></a>
 
 Session duration is the length of time that the application user sessions are valid for\. For SAML 2\.0, this is used to set the `NotOnOrAfter` date of the SAML assertion's elements; `saml2:SubjectConfirmationData` and `saml2:Conditions`\. 
 

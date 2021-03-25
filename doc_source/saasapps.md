@@ -1,10 +1,10 @@
-# Cloud Applications<a name="saasapps"></a>
+# Cloud applications<a name="saasapps"></a>
 
-You can use the AWS SSO application configuration wizard to include built\-in SAML integrations to many popular cloud applications\. Examples include Salesforce, Box, and Office 365\. For a complete list of applications that you can add from the wizard, see [Supported Applications](#saasapps-supported)\.
+You can use the AWS SSO application configuration wizard to include built\-in SAML integrations to many popular cloud applications\. Examples include Salesforce, Box, and Office 365\. For a complete list of applications that you can add from the wizard, see [Supported applications](#saasapps-supported)\.
 
 Most cloud applications come with detailed instructions on how to set up the trust between AWS SSO and the application's service provider\. You can find these instructions on the cloud applications configuration page during the setup process and after the application has been set up\. After the application has been configured, you can assign access to the groups or users that require it\.
 
-## Supported Applications<a name="saasapps-supported"></a>
+## Supported applications<a name="saasapps-supported"></a>
 
 AWS SSO has built\-in support for the following commonly used cloud applications\.
 
@@ -78,7 +78,7 @@ AWS Support engineers can assist customers who have Business and Enterprise supp
 | Coralogix | HappyFox | PipeDrive | SproutVideo |  | 
 | Cybozu Garoon | Heap | Pivotal Tracker | Squadcast |  | 
 
-## Add and Configure a Cloud Application<a name="saasapps-addconfigapp"></a>
+## Add and configure a cloud application<a name="saasapps-addconfigapp"></a>
 
 Use this procedure when you need to set up a SAML trust relationship between AWS SSO and your cloud application's service provider\. Before you begin this procedure, make sure you have the service provider's metadata exchange file so that you can more efficiently set up the trust\. If you do not have this file, you can still use this procedure to configure it manually\.
 
@@ -86,7 +86,7 @@ Use this procedure when you need to set up a SAML trust relationship between AWS
 
 1. In the AWS SSO console, choose **Applications** in the left navigation pane\. Then choose **Add a new application**\.
 
-1. In the **Select an application** dialog box, select the application you want to add from the list\. Then choose **Add**\. 
+1. Select the application you want to add from the list\. Then choose **Add application**\. 
 
 1. On the **Configure <application name>** page, under **Details**, enter a **Display name** for the application, such as **Salesforce**\.
 
@@ -98,8 +98,12 @@ Use this procedure when you need to set up a SAML trust relationship between AWS
 **Note**  
 You will need these files later when you set up the cloud application from the service provider's website\. Follow the instructions from that provider\. 
 
-1. \(Optional\) Under **Application properties**, you can specify additional properties for the **Application start URL**, **Relay State**, and **Session Duration**\. For more information, see [Application Properties](appproperties.md)\.
+1. \(Optional\) Under **Application properties**, you can specify additional properties for the **Application start URL**, **Relay state**, and **Session duration**\. For more information, see [Application properties](appproperties.md)\.
 
-1. Under **Application metadata**, provide the **Application ACS URL** and **Application SAML audience** values\.
+1. Under **Application metadata**, do one of the following: 
+
+   1. Next to **AWS SSO SAML metadata****file**, choose **Browse** to find and select the metadata file\.
+
+   1. If you do not have a metadata file, choose the link **If you don't have a metadata file, you can manually type your metadata values\.**, and then provide the **Application ACS URL** and **Application SAML audience** values\.
 
 1. Choose **Save changes** to save the configuration\.

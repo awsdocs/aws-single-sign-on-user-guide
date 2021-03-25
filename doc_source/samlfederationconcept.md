@@ -1,4 +1,4 @@
-# SAML Federation<a name="samlfederationconcept"></a>
+# SAML federation<a name="samlfederationconcept"></a>
 
 AWS SSO supports identity federation with [SAML \(Security Assertion Markup Language\)](https://wiki.oasis-open.org/security) 2\.0\. SAML 2\.0 is an industry standard used for securely exchanging SAML assertions that pass information about a user between a SAML authority \(called an identity provider or IdP\), and a SAML consumer \(called a service provider or SP\)\. AWS SSO service uses this information to provide federated single sign\-on \(SSO\) for those users who are authorized to use applications within the AWS SSO user portal\. 
 

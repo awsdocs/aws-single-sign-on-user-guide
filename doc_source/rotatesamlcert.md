@@ -1,4 +1,4 @@
-# Rotate a SAML 2\.0 Certificate<a name="rotatesamlcert"></a>
+# Rotate a SAML 2\.0 certificate<a name="rotatesamlcert"></a>
 
 You may need to import certificates periodically in order to rotate invalid or expired certificates issued by your identity provider\. This helps to prevent authentication disruption or downtime\. All imported certificates are automatically active\. Certificates should only be deleted after ensuring that they are no longer in use with the associated identity provider\.
 
@@ -44,7 +44,7 @@ Use the following procedure to complete the certificate rotation process for you
 **Note**  
 Make sure that your identity provider is no longer signing SAML responses with this certificate before deleting it\. 
 
-1. On the **Manage SAML 2\.0 certificates** page, select the certificate that you want to delete\. Choose **Delete**\.
+1. On the **Manage SAML 2\.0 certificates** page, choose the certificate that you want to delete\. Choose **Delete**\.
 
 1. In the **Delete SAML 2\.0 certificate** dialog box, type **DELETE** to confirm, and then choose **Delete**\.
 

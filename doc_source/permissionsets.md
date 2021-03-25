@@ -1,3 +1,3 @@
-# Permission Sets<a name="permissionsets"></a>
+# Permission sets<a name="permissionsets"></a>
 
-Permission sets define the level of access that users and groups have to an AWS account\. Permission sets are stored in AWS SSO and provisioned to the AWS account as IAM roles\. You can assign more than one permission set to a user\. Users who have multiple permission sets must choose one when they sign in to the user portal\. \(Users will see these as IAM roles\)\. For more information, see [Permission Sets](permissionsetsconcept.md)\.
+Permission sets define the level of access that users and groups have to an AWS account\. Permission sets are stored in AWS SSO and provisioned to the AWS account as IAM roles\. You can assign more than one permission set to a user\. Users who have multiple permission sets must choose one when they sign in to the user portal\. \(Users will see these as IAM roles\)\. For more information, see [Permission sets](permissionsetsconcept.md)\.

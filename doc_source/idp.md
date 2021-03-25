@@ -1,8 +1,8 @@
-# IAM Identity Provider<a name="idp"></a>
+# IAM identity provider<a name="idp"></a>
 
 When you add SSO access to an AWS account, AWS SSO creates an IAM identity provider in each AWS account\. An IAM identity provider helps keep your AWS account secure because you don't have to distribute or embed long\-term security credentials, such as IAM access keys, in your application\.
 
-## Repair the IAM Identity Provider<a name="repairidp"></a>
+## Repair the IAM identity provider<a name="repairidp"></a>
 
 Use the following procedure to repair your identity provider in case it was deleted or modified\.
 
@@ -16,7 +16,7 @@ Use the following procedure to repair your identity provider in case it was dele
 
 1. On the AWS account details page, under **IAM identity provider**, choose **Repair identity provider**\.
 
-## Remove the IAM Identity Provider<a name="removeidp"></a>
+## Remove the IAM identity provider<a name="removeidp"></a>
 
 Use the following procedure to remove the IAM identity provider from AWS SSO\.
 

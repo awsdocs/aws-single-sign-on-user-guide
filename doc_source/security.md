@@ -9,9 +9,9 @@ Security is a shared responsibility between AWS and you\. The [shared responsibi
 This documentation helps you understand how to apply the shared responsibility model when using AWS SSO\. The following topics show you how to configure AWS SSO to meet your security and compliance objectives\. You also learn how to use other AWS services that help you to monitor and secure your AWS SSO resources\. 
 
 **Topics**
-+ [Identity and Access Management for AWS SSO](iam-auth-access.md)
-+ [AWS SSO Console and API Authorization](security-authorization.md)
-+ [Logging and Monitoring in AWS Single Sign\-On](security-logging-and-monitoring.md)
-+ [Compliance Validation for AWS Single Sign\-On](sso-compliance.md)
++ [Identity and access management for AWS SSO](iam-auth-access.md)
++ [AWS SSO console and API authorization](security-authorization.md)
++ [Logging and monitoring in AWS Single Sign\-On](security-logging-and-monitoring.md)
++ [Compliance validation for AWS Single Sign\-On](sso-compliance.md)
 + [Resilience in AWS Single Sign\-On](disaster-recovery-resiliency.md)
-+ [Infrastructure Security in AWS Single Sign\-On](infrastructure-security.md)
++ [Infrastructure security in AWS Single Sign\-On](infrastructure-security.md)

@@ -1,4 +1,4 @@
-# Add Groups<a name="addgroups"></a>
+# Add groups<a name="addgroups"></a>
 
 Use the following procedure to add groups to your AWS SSO store\.
 

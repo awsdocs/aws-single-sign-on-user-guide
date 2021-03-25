@@ -1,4 +1,4 @@
-# Rotate an AWS SSO Certificate<a name="rotatecert"></a>
+# Rotate an AWS SSO certificate<a name="rotatecert"></a>
 
 Rotating an AWS SSO certificate is a multistep process that involves the following:
 + Generating a new certificate

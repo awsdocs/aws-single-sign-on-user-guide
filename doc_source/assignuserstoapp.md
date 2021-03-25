@@ -1,4 +1,4 @@
-# Assign User Access<a name="assignuserstoapp"></a>
+# Assign user access<a name="assignuserstoapp"></a>
 
 Use the following procedure to assign users SSO access to cloud applications or custom SAML 2\.0 applications\.
 

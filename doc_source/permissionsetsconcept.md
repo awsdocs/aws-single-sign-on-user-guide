@@ -1,10 +1,10 @@
-# Permission Sets<a name="permissionsetsconcept"></a>
+# Permission sets<a name="permissionsetsconcept"></a>
 
 A permission set is a collection of administrator\-defined policies that AWS SSO uses to determine a user's effective permissions to access a given AWS account\. Permission sets can contain either [AWS managed policies](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#aws-managed-policies) or custom policies that are stored in AWS SSO\. Policies are essentially documents that act as containers for one or more permission statements\. These statements represent individual access controls \(allow or deny\) for various tasks that determine what tasks users can or cannot perform within the AWS account\.
 
 Permission sets are stored in AWS SSO and are only used for AWS accounts\. They are not used to manage access to cloud applications\. Permission sets ultimately get created as [IAM roles](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) in a given AWS account, with trust policies that allow users to assume the role through AWS SSO\.
 
-## Delegating Permission Set Administration<a name="permissionsetdelegation"></a>
+## Delegating permission set administration<a name="permissionsetdelegation"></a>
 
 AWS SSO enables you to delegate management of permission sets and assignments in accounts by creating [IAM policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html) that reference the [Amazon Resource Names \(ARNs\)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of AWS SSO resources\. For example, you can create policies that enable different administrators to manage assignments in specified accounts for permission sets with specific tags\.
 

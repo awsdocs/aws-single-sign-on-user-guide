@@ -1,4 +1,4 @@
-# Connect AWS SSO to a Self\-Managed Active Directory<a name="connectonpremad"></a>
+# Connect AWS SSO to a self\-managed Active Directory<a name="connectonpremad"></a>
 
 Users in your self\-managed Active Directory \(AD\) can also have SSO access to AWS accounts and cloud applications in the AWS SSO user portal\. To do that, AWS Directory Service has the following two options available:
 + **Create a two\-way trust relationship** – When two\-way trust relationships are created between AWS Managed Microsoft AD and a self\-managed AD, users in your self\-managed AD can sign in with their corporate credentials to various AWS services and business applications\. One\-way trusts do not work with AWS SSO\. For more information about setting up a two\-way trust, see [When to Create a Trust Relationship](http://docs.aws.amazon.com/directoryservice/latest/admin-guide/setup_trust.html) in the *AWS Directory Service Administration Guide*\.

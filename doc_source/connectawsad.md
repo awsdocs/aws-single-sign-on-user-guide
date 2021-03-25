@@ -1,4 +1,4 @@
-# Connect AWS SSO to an AWS Managed Microsoft AD Directory<a name="connectawsad"></a>
+# Connect AWS SSO to an AWS Managed Microsoft AD directory<a name="connectawsad"></a>
 
 Use the following procedure to connect an AWS Managed Microsoft AD directory that is managed by AWS Directory Service to AWS SSO\. 
 

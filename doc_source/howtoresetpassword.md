@@ -1,4 +1,4 @@
-# How to Reset Your Password<a name="howtoresetpassword"></a>
+# How to reset your password<a name="howtoresetpassword"></a>
 
 From time to time you may need to reset your password, depending on your company policies\. 
 
@@ -8,7 +8,7 @@ From time to time you may need to reset your password, depending on your company
 
 1. Under the **Sign In** button, choose **Forgot Password?**\.
 
-1. Provide your **Username** and type the characters for the provided image to confirm that you are not a robot\. Then choose **Recover Password**\. This sends an email to you with the subject **AWS Directory Service Reset Password Request**\. 
+1. Provide your **Username** and enter the characters for the provided image to confirm that you are not a robot\. Then choose **Recover Password**\. This sends an email to you with the subject **AWS Directory Service Reset Password Request**\. 
 
 1. Once you receive the email, choose **Reset Password**\. 
 

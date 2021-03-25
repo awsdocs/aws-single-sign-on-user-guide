@@ -1,4 +1,4 @@
-# Certificate Expiration Status Indicators<a name="samlcertexpirationindicators"></a>
+# Certificate expiration status indicators<a name="samlcertexpirationindicators"></a>
 
 While on the **Manage SAML 2\.0 certificates** page, you might notice colored status indicator icons\. These icons appear in the **Expires on** column next to each certificate in the list\. The following describes the criteria that AWS SSO uses to determine which icon is displayed for each certificate\.
 + **Red** – Indicates that a certificate is currently expired\.

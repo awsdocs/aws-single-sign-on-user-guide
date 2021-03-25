@@ -1,4 +1,4 @@
-# Tips for Using the Portal<a name="portaltips"></a>
+# Tips for using the portal<a name="portaltips"></a>
 
 Like any business tool or application that you use on a daily basis, the user portal might not work as you expected\. If that happens, try these tips:
 + Occasionally, you may need to sign out and sign back in to the user portal\. This might be necessary to access new applications that your administrator recently assigned to you\. This is not required, however, because all new applications are refreshed every hour\.

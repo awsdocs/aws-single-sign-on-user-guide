@@ -1,4 +1,4 @@
-# How to Sign Out of the User Portal<a name="howtosignout"></a>
+# How to sign out of the user portal<a name="howtosignout"></a>
 
 When you sign out from the portal, your credentials are completely removed from the browser session\. 
 

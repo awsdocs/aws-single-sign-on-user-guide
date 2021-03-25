@@ -1,6 +1,6 @@
-# Change Your Identity Source<a name="manage-your-identity-source-change"></a>
+# Change your identity source<a name="manage-your-identity-source-change"></a>
 
-You can change where you store users at any time\. Use the following procedure to switch from a directory that AWS SSO provides \(the default\) to an external identity provider, AWS Managed Microsoft AD directory or vice versa\. Make sure to review identity source considerations before proceeding\. For more information, see [Considerations for Changing Your Identity Source](manage-your-identity-source-considerations.md)\.
+You can change where you store users at any time\. Use the following procedure to switch from a directory that AWS SSO provides \(the default\) to an external identity provider, AWS Managed Microsoft AD directory or vice versa\. Make sure to review identity source considerations before proceeding\. For more information, see [Considerations for changing your identity source](manage-your-identity-source-considerations.md)\.
 
 **To change your identity source**
 

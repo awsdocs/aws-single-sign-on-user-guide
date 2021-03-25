@@ -1,4 +1,4 @@
-# Delete Permission Sets<a name="howtoremovepermissionset"></a>
+# Delete permission sets<a name="howtoremovepermissionset"></a>
 
 Use this procedure to delete one or more permission sets so that they can no longer be used by any AWS account in the organization\.
 

@@ -1,4 +1,4 @@
-# How to Accept the Invitation to Join AWS SSO<a name="howtoactivateaccount"></a>
+# How to accept the invitation to join AWS SSO<a name="howtoactivateaccount"></a>
 
 If this is your first time signing into the user portal, check your email for instructions on how to activate your account\. 
 

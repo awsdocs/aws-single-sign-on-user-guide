@@ -1,4 +1,4 @@
-# Remove User Access<a name="removeaccessfromapp"></a>
+# Remove user access<a name="removeaccessfromapp"></a>
 
 Use this procedure to remove user access to cloud applications or custom SAML 2\.0 applications\.
 

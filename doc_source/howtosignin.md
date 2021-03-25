@@ -1,4 +1,4 @@
-# How to Sign In to the User Portal<a name="howtosignin"></a>
+# How to sign in to the user portal<a name="howtosignin"></a>
 
 By this time, you should have been provided a specific sign\-in URL to the user portal by an administrator or help desk employee\. Once you have this, you can proceed with the following steps to sign in to the portal\.
 
@@ -15,6 +15,6 @@ Verification codes are typically sent through email, but the delivery method can
 
 1. Once signed in, you can access any AWS account and application that appears in the portal\. Simply choose an icon\. 
 
-## Trusted Devices<a name="howtosignin-trusted-devices"></a>
+## Trusted devices<a name="howtosignin-trusted-devices"></a>
 
-Once you select the option **This is a trusted device** from the sign\-in page, AWS SSO will consider all future sign\-ins from that device as authorized\. This means that AWS SSO will not present an option to enter in an MFA code as long as your are using that trusted device\. However, there are some exceptions\. These include signing in from a new browser, or when your device has been issued an unknown IP address\.
+After you choose the option **This is a trusted device** from the sign\-in page, AWS SSO will consider all future sign\-ins from that device as authorized\. This means that AWS SSO will not present an option to enter in an MFA code as long as you are using that trusted device\. However, there are some exceptions\. These include signing in from a new browser or when your device has been issued an unknown IP address\.

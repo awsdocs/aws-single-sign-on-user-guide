@@ -1,68 +1,298 @@
-# Using Identity\-Based Policies \(IAM Policies\) for AWS SSO<a name="iam-auth-access-using-id-policies"></a>
+# Using identity\-based policies \(IAM policies\) for AWS SSO<a name="iam-auth-access-using-id-policies"></a>
 
-This topic provides examples of permissions policies that an account administrator can attach to IAM identities \(that is, users, groups, and roles\)\. 
+This topic provides examples of permissions policies that an account administrator can attach to AWS identities, including IAM users, groups, and roles, and AWS SSO users \(as part of a custom permissions policy\), for administration of AWS SSO\. 
 
 **Important**  
-We recommend that you first review the introductory topics that explain the basic concepts and options available for you to manage access to your AWS SSO resources\. For more information, see [Overview of Managing Access Permissions to Your AWS SSO Resources](iam-auth-access-overview.md)\.
+We recommend that you first review the introductory topics that explain the basic concepts and options available for you to manage access to your AWS SSO resources\. For more information, see [Overview of managing access permissions to your AWS SSO resources](iam-auth-access-overview.md)\.
 
 The sections in this topic cover the following:
-+ [Permissions Required to Use the AWS SSO Console](#requiredpermissionsconsole)
-+ [AWS Managed \(Predefined\) Policies for AWS SSO](#accesscontrolmanagedpolicies)
++ [AWS managed \(predefined\) policies for AWS SSO](#accesscontrolmanagedpolicies)
++ [Customer managed policy examples](#policyexample)
++ [Permissions required to use the AWS SSO console](#requiredpermissionsconsole)
 
-The following shows an example of a permissions policy\.
+## AWS managed \(predefined\) policies for AWS SSO<a name="accesscontrolmanagedpolicies"></a>
+
+AWS addresses many common use cases by providing standalone IAM policies that are created and administered by AWS\. Managed policies grant necessary permissions for common use cases so you can avoid having to investigate what permissions are needed\. For more information, see [AWS Managed Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#aws-managed-policies) in the *IAM User Guide*\.
+
+If an existing AWS Managed Policy satisfies your requirements, that is the recommended approach to assigning permissions\.
+
+## Customer managed policy examples<a name="policyexample"></a>
+
+In this section, you can find examples of common use cases which require a custom IAM policy\. The example policies below are identity\-based policies, which do not specify the Principal element\. This is because with an identity\-based policy, you don't specify the principal who gets the permission\. Instead, you attach the policy to the principal\. When you attach an identity\-based permission policy to an IAM role, the principal identified in the role's trust policy gets the permissions\. Identity\-based policies can be created in IAM and are attached to users, groups, and/or roles, or can be applied to AWS SSO users as part of a custom permissions policy in an AWS SSO permission set\. 
+
+**Note**  
+Use these examples when crafting policies for your environment and make sure to test for both positive \(“access granted”\) and negative \(“access denied”\) test cases prior to deploying in your production deployment\. For more information about testing IAM policies, see [Testing IAM policies with the IAM policy simulator](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#aws-managed-policies) in the *IAM User Guide*\.
+
+**Topics**
++ [Example 1: Allow a user to view AWS SSO](#policyexamplesetupenable)
++ [Example 2: Allow a user to manage permissions to AWS accounts in AWS SSO](#policyexamplemanageconnecteddirectory)
++ [Example 3: Allow a user to manage applications in AWS SSO](#policyexamplemanageapplication)
++ [Example 4: Allow a user to manage users and groups in your AWS SSO directory](#policyexamplemanageaccount)
+
+### Example 1: Allow a user to view AWS SSO<a name="policyexamplesetupenable"></a>
+
+The following permissions policy grants read\-only permissions to a user so they can view all of the settings and directory information configured within AWS SSO\. 
+
+**Note**  
+This example policy is provided purely for illustrative purposes\. In a production environment, we recommend that you use the AWS Managed Policy for Read\-Only access to AWS SSO\.
+
+```
+ 1. {
+ 2.     "Version": "2012-10-17",
+ 3.     "Statement": [
+ 4.         {
+ 5.             "Sid": "VisualEditor0",
+ 6.             "Effect": "Allow",
+ 7.             "Action": [
+ 8.                 "ds:DescribeDirectories",
+ 9.                 "ds:DescribeTrusts",
+10.                 "iam:ListPolicies",
+11.                 "organizations:DescribeOrganization",
+12.                 "organizations:DescribeAccount",
+13.                 "organizations:ListParents",
+14.                 "organizations:ListChildren",
+15.                 "organizations:ListAccounts",
+16.                 "organizations:ListRoots",
+17.                 "organizations:ListAccountsForParent",
+18.                 "organizations:ListOrganizationalUnitsForParent",
+19.                 "sso:ListManagedPoliciesInPermissionSet",
+20.                 "sso:ListPermissionSetsProvisionedToAccount",
+21.                 "sso:ListAccountAssignments",
+22.                 "sso:ListAccountsForProvisionedPermissionSet",
+23.                 "sso:ListPermissionSetsProvisionedToAccount",
+24.                 "sso:ListPermissionSets",
+25.                 "sso:DescribePermissionSet",
+26.                 "sso:GetInlinePolicyForPermissionSet",
+27.                 "sso-directory:DescribeDirectory",
+28.                 "sso-directory:SearchUsers",
+29.                 "sso-directory:SearchGroups"
+30.             ],
+31.             "Resource": "*"
+32.         }
+33.     ]
+34. }
+```
+
+### Example 2: Allow a user to manage permissions to AWS accounts in AWS SSO<a name="policyexamplemanageconnecteddirectory"></a>
+
+The following permissions policy grants permissions to allow a user to create, manage and deploy permission sets for your AWS accounts\. 
+
+```
+ 1. {
+ 2.     "Version": "2012-10-17",
+ 3.     "Statement": [
+ 4.         {
+ 5.             "Effect": "Allow",
+ 6.             "Action": [
+ 7.                 "sso:AttachManagedPolicyToPermissionSet",
+ 8.                 "sso:CreateAccountAssignment",
+ 9.                 "sso:CreatePermissionSet",
+10.                 "sso:DeleteAccountAssignment",
+11.                 "sso:DeleteInlinePolicyFromPermissionSet",
+12.                 "sso:DeletePermissionSet",
+13.                 "sso:DetachManagedPolicyFromPermissionSet",
+14.                 "sso:ProvisionPermissionSet",
+15.                 "sso:PutInlinePolicyToPermissionSet",
+16.                 "sso:UpdatePermissionSet"
+17.             ],
+18.             "Resource": "*"
+19.         },
+20.         {
+21.             "Sid": "IAMListPermissions",
+22.             "Effect": "Allow",
+23.             "Action": [
+24.                 "iam:ListRoles",
+25.                 "iam:ListPolicies"
+26.             ],
+27.             "Resource": "*"
+28.         },
+29.         {
+30.             "Sid": "AccessToSSOProvisionedRoles",
+31.             "Effect": "Allow",
+32.             "Action": [
+33.                 "iam:AttachRolePolicy",
+34.                 "iam:CreateRole",
+35.                 "iam:DeleteRole",
+36.                 "iam:DeleteRolePolicy",
+37.                 "iam:DetachRolePolicy",
+38.                 "iam:GetRole",
+39.                 "iam:ListAttachedRolePolicies",
+40.                 "iam:ListRolePolicies",
+41.                 "iam:PutRolePolicy",
+42.                 "iam:UpdateRole",
+43.                 "iam:UpdateRoleDescription"
+44.             ],
+45.             "Resource": "arn:aws:iam::*:role/aws-reserved/sso.amazonaws.com/*/AWSReservedSSO*"
+46.         },
+47.         {
+48.             "Effect": "Allow",
+49.             "Action": [
+50.                 "iam:GetSAMLProvider"
+51.             ],
+52.             "Resource": "arn:aws:iam::*:saml-provider/AWSSSO_*_DO_NOT_DELETE"
+53.         }
+54.     ]
+55. }
+```
+
+**Note**  
+The additional permissions listed under the `"Sid": "IAMListPermissions"`, and `"Sid": "AccessToSSOProvisiondRoles"` sections are required only to enable the user to create assignments in the AWS Organizations management account\.
+
+### Example 3: Allow a user to manage applications in AWS SSO<a name="policyexamplemanageapplication"></a>
+
+The following permissions policy grants permissions to allow a user to view and configure applications in AWS SSO, including pre\-integrated SaaS applications from within the AWS SSO catalog\. 
+
+**Note**  
+The `sso:AssociateProfile` operation used in the policy example below is required for management of user and group assignments to applications\. It also allows a user to assign users and groups to AWS accounts, using existing permission sets\. If a user needs to manage AWS account access within AWS SSO, and requires permissions necessary to manage permission sets, see [Example 2: Allow a user to manage permissions to AWS accounts in AWS SSO](#policyexamplemanageconnecteddirectory)\.
+
+As of October 2020, many of these operations are available only through the AWS console\. This example policy includes “read” actions such as list, get, and search, which are relevant to the error\-free operation of the console for this case\.
+
+```
+ 1. {
+ 2.     "Version": "2012-10-17",
+ 3.     "Statement": [
+ 4.         {
+ 5.             "Effect": "Allow",
+ 6.             "Action": [
+ 7.                 "sso:AssociateProfile",
+ 8.                 "sso:CreateApplicationInstance",
+ 9.                 "sso:ImportApplicationInstanceServiceProviderMetadata",
+10.                 "sso:DeleteApplicationInstance",
+11.                 "sso:DeleteProfile",
+12.                 "sso:DisassociateProfile",
+13.                 "sso:GetApplicationTemplate",
+14.                 "sso:UpdateApplicationInstanceServiceProviderConfiguration",
+15.                 "sso:UpdateApplicationInstanceDisplayData",
+16.                 "sso:DeleteManagedApplicationInstance",
+17.                 "sso:UpdateApplicationInstanceStatus",
+18.                 "sso:GetManagedApplicationInstance",
+19.                 "sso:UpdateManagedApplicationInstanceStatus",
+20.                 "sso:CreateManagedApplicationInstance",
+21.                 "sso:UpdateApplicationInstanceSecurityConfiguration",
+22.                 "sso:UpdateApplicationInstanceResponseConfiguration",
+23.                 "sso:GetApplicationInstance",
+24.                 "sso:CreateApplicationInstanceCertificate",
+25.                 "sso:UpdateApplicationInstanceResponseSchemaConfiguration",
+26.                 "sso:UpdateApplicationInstanceActiveCertificate",
+27.                 "sso:DeleteApplicationInstanceCertificate",
+28.                 "sso:ListApplicationInstanceCertificates",
+29.                 "sso:ListApplicationTemplates",
+30.                 "sso:ListApplications",
+31.                 "sso:ListApplicationInstances",
+32.                 "sso:ListDirectoryAssociations",
+33.                 "sso:ListProfiles",
+34.                 "sso:ListProfileAssociations",
+35.                 "sso:ListInstances",
+36.                 "sso:GetProfile",
+37.                 "sso:GetSSOStatus",
+38.                 "sso:GetSsoConfiguration",
+39.                 "sso-directory:DescribeDirectory",
+40.                 "sso-directory:DescribeUsers",
+41.                 "sso-directory:ListMembersInGroup",
+42.                 "sso-directory:SearchGroups",
+43.                 "sso-directory:SearchUsers"
+44.             ],
+45.             "Resource": "*"
+46.         }
+47.     ]
+48. }
+```
+
+### Example 4: Allow a user to manage users and groups in your AWS SSO directory<a name="policyexamplemanageaccount"></a>
+
+The following permissions policy grants permissions to allow a user to create, view, modify, and delete users and groups in AWS SSO\. 
+
+Note that in some cases direct modifications to users and groups in AWS SSO are restricted\. For example, when Active Directory, or an external identity provider with Automatic Provisioning enabled, is selected as the identity source\.
+
+```
+ 1. {
+ 2.     "Version": "2012-10-17",
+ 3.     "Statement": [
+ 4.         {
+ 5.             "Sid": "VisualEditor0",
+ 6.             "Effect": "Allow",
+ 7.             "Action": [
+ 8.                 "sso-directory:ListGroupsForUser",
+ 9.                 "sso-directory:DisableUser",
+10.                 "sso-directory:EnableUser",
+11.                 "sso-directory:SearchGroups",
+12.                 "sso-directory:DeleteGroup",
+13.                 "sso-directory:AddMemberToGroup",
+14.                 "sso-directory:DescribeDirectory",
+15.                 "sso-directory:UpdateUser",
+16.                 "sso-directory:ListMembersInGroup",
+17.                 "sso-directory:CreateUser",
+18.                 "sso-directory:DescribeGroups",
+19.                 "sso-directory:SearchUsers",
+20.                 "sso:ListDirectoryAssociations",
+21.                 "sso-directory:RemoveMemberFromGroup",
+22.                 "sso-directory:DeleteUser",
+23.                 "sso-directory:DescribeUsers",
+24.                 "sso-directory:UpdateGroup",
+25.                 "sso-directory:CreateGroup"
+26.             ],
+27.             "Resource": "*"
+28.         }
+29.     ]
+30. }
+```
+
+## Permissions required to use the AWS SSO console<a name="requiredpermissionsconsole"></a>
+
+For a user to work with the AWS SSO console without errors, additional permissions are required\. If you create an IAM policy that is more restrictive than the minimum required permissions, the console won't function as intended for users with that IAM policy\. The following example lists the set of permissions that may be needed to ensure error\-free operation within the AWS SSO console\.
 
 ```
 {
-  "Version" : "2012-10-17",
-  "Statement" : [
-    {
-      "Action" : [
-        "sso:CreateApplicationInstance",
-        "sso:UpdateResponseConfig",
-        "sso:UpdateResponseSchemaConfig",
-        "sso:UpdateSecurityConfig",
-        "sso:UpdateServiceProviderConfig",
-        "sso:UpdateApplicationInstanceStatus",
-        "sso:UpdateApplicationInstanceDisplay",
-        "sso:CreateProfile",
-        "sso:SetupTrust"
-      ],
-      "Effect" : "Allow",
-      "Resource" : "*"
-    },
-    
-    {
-      "Action" : [
-        "organizations:xxx", 
-        "organizations:yyy"
-       ],
-      "Effect" : "Allow",
-      "Resource" : "*"
-    },
-    
-    {
-      "Action" : [
-        "ds:AuthorizeApplication"
-      ],
-      "Effect" : "Allow",
-      "Resource" : "*"
-    }
-  ]
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "sso:DescribeAccountAssignmentCreationStatus",
+                "sso:DescribeAccountAssignmentDeletionStatus",
+                "sso:DescribePermissionSet",
+                "sso:DescribePermissionSetProvisioningStatus",
+                "sso:DescribePermissionsPolicies",
+                "sso:DescribeRegisteredRegions",
+                "sso:GetApplicationInstance",
+                "sso:GetApplicationTemplate",
+                "sso:GetInlinePolicyForPermissionSet",
+                "sso:GetManagedApplicationInstance",
+                "sso:GetMfaDeviceManagementForDirectory",
+                "sso:GetPermissionSet",
+                "sso:GetPermissionsPolicy",
+                "sso:GetProfile",
+                "sso:GetSharedSsoConfiguration",
+                "sso:GetSsoConfiguration",
+                "sso:GetSSOStatus",
+                "sso:GetTrust",
+                "sso:ListAccountAssignmentCreationStatus",
+                "sso:ListAccountAssignmentDeletionStatus",
+                "sso:ListAccountAssignments",
+                "sso:ListAccountsForProvisionedPermissionSet",
+                "sso:ListApplicationInstanceCertificates",
+                "sso:ListApplicationInstances",
+                "sso:ListApplications",
+                "sso:ListApplicationTemplates",
+                "sso:ListDirectoryAssociations",
+                "sso:ListInstances",
+                "sso:ListManagedPoliciesInPermissionSet",
+                "sso:ListPermissionSetProvisioningStatus",
+                "sso:ListPermissionSets",
+                "sso:ListPermissionSetsProvisionedToAccount",
+                "sso:ListProfileAssociations",
+                "sso:ListProfiles",
+                "sso:ListTagsForResource",
+                "sso-directory:DescribeDirectory",
+                "sso-directory:DescribeGroups",
+                "sso-directory:DescribeUsers",
+                "sso-directory:ListGroupsForUser",
+                "sso-directory:ListMembersInGroup",
+                "sso-directory:SearchGroups",
+                "sso-directory:SearchUsers",
+            ],
+            "Resource": "*"
+        }
+    ]
 }
 ```
-
-The policy includes the following:
-+ The first statement grants permission to manage profile associations to users and groups within your directory\. It also grants permission to read all of the AWS SSO resources\.
-+ The second statement grants permissions to search the directory for users and groups\. This is required before you can create profile associations\. 
-
-The policy doesn't specify the `Principal` element because in an identity\-based policy you don't specify the principal who gets the permission\. When you attach a policy to a user, the user is the implicit principal\. When you attach a permission policy to an IAM role, the principal identified in the role's trust policy gets the permissions\.
-
-## Permissions Required to Use the AWS SSO Console<a name="requiredpermissionsconsole"></a>
-
-For a user to work with the AWS SSO console, that user must have permissions listed in the preceding policy\.
-
-If you create an IAM policy that is more restrictive than the minimum required permissions, the console won't function as intended for users with that IAM policy\. 
-
-## AWS Managed \(Predefined\) Policies for AWS SSO<a name="accesscontrolmanagedpolicies"></a>
-
-AWS addresses many common use cases by providing standalone IAM policies that are created and administered by AWS\. Managed policies grant necessary permissions for common use cases so you can avoid having to investigate what permissions are needed\. For more information, see [AWS Managed Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#aws-managed-policies) in the *IAM User Guide*\.

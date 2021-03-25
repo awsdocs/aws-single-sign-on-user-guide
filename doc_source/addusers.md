@@ -1,4 +1,4 @@
-# Add Users<a name="addusers"></a>
+# Add users<a name="addusers"></a>
 
 Users and groups that you create in your AWS SSO store are available in AWS SSO only\. Use the following procedure to add users to your AWS SSO store\. 
 
@@ -18,11 +18,11 @@ Users and groups that you create in your AWS SSO store are available in AWS SSO 
 
       1. **Generate a one\-time password that you can share with the user** – This option provides you with the user portal URL and password details that you can manually send to the user from your email address\.
 
-   1. **Email address**
+   1. **Email address** – The value you provide here must be unique\.
 
    1. **Confirm email address**
 
-   1. **First name** – You must enter a name here for automatic provisioning to work\. For more information, see [Automatic Provisioning](provision-automatically.md)\.
+   1. **First name** – You must enter a name here for automatic provisioning to work\. For more information, see [Automatic provisioning](provision-automatically.md)\.
 
    1. **Last name** – You must enter a name here for automatic provisioning to work\.
 

@@ -1,4 +1,4 @@
-# Certificate Expiration Status Indicators<a name="certexpirationindicators"></a>
+# Certificate expiration status indicators<a name="certexpirationindicators"></a>
 
 While on the **Applications** page in the properties of an application, you may notice colored status indicator icons\. These icons appear in the **Expires on** column next to each certificate in the list\. The following describes the criteria that AWS SSO uses to determine which icon is displayed for each certificate\.
 + **Red** – Indicates that a certificate is currently expired\.
