@@ -14,4 +14,6 @@ Contact your administrator or help desk to request additional access in the foll
 + [How to search for an AWS account or application](howtosearchforapp.md)
 + [How to reset your password](howtoresetpassword.md)
 + [How to get credentials of an IAM role for use with CLI access to an AWS account](howtogetcredentials.md)
++ [How to bookmark an IAM role for quick access to your management console](howtobookmark.md)
 + [How to register a device for use with multi\-factor authentication](user-device-registration.md)
++ [How to customize the user portal URL](howtochangeURL.md)

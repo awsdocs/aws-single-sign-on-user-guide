@@ -31,8 +31,6 @@ The AWS SSO console supports selecting up to 10 AWS accounts at a time per permi
 1. On the **Select permission sets** page, select the permission sets that you want to apply to the users or groups from the table\. Then choose **Finish**\. You can optionally choose to **Create a new permission set** if none of the permissions in the table meets your needs\. For detailed instructions, see [Create a permission set](howtocreatepermissionset.md)\. 
 
 1. Choose **Finish** to begin the process of configuring your AWS account\.
-**Note**  
-If this is the first time you have assigned SSO access to this AWS account, this process creates a service\-linked role in the account\. For more information, see [Using service\-linked roles for AWS SSO](using-service-linked-roles.md)\.
 **Important**  
 The user assignment process may take a few minutes to complete\. It is important that you leave this page open until the process successfully completes\.
 **Note**  

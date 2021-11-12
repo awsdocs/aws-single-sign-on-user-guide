@@ -8,9 +8,9 @@ Use the following procedure to determine whether your users must have a register
 
 1. In the left navigation pane, choose **Settings**\.
 
-1. On the **Settings** page, choose **Configure**\.
+1. On the **Settings** page, under **Multi\-factor authentication**, choose **Configure**\.
 
-1. On the **Multi\-factor authentication \(MFA\)** page, under **If a user does not yet have a registered MFA device** choose one of the following choices based on your business needs:
+1. On the **Configure multi\-factor authentication** page, under **If a user does not yet have a registered MFA device** choose one of the following choices based on your business needs:
    + **Require them to register an MFA device at sign in**
 
      Use this option when you want to require users who do not yet have a registered MFA device, to self\-enroll a device during sign\-in following a successful password authentication\. This allows you to secure your organization’s AWS environments with MFA without having to individually enroll and distribute authentication devices to your users\. During self\-enrollment, your users can register any device from the available [MFA types](mfa-types.md) you've previously enabled\. After completing registration, users have the option to give their newly enrolled MFA device a friendly name, after which AWS SSO redirects the user to their original destination\. If the user’s device is lost or stolen, you can simply remove that device from their account, and AWS SSO will require them to self\-enroll a new device during their next sign\-in\.

@@ -7,7 +7,7 @@ We recommend that you first download the appropriate Authenticator app onto your
 
 **To register your device for use with MFA**
 
-1. Go to your user portal\.
+1. Sign in to your user portal\. For more information, see [How to sign in to the user portal](howtosignin.md)\.
 
 1. Near the top\-right of the page, choose **MFA devices**\.
 

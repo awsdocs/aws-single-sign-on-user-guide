@@ -9,7 +9,7 @@ When end\-users federate into their AWS Account’s console or when using the AW
 **Important**  
 As a security best practice, we recommend that you do not set the session duration length longer than is needed to perform the role\.
 
-Once a permission set has been created, you can later update it to apply a new session duration\. When you reapply the permission set to your AWS accounts, the IAM role’s maximum session duration value is updated\. Use the following procedure to modify the session duration length for a given permission set\.
+Once a permission set has been created, you can later update it to apply a new session duration\. Use the following procedure to modify the session duration length for a given permission set\.
 
 **To set the session duration**
 

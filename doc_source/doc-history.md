@@ -1,10 +1,11 @@
 # Document history<a name="doc-history"></a>
 
 The following table describes the documentation for this release of AWS Single Sign\-On\.
-+ **Latest documentation update: **December 21, 2020
++ **Latest documentation update: **August 4, 2021
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [New AWS managed policy topic](https://docs.aws.amazon.com/singlesignon/latest/userguide/security-iam-awsmanpol.html) | Added details for the `AWSSSOMasterAccountAdministrator` managed policy\. | August 4, 2021 | 
 | [Updates for quotas](https://docs.aws.amazon.com/singlesignon/latest/userguide/limits.html) | Adjustments to quota tables\. | December 21, 2020 | 
 | [New example policies](https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html) | Added new customer managed policy examples and updates to the permissions required section\. | December 21, 2020 | 
 | [Support for attribute\-based access control \(ABAC\)](https://docs.aws.amazon.com/singlesignon/latest/userguide/abac.html) | Added content for ABAC feature\. | November 24, 2020 | 

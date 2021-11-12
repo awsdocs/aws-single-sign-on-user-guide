@@ -7,7 +7,7 @@ SSO Instances created before October 15th 2020 will honor both old and new API a
 
 ****  
 
-| Operation name | API actions used before october 15th, 2020 | API actions used after october 15th, 2020 | 
+| Operation name | API actions used before October 15th, 2020 | API actions used after October 15th, 2020 | 
 | --- | --- | --- | 
 | AssociateProfile | AssociateProfile | CreateAccountAssignment | 
 | AttachManagedPolicy | PutPermissionsPolicy | AttachManagedPolicyToPermissionSet | 

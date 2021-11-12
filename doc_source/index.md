@@ -1,7 +1,7 @@
 # AWS Single Sign-On User Guide
 
 -----
-*****Copyright &copy;  Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -39,7 +39,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Edit user properties](edituser.md)
       + [Disable a user](disableuser.md)
       + [Reset a user password](resetuserpwd.md)
-      + [Password requirements for the AWS SSO identity store](password-requirements.md)
+      + [Password requirements when managing identities in AWS SSO](password-requirements.md)
       + [Supported user and group attributes](supported-attributes.md)
       + [Using predefined attributes from the AWS SSO identity store for access control in AWS](using-predefined-attributes.md)
    + [Connect to your Microsoft AD directory](manage-your-identity-source-ad.md)
@@ -56,6 +56,8 @@ Amazon's trademarks and trade dress may not be used in
             + [Certificate expiration status indicators](samlcertexpirationindicators.md)
       + [Supported identity providers](supported-idps.md)
          + [Azure AD](azure-ad-idp.md)
+         + [CyberArk](cyberark-idp.md)
+         + [JumpCloud](jumpcloud-idp.md)
          + [Okta](okta-idp.md)
          + [OneLogin](onelogin-idp.md)
          + [Ping Identity](pingidentity.md)
@@ -97,7 +99,9 @@ Amazon's trademarks and trade dress may not be used in
    + [How to search for an AWS account or application](howtosearchforapp.md)
    + [How to reset your password](howtoresetpassword.md)
    + [How to get credentials of an IAM role for use with CLI access to an AWS account](howtogetcredentials.md)
+   + [How to bookmark an IAM role for quick access to your management console](howtobookmark.md)
    + [How to register a device for use with multi-factor authentication](user-device-registration.md)
+   + [How to customize the user portal URL](howtochangeURL.md)
 + [Multi-factor authentication](enable-mfa.md)
    + [Getting started](mfa-getting-started.md)
       + [Considerations before using MFA in AWS SSO](mfa-considerations.md)
@@ -116,7 +120,8 @@ Amazon's trademarks and trade dress may not be used in
 + [Security in AWS Single Sign-On](security.md)
    + [Identity and access management for AWS SSO](iam-auth-access.md)
       + [Overview of managing access permissions to your AWS SSO resources](iam-auth-access-overview.md)
-      + [Using identity-based policies (IAM policies) for AWS SSO](iam-auth-access-using-id-policies.md)
+      + [Identity-based policy examples for AWS SSO](iam-auth-access-using-id-policies.md)
+      + [AWS managed policies for AWS Single Sign-On](security-iam-awsmanpol.md)
       + [Using service-linked roles for AWS SSO](using-service-linked-roles.md)
    + [AWS SSO console and API authorization](security-authorization.md)
    + [Logging and monitoring in AWS Single Sign-On](security-logging-and-monitoring.md)

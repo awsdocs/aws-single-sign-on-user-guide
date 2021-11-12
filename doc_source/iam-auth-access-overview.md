@@ -67,7 +67,7 @@ The following permissions policy grants permissions to a user to run all of the 
 10. }
 ```
 
-For more information about using identity\-based policies with AWS SSO, see [Using identity\-based policies \(IAM policies\) for AWS SSO](iam-auth-access-using-id-policies.md)\. For more information about users, groups, roles, and permissions, see [Identities \(users, groups, and roles\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id.html) in the *IAM User Guide*\. 
+For more information about using identity\-based policies with AWS SSO, see [Identity\-based policy examples for AWS SSO](iam-auth-access-using-id-policies.md)\. For more information about users, groups, roles, and permissions, see [Identities \(users, groups, and roles\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id.html) in the *IAM User Guide*\. 
 
 ### Resource\-based policies<a name="accesscontrolresourcebased"></a>
 

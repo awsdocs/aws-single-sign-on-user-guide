@@ -4,6 +4,8 @@ The following external identity providers have been tested with the AWS SSO SCIM
 
 **Topics**
 + [Azure AD](azure-ad-idp.md)
++ [CyberArk](cyberark-idp.md)
++ [JumpCloud](jumpcloud-idp.md)
 + [Okta](okta-idp.md)
 + [OneLogin](onelogin-idp.md)
 + [Ping Identity](pingidentity.md)

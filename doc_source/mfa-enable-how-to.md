@@ -2,6 +2,9 @@
 
 Use the following steps to enable MFA using the AWS SSO console\. Before you enable MFA, we recommend that you first review details about [MFA types](mfa-types.md)\.
 
+**Note**  
+If you’re using an external IdP, you will not see the **Multi\-factor authentication** section\. The external IdP manages MFA settings rather than AWS SSO managing them\.
+
 **To enable MFA**
 
 1. Open the [AWS SSO console](https://console.aws.amazon.com/singlesignon)\.
@@ -10,7 +13,7 @@ Use the following steps to enable MFA using the AWS SSO console\. Before you ena
 
 1. On the **Settings** page, under **Multi\-factor authentication**, choose **Configure**\.
 
-1. On the **Multi\-factor authentication \(MFA\)** page, choose one of the following authentication modes based on the level of security that your business needs:
+1. On the **Configure multi\-factor authentication** page, choose one of the following authentication modes based on the level of security that your business needs:
    + **Only when their sign\-in context changes \(context\-aware\)**
 
      In this mode \(the default\), AWS SSO analyzes the sign\-in context \(browser, location, and devices\) for each user\. AWS SSO then determines whether the user is signing in with a previously trusted context\. If a user is signing in from an unknown IP address or is using an unknown device, AWS SSO prompts the user for MFA\. This prompt comes in addition to their email address and password credentials\.

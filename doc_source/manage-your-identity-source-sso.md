@@ -1,6 +1,4 @@
 # Manage identities in AWS SSO<a name="manage-your-identity-source-sso"></a>
-
-AWS Single Sign\-On provides you with a default store where you can store your users and groups\. If you choose to store them in AWS SSO, all you need to do is the following:
 + Create your users and groups\.
 + Add your users as members to the groups\. 
 + Assign the groups with the desired level of access to your AWS accounts and applications\. 
@@ -24,6 +22,6 @@ When you create users and groups directly in AWS SSO, provisioning is automatic\
 + [Edit user properties](edituser.md)
 + [Disable a user](disableuser.md)
 + [Reset a user password](resetuserpwd.md)
-+ [Password requirements for the AWS SSO identity store](password-requirements.md)
++ [Password requirements when managing identities in AWS SSO](password-requirements.md)
 + [Supported user and group attributes](supported-attributes.md)
 + [Using predefined attributes from the AWS SSO identity store for access control in AWS](using-predefined-attributes.md)

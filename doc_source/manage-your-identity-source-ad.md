@@ -6,8 +6,9 @@ AWS Directory Service helps you to set up and run a standalone AWS Managed Micro
 
 AWS SSO uses the connection provided by AWS Directory Service to perform pass\-through authentication to the source AD instance, leveraging the Kerberos protocol\. When you use AWS Managed Microsoft AD as your identity source, AWS SSO can work with users from AWS Managed Microsoft AD or from any domain connected through an AD trust\. If you want to locate your users in four or more domains, users must use the `DOMAIN\user` syntax as their user name when performing sign\-ins to AWS SSO\.
 
-**Note**  
-AWS SSO does not support SAMBA4\-based Simple AD as a connected directory\.
+**Notes**  
+As a prerequisite step, make sure your AD Connector or AWS Managed Microsoft AD directory in AWS Directory Service resides within your AWS Organizations management account\. For more information, see [AWS SSO prerequisites](prereqs.md)\.
+AWS SSO does not support SAMBA 4\-based Simple AD as a connected directory\.
 
 ## Provisioning when users come from Active Directory<a name="provision-users-from-ad"></a>
 

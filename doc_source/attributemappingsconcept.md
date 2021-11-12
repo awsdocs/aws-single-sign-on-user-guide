@@ -46,8 +46,6 @@ The following table lists all AWS SSO attributes that are supported and that can
 | $\{user:name\} | 
 | $\{user:preferredUsername\} | 
 | $\{user:subject\} | 
-| $\{user:groups\} | 
-
 
 ## Supported external identity provider attributes<a name="supportedidpattributes"></a>
 

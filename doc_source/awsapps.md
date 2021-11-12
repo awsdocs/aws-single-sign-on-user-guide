@@ -12,6 +12,18 @@ To use AWS SSO\-integrated applications, you must first enable AWS SSO to allow 
 
 After they are enabled, integrated applications can access user and group information directly from AWS SSO\. As a result, you won’t have to manage access in both AWS SSO and then again inside the application\. Instead, AWS SSO delegates application access to the application administrator\. To add users to integrated applications, use the console of the application where you created the application\.
 
+**To add and configure your application**
+
+1. In the AWS SSO console, choose **Applications** in the left navigation pane\.
+
+1. Choose **Add a new application**\.
+
+1. Select the application in the list\.
+
+1. Fill out the **Details**, **AWS SSO metadata**, **Application properties**, and **Application metadata**\.
+
+1. Choose **Save changes**\.
+
 ## Disable or enable an AWS SSO\-integrated application<a name="awsapps-disable-enable"></a>
 
 If you only want to stop or restart user authentications to your application, use the following procedure to either disable or enable your application\.

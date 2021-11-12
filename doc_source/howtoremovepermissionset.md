@@ -1,6 +1,6 @@
 # Delete permission sets<a name="howtoremovepermissionset"></a>
 
-Use this procedure to delete one or more permission sets so that they can no longer be used by any AWS account in the organization\.
+Use this procedure to delete one or more permission sets so that they can no longer be used by any AWS account in the organization\. You must remove permission set\(s\) from the provisioned AWS accounts before deleting them from AWS SSO\.
 
 **Note**  
 All users and groups that have been assigned this permission set, regardless of what AWS account is using it, will no longer be able to sign in\.

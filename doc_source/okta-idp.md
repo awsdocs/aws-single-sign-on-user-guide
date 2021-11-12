@@ -105,7 +105,11 @@ After you complete this step and the first synchronization with SCIM is complete
 
 1. Choose the Okta group or groups that you want to assign access to the AWS Single Sign\-On app\. Choose **Assign**, choose **Save and Go Back**, and then choose **Done**\. This starts the process of provisioning the users in the group into AWS SSO\.
 
-1. Choose the **Push Groups** tab, choose the Okta group or groups that you chose in the previous step\. Then choose **Save**\. The group status changes to **Active** after the group and its members have successfully been pushed to AWS SSO\.
+1. Choose the **Push Groups** tab\. Choose the Okta group or groups that you chose in the previous step\.
+**Note**  
+These chosen groups must be different from those assigned to the application\. To maintain consistent group memberships between Okta and AWS SSO, you need to create a separate group and configure it to push groups to AWS SSO\. 
+
+   Then choose **Save**\. The group status changes to **Active** after the group and its members have successfully been pushed to AWS SSO\.
 
 To grant your Okta users access to AWS accounts and cloud applications, complete the following applicable procedures from the AWS SSO console:
 + To grant access to AWS accounts, see [Assign user access](useraccess.md#assignusers)\.
@@ -172,4 +176,6 @@ Automatic profile push of <user> to app AWS Single Sign-On failed: Error while t
 
 For SCIM synchronization to work:
 + Every user must have a **First name**, **Last name**, **Username**, and **Display name** value specified\. If any of these values are missing from a user, that user will not be provisioned\.
++ Usernames should be mapped to attributes that are unique within your directory in Okta\.
++ The following special characters must not be used in attributes that are synchronized with SCIM: `<>;:%`
 + If you update a user’s address you must have **streetAddress**, **city**, **state**, **zipCode** and the **countryCode** value specified\. If any of these values are not specified for the Okta user at the time of synchronization, the user or changes to the user will not be provisioned\.

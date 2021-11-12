@@ -8,9 +8,9 @@ Use the following procedure to allow your users to self\-register their own MFA 
 
 1. In the left navigation pane, choose **Settings**\.
 
-1. On the **Settings** page, choose **Configure**\.
+1. On the **Settings** page, under **Multi\-factor authentication**, choose **Configure**\.
 
-1. On the **Multi\-factor authentication \(MFA\) settings** page, under **Who can manage MFA devices**, choose **Users can self manage and add MFA devices**\.
+1. On the **Configure multi\-factor authentication** page, under **Who can manage MFA devices**, choose **Users can add and manage their own MFA devices**\.
 
 1. Choose **Save changes**\.
 

@@ -1,4 +1,4 @@
-# Using identity\-based policies \(IAM policies\) for AWS SSO<a name="iam-auth-access-using-id-policies"></a>
+# Identity\-based policy examples for AWS SSO<a name="iam-auth-access-using-id-policies"></a>
 
 This topic provides examples of permissions policies that an account administrator can attach to AWS identities, including IAM users, groups, and roles, and AWS SSO users \(as part of a custom permissions policy\), for administration of AWS SSO\. 
 
@@ -6,15 +6,8 @@ This topic provides examples of permissions policies that an account administrat
 We recommend that you first review the introductory topics that explain the basic concepts and options available for you to manage access to your AWS SSO resources\. For more information, see [Overview of managing access permissions to your AWS SSO resources](iam-auth-access-overview.md)\.
 
 The sections in this topic cover the following:
-+ [AWS managed \(predefined\) policies for AWS SSO](#accesscontrolmanagedpolicies)
 + [Customer managed policy examples](#policyexample)
 + [Permissions required to use the AWS SSO console](#requiredpermissionsconsole)
-
-## AWS managed \(predefined\) policies for AWS SSO<a name="accesscontrolmanagedpolicies"></a>
-
-AWS addresses many common use cases by providing standalone IAM policies that are created and administered by AWS\. Managed policies grant necessary permissions for common use cases so you can avoid having to investigate what permissions are needed\. For more information, see [AWS Managed Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#aws-managed-policies) in the *IAM User Guide*\.
-
-If an existing AWS Managed Policy satisfies your requirements, that is the recommended approach to assigning permissions\.
 
 ## Customer managed policy examples<a name="policyexample"></a>
 
@@ -28,6 +21,7 @@ Use these examples when crafting policies for your environment and make sure to 
 + [Example 2: Allow a user to manage permissions to AWS accounts in AWS SSO](#policyexamplemanageconnecteddirectory)
 + [Example 3: Allow a user to manage applications in AWS SSO](#policyexamplemanageapplication)
 + [Example 4: Allow a user to manage users and groups in your AWS SSO directory](#policyexamplemanageaccount)
++ [Example 5: Allow a user to administer AWS SSO for specific permission sets, accounts, or OUs](#policyexamplemanageaccount)
 
 ### Example 1: Allow a user to view AWS SSO<a name="policyexamplesetupenable"></a>
 
@@ -122,7 +116,7 @@ The following permissions policy grants permissions to allow a user to create, m
 42.                 "iam:UpdateRole",
 43.                 "iam:UpdateRoleDescription"
 44.             ],
-45.             "Resource": "arn:aws:iam::*:role/aws-reserved/sso.amazonaws.com/*/AWSReservedSSO*"
+45.             "Resource": "arn:aws:iam::*:role/aws-reserved/sso.amazonaws.com/*"
 46.         },
 47.         {
 48.             "Effect": "Allow",
@@ -237,9 +231,148 @@ Note that in some cases direct modifications to users and groups in AWS SSO are 
 30. }
 ```
 
+### Example 5: Allow a user to administer AWS SSO for specific permission sets, accounts, or OUs<a name="policyexamplemanageaccount"></a>
+
+As your team grows, an AWS SSO administrator may want to consider implementing a delegation model that enables AWS account and application administrators to manage their users SSO access to their resources\. Using this model and the example policies below, permissions can be delegated for administering AWS accounts, permission sets, or OUs\. Once any of these policies have been created, that same policy can be selected anytime the same permissions need to be delegated to other administrative users\.
+
+**Account\-based delegation**
+
+The following policy grants permissions that allow an administrator to delegate access for each of the AWS accounts noted under `Resource`\.
+
+```
+ 1. {
+ 2.    "Sid":"DelegateAccountsAdminAccess",
+ 3.    "Effect":"Allow",
+ 4.    "Action":[
+ 5.       "sso:ProvisionPermissionSet",
+ 6.       "sso:CreateAccountAssignment",
+ 7.       "sso:DeleteInlinePolicyFromPermissionSet",
+ 8.       "sso:UpdateInstanceAccessControlAttributeConfiguration",
+ 9.       "sso:PutInlinePolicyToPermissionSet",
+10.       "sso:DeleteAccountAssignment",
+11.       "sso:DetachManagedPolicyFromPermissionSet",
+12.       "sso:DeletePermissionSet",
+13.       "sso:AttachManagedPolicyToPermissionSet",
+14.       "sso:CreatePermissionSet",
+15.       "sso:UpdatePermissionSet",
+16.       "sso:CreateInstanceAccessControlAttributeConfiguration",
+17.       "sso:DeleteInstanceAccessControlAttributeConfiguration"
+18.    ],
+19.    "Resource":[
+20.       "arn:aws:sso:::account/112233445566",
+21.       "arn:aws:sso:::account/223344556677",
+22.       "arn:aws:sso:::account/334455667788"
+23.    ]
+24. }
+```
+
+**Permission\-based delegation**
+
+The following permissions policy grants permissions that allow an administrator to delegate access for a given AWS SSO instance ID ARN \(in this case, `ssoins-1111111111`\) or permission set ARN \(`ssoins-1111111111/ps-112233abcdef123`\)\.
+
+For more information about finding the ARNs associated with an AWS SSO instance ID or permission set, see [Identify your permission set and AWS SSO Instance IDs](https://aws.amazon.com/blogs/security/how-to-delegate-management-of-identity-in-aws-single-sign-on/#Identify) on the AWS Security blog\.
+
+```
+ 1. {
+ 2.    "Sid":"DelegatePermissionsAdminAccess",
+ 3.    "Effect":"Allow",
+ 4.    "Action":[
+ 5.       "sso:ProvisionPermissionSet",
+ 6.       "sso:CreateAccountAssignment",
+ 7.       "sso:DeleteInlinePolicyFromPermissionSet",
+ 8.       "sso:UpdateInstanceAccessControlAttributeConfiguration",
+ 9.       "sso:PutInlinePolicyToPermissionSet",
+10.       "sso:DeleteAccountAssignment",
+11.       "sso:DetachManagedPolicyFromPermissionSet",
+12.       "sso:DeletePermissionSet",
+13.       "sso:AttachManagedPolicyToPermissionSet",
+14.       "sso:CreatePermissionSet",
+15.       "sso:UpdatePermissionSet",
+16.       "sso:CreateInstanceAccessControlAttributeConfiguration",
+17.       "sso:DeleteInstanceAccessControlAttributeConfiguration",
+18.       "sso:ProvisionApplicationInstanceForAWSAccount"
+19.    ],
+20.    "Resource":[
+21.       "arn:aws:sso:::instance/ssoins-1111111111",
+22.       "arn:aws:sso:::permissionSet/ssoins-1111111111/ps-112233abcdef123"
+23.    ]
+24. }
+```
+
+**OU\-based delegation**
+
+OU\-based delegation requires two policy statements within the same permission set and the ability for [Tagging AWS Single Sign\-On resources](tagging.md)\. 
+
+The following permissions policy grants permissions that allow an administrator to delegate access for an OU\. In the first policy statement, we filter the permission sets by both the `Environment` and `OU` tags\. In the second policy statement, we filter the accounts that are tagged for the `Development` OU\. 
+
+```
+ 1. {
+ 2.    "Version":"2012-10-17",
+ 3.    "Statement":[
+ 4.       {
+ 5.          "Sid":"DelegateOUsAdminAccess",
+ 6.          "Effect":"Allow",
+ 7.          "Action":[
+ 8.             "sso:ProvisionPermissionSet",
+ 9.             "sso:CreateAccountAssignment",
+10.             "sso:DeleteInlinePolicyFromPermissionSet",
+11.             "sso:UpdateInstanceAccessControlAttributeConfiguration",
+12.             "sso:PutInlinePolicyToPermissionSet",
+13.             "sso:DeleteAccountAssignment",
+14.             "sso:DetachManagedPolicyFromPermissionSet",
+15.             "sso:DeletePermissionSet",
+16.             "sso:AttachManagedPolicyToPermissionSet",
+17.             "sso:CreatePermissionSet",
+18.             "sso:UpdatePermissionSet",
+19.             "sso:CreateInstanceAccessControlAttributeConfiguration",
+20.             "sso:DeleteInstanceAccessControlAttributeConfiguration",
+21.             "sso:ProvisionApplicationInstanceForAWSAccount"
+22.          ],
+23.          "Resource":"arn:aws:sso:::permissionSet/*/*",
+24.          "Condition":{
+25.             "StringEquals":{
+26.                "aws:ResourceTag/Environment":"Development",
+27.                "aws:ResourceTag/OU":"Test"
+28.             }
+29.          }
+30.       },
+31.       {
+32.          "Sid":"Instance",
+33.          "Effect":"Allow",
+34.          "Action":[
+35.             "sso:ProvisionPermissionSet",
+36.             "sso:CreateAccountAssignment",
+37.             "sso:DeleteInlinePolicyFromPermissionSet",
+38.             "sso:UpdateInstanceAccessControlAttributeConfiguration",
+39.             "sso:PutInlinePolicyToPermissionSet",
+40.             "sso:DeleteAccountAssignment",
+41.             "sso:DetachManagedPolicyFromPermissionSet",
+42.             "sso:DeletePermissionSet",
+43.             "sso:AttachManagedPolicyToPermissionSet",
+44.             "sso:CreatePermissionSet",
+45.             "sso:UpdatePermissionSet",
+46.             "sso:CreateInstanceAccessControlAttributeConfiguration",
+47.             "sso:DeleteInstanceAccessControlAttributeConfiguration",
+48.             "sso:ProvisionApplicationInstanceForAWSAccount"
+49.          ],
+50.          "Resource":[
+51.             "arn:aws:sso:::instance/ssoins-82593a6ed92c8920",
+52.             "arn:aws:sso:::account/112233445566",
+53.             "arn:aws:sso:::account/223344556677",
+54.             "arn:aws:sso:::account/334455667788"
+55.          ]
+56.       }
+57.    ]
+58. }
+```
+
+**More information**
+
+To see an example walkthrough that covers how to delegate administration of user identities in an IAM environment, see [How to delegate management of identity in AWS Single Sign\-On](https://aws.amazon.com/blogs/security/how-to-delegate-management-of-identity-in-aws-single-sign-on/) on the AWS Security Blog\.
+
 ## Permissions required to use the AWS SSO console<a name="requiredpermissionsconsole"></a>
 
-For a user to work with the AWS SSO console without errors, additional permissions are required\. If you create an IAM policy that is more restrictive than the minimum required permissions, the console won't function as intended for users with that IAM policy\. The following example lists the set of permissions that may be needed to ensure error\-free operation within the AWS SSO console\.
+For a user to work with the AWS SSO console without errors, additional permissions are required\. If an IAM policy has been created that is more restrictive than the minimum required permissions, the console won't function as intended for users with that policy\. The following example lists the set of permissions that may be needed to ensure error\-free operation within the AWS SSO console\.
 
 ```
 {
@@ -289,7 +422,7 @@ For a user to work with the AWS SSO console without errors, additional permissio
                 "sso-directory:ListGroupsForUser",
                 "sso-directory:ListMembersInGroup",
                 "sso-directory:SearchGroups",
-                "sso-directory:SearchUsers",
+                "sso-directory:SearchUsers"
             ],
             "Resource": "*"
         }

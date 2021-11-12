@@ -57,7 +57,7 @@ These roles can only be modified from the AWS SSO Administrator console, which i
 
 ## Directory users cannot reset their password<a name="issue5"></a>
 
-When a directory user resets their password using the **Forgot Password?** option during sign\-in of the user portal, their new password must adhere to the default password policy as described in [Password requirements for the AWS SSO identity store](password-requirements.md)\. 
+When a directory user resets their password using the **Forgot Password?** option during sign\-in of the user portal, their new password must adhere to the default password policy as described in [Password requirements when managing identities in AWS SSO](password-requirements.md)\. 
 
 If a user enters a password that adheres to the policy and then receives the error `We couldn't update your password`, check to see if AWS CloudTrail recorded the failure\. This can be done by searching in the Event History console of CloudTrail using the following filter:
 
@@ -123,3 +123,15 @@ WebAuthn is currently supported in Google Chrome, Mozilla Firefox, Microsoft Edg
 ## Active Directory “Domain Users” group does not properly sync into AWS SSO<a name="issue11"></a>
 
 The Active Directory Domain Users group is the default “primary group” for AD user objects\. Active Directory primary groups and their memberships cannot be read by AWS SSO\. When assigning access to AWS SSO resources or applications, use groups other than the Domain Users group \(or other groups assigned as primary groups\) to have group membership properly reflected in the AWS SSO identity store\.
+
+## Invalid MFA credentials error<a name="issue12"></a>
+
+This error can occur when a user attempts to sign in to AWS SSO using an account from an external identity provider \(for example, Okta or Azure AD\) before their user account has been fully provisioned to AWS SSO using the SCIM protocol\. Once the user account has been provisioned to AWS SSO, this issue should be resolved\. Confirm that the user account has been provisioned to AWS SSO and, if not, check the provisioning logs in the external identity provider\.
+
+## I get a 'An unexpected error has occurred' message when I attempt to register or sign in using an authenticator app<a name="issue13"></a>
+
+Time\-based one\-time password \(TOTP\) systems, such as those used by AWS SSO in combination with code\-based authenticator apps, rely on time synchronization between the client and the server\. Ensure that the device where your authenticator app is installed is correctly synchronized to a reliable time source, or manually set the time on your device to match a reliable source, such as NIST \([https://www\.time\.gov/](https://www.time.gov/)\) or other local/regional equivalents\.
+
+## My users are not receiving emails from AWS SSO<a name="issue14"></a>
+
+All emails sent by the AWS SSO service will come from either the address [no-reply@signin.aws](no-reply@signin.aws) or [no-reply@login.awsapps.com](no-reply@login.awsapps.com)\. Your mail system must be configured so that it accepts emails from these sender email addresses and does not handle them as junk or spam\.
