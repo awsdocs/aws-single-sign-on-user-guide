@@ -1,7 +1,0 @@
-# Considerations before using MFA in AWS SSO<a name="mfa-considerations"></a>
-
-Before you enable MFA, consider the following information:
-+ Users are encouraged to register multiple backup authenticators for all enabled MFA types\. This practice can prevent the user’s losing access in case of a broken or misplaced MFA device\. 
-+ Do not use the option **Require Them to Provide a One\-Time Password Sent by Email** if your users must sign in to the user portal to access their email\. For example, your users might use Office 365 on the user portal to read their email\. In this case, users would not be able to retrieve the verification code and would be unable to sign in to the user portal\. For more information, see [Configure MFA device enforcement](how-to-configure-mfa-device-enforcement.md)\.
-+ If you are already using RADIUS MFA that you configured with AWS Directory Service, then you do not need to enable MFA within AWS SSO\. MFA in AWS SSO is an alternative to RADIUS MFA for Microsoft Active Directory users of AWS SSO\. For more information, see [RADIUS MFA](about-radius.md)\.
-+ You can use AWS SSO’s multi\-factor authentication capabilities when your identity source is configured with AWS SSO’s identity store, AWS Managed Microsoft AD, or AD Connector\. MFA in AWS SSO is currently not supported for use by [external identity providers](https://docs.aws.amazon.com/singlesignon/latest/userguide/manage-your-identity-source-idp.html)\.
