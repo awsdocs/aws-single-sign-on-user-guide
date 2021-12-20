@@ -1,0 +1,5 @@
+# Amazon CloudWatch Events<a name="cloudwatch-integration"></a>
+
+AWS SSO can work with CloudWatch Events to raise events when administrator\-specified actions occur in an organization\. For example, because of the sensitivity of such actions, most administrators would want to be warned every time someone creates a new account in the organization or when an administrator of a member account attempts to leave the organization\. You can configure CloudWatch Events rules that look for these actions and then send the generated events to administrator\-defined targets\. Targets can be an Amazon SNS topic that emails or text messages its subscribers\. You could also create an AWS Lambda function that logs the details of the action for your later review\.
+
+To learn more about CloudWatch Events, including how to configure and enable it, see the *[Amazon CloudWatch Events User Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/)*\.
