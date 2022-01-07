@@ -21,7 +21,7 @@ The following tables describe quotas within AWS SSO\.
 |  Number of IAM roles in the AWS account that can be repaired at a time  | 1 | No | 
 
 **Note**  
-[Permission sets](permissionsetsconcept.md) are provisioned in AWS accounts as IAM roles and therefore follow IAM quotas\. For more information about IAM quotas, see [IAM and STS quotas](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html)\. 
+[Permission sets](permissionsetsconcept.md) are provisioned in AWS accounts as IAM roles and therefore follow IAM quotas\. For more information about quotas that are associated with IAM roles, see [IAM and STS quotas](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html)\. 
 
 ## Active Directory quotas<a name="connecteddirectorylimits"></a>
 

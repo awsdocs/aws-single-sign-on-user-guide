@@ -32,7 +32,7 @@ When you configure an MFA device for AWS SSO, we recommend that you save a copy 
 Submit your request immediately after generating the code\. If you generate the code and then wait too long to submit the request, the MFA device is successfully associated with the user\. But the MFA device is out of sync\. This happens because time\-based one\-time passwords \(TOTP\) expire after a short period of time\. If this happens, you can resync the device\.
 
      1. Choose **Assign MFA**\. The MFA device can now start generating one\-time passwords and is now ready for use with AWS\.
-   + **Security key** or **Built\-in authenticator**
+   + **Security key**
 
      1. On the **Register your user's security key** page, follow the instructions given to you by your browser or platform\.
 **Note**  

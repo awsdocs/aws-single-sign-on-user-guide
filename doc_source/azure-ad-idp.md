@@ -18,7 +18,7 @@ Make sure that all users in Azure AD have filled out **First name**, **Last name
 
 ## Additional considerations<a name="azure-ad-considerations"></a>
 
-If an attribute is removed from a user in Azure AD, that attribute will not be removed from the corresponding user in AWS SSO\. This is a known limitation in Azure AD\. If an attribute is changed to a different \(non\-empty\) value on a user, that change will be synchronized to AWS SSO\.
+Attributes for access control are used in permission policies that determine who in your identity source can access your AWS resources\. If an attribute is removed from a user in Azure AD, that attribute will not be removed from the corresponding user in AWS SSO\. This is a known limitation in Azure AD\. If an attribute is changed to a different \(non\-empty\) value on a user, that change will be synchronized to AWS SSO\.
 
 ## Step 1: Set up AWS SSO and configure automatic provisioning<a name="azure-ad-step1"></a>
 

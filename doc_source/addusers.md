@@ -10,7 +10,7 @@ Users and groups that you create in your AWS SSO store are available in AWS SSO 
 
 1. Choose **Add user** and provide the following required information:
 
-   1. **Username** – This user name will be required to sign in to the user portal and cannot be changed later\.
+   1. **Username** – This user name will be required to sign in to the user portal and cannot be changed later\. It must be between 1 and 100 characters\.
 
    1. **Password** – Choose from one of the following choices to send the user's password\.
 

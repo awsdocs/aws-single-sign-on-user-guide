@@ -6,10 +6,10 @@ This topic provides examples of permissions policies that an account administrat
 We recommend that you first review the introductory topics that explain the basic concepts and options available for you to manage access to your AWS SSO resources\. For more information, see [Overview of managing access permissions to your AWS SSO resources](iam-auth-access-overview.md)\.
 
 The sections in this topic cover the following:
-+ [Customer managed policy examples](#policyexample)
++ [Custom policy examples](#policyexample)
 + [Permissions required to use the AWS SSO console](#requiredpermissionsconsole)
 
-## Customer managed policy examples<a name="policyexample"></a>
+## Custom policy examples<a name="policyexample"></a>
 
 In this section, you can find examples of common use cases which require a custom IAM policy\. The example policies below are identity\-based policies, which do not specify the Principal element\. This is because with an identity\-based policy, you don't specify the principal who gets the permission\. Instead, you attach the policy to the principal\. When you attach an identity\-based permission policy to an IAM role, the principal identified in the role's trust policy gets the permissions\. Identity\-based policies can be created in IAM and are attached to users, groups, and/or roles, or can be applied to AWS SSO users as part of a custom permissions policy in an AWS SSO permission set\. 
 

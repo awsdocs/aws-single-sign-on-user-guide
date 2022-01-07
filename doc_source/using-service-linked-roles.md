@@ -48,6 +48,9 @@ You must configure permissions to allow an IAM entity \(such as a user, group, o
 
 You don't need to manually create a service\-linked role\. Once enabled, AWS SSO creates a service\-linked role in all accounts within the organization in AWS Organizations\. AWS SSO also creates the same service\-linked role in every account that is subsequently added to your organization\. This role allows AWS SSO to access each account's resources on your behalf\.
 
+**Note**  
+If you're signed in to the management account, it uses your currently signed\-in role and not the the service\-linked role\. This prevents the escalation of privileges\.
+
 **Important**  
 If you were using the AWS SSO service before December 7, 2017, when it began supporting service\-linked roles, then AWS SSO created the AWSServiceRoleForSSO role in your account\. To learn more, see [A New Role Appeared in My IAM Account](https://docs.aws.amazon.com/IAM/latest/UserGuide/troubleshoot_roles.html#troubleshoot_roles_new-role-appeared)\.
 
