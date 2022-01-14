@@ -37,7 +37,7 @@ Before you begin this procedure, we recommend that you first review provisioning
 
 1. Choose **Settings** in the left navigation pane\.
 
-1. On the **Settings** page, under **Identity source**, next to **Provisioning**, choose **Enable automatic provisioning**\. This immediately enables automatic provisioning in AWS SSO and displays the necessary endpoint and access token information\.
+1. On the **Settings** page, locate the **Automatic provisioning** information box, and then choose **Enable**\. This immediately enables automatic provisioning in AWS SSO and displays the necessary SCIM endpoint and access token information\.
 
 1. In the **Inbound automatic provisioning** dialog box, copy each of the values for the following options\. You will need to paste these in later when you configure provisioning in your IdP\.
 
@@ -60,9 +60,9 @@ You must delete the access token before you start this procedure\. For more info
 
 1. In the [AWS SSO console](https://console.aws.amazon.com/singlesignon), choose **Settings** in the left navigation pane\.
 
-1. On the **Settings** page, under the **Identity source** section, next to **Provisioning**, choose **View details**\.
+1. On the **Settings** page, choose the **Identity source** tab, and then choose **Actions > Manage provisioning**\.
 
-1. On the **Automatic provisioning** page, choose **Disable automatic provisioning**\.
+1. On the **Automatic provisioning** page, choose **Disable**\.
 
 1. In the **Disable automatic provisioning** dialog box, review the information, type **DISABLE**, and then choose **Disable automatic provisioning**\.
 
@@ -74,11 +74,13 @@ Use the following procedure to generate a new access token in the AWS SSO consol
 
 1. In the [AWS SSO console](https://console.aws.amazon.com/singlesignon), choose **Settings** in the left navigation pane\.
 
-1. On the **Settings** page, under the **Identity source** section, next to **Provisioning**, choose **View details**\.
+1. On the **Settings** page, choose the **Identity source** tab, and then choose **Actions > Manage provisioning**\.
 
-1. On the **Automatic provisioning** page, under **Access tokens**, choose **Generate new token**\.
+1. On the **Automatic provisioning** page, under **Access tokens**, choose **Generate token**\.
 
-1. In the **Generate new access token** dialog box, under **Access token**, choose **Show token**\.
+1. In the **Generate new access token** dialog box, copy the new access token and save it in a safe place\.
+
+1. Choose **Close**\.
 
 ## How to delete an access token<a name="delete-token"></a>
 
@@ -88,9 +90,9 @@ Use the following procedure to delete an existing access token in the AWS SSO co
 
 1. In the [AWS SSO console](https://console.aws.amazon.com/singlesignon), choose **Settings** in the left navigation pane\.
 
-1. On the **Settings** page, under the **Identity source** section, next to **Provisioning**, choose **View details**\.
+1. On the **Settings** page, choose the **Identity source** tab, and then choose **Actions > Manage provisioning**\.
 
-1. On the **Automatic provisioning** page, under **Access tokens**, next to the access token you want to delete, choose **Delete**\.
+1. On the **Automatic provisioning** page, under **Access tokens**, select the access token you want to delete, and then choose **Delete**\.
 
 1. In the **Delete access token** dialog box, review the information, type **DELETE**, and then choose **Delete access token**\.
 
@@ -102,7 +104,7 @@ If your SCIM access token is close to expiring, you can use the following proced
 
 1. In the [AWS SSO console](https://console.aws.amazon.com/singlesignon), choose **Settings** in the left navigation pane\.
 
-1. On the **Settings** page, under the **Identity source** section, next to **Provisioning**, choose **View details**\.
+1. On the **Settings** page, choose the **Identity source** tab, and then choose **Actions > Manage provisioning**\.
 
 1. On the **Automatic provisioning** page, under **Access tokens**, make a note of the token ID of the token you want to rotate\.
 

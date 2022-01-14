@@ -20,15 +20,17 @@ Use the following procedure to connect to an external identity provider from the
 
 1. Choose **Settings**\.
 
-1. On the **Settings** page, under **Identity source**, choose **Change**\.
+1. On the **Settings** page, choose the **Identity source** tab, and then choose **Actions > Change identity source**\.
 
-1. On the **Change identity source** page, choose **External identity provider**\. Then do the following:
+1. Under **Choose identity source**, select **External identity provider**, and then choose **Next**\. 
 
-   1. Under **Service provider metadata**, for **AWS SSO SAML metadata**, choose **Download metadata file** to download the metadata file and save it on your system\. The AWS SSO SAML metadata file is required by your external identity provider\.
+1. Under **Configure external identity provider**, do the following:
 
-   1. Under **Identity provider metadata**, choose **Browse**, and locate the metadata file that you downloaded from your external identity provider\. Then upload the file\. This metadata file contains the necessary public x509 certificate used to trust messages that are sent from the IdP\.
+   1. Under **Service provider metadata**, choose **Download metadata file** to download the metadata file and save it on your system\. The AWS SSO SAML metadata file is required by your external identity provider\.
 
-   1. Choose **Next: Review**\.
+   1. Under **Identity provider metadata**, choose **Choose file**, and locate the metadata file that you downloaded from your external identity provider\. Then upload the file\. This metadata file contains the necessary public x509 certificate used to trust messages that are sent from the IdP\.
+
+   1. Choose **Next**\.
 **Important**  
 Changing your source to or from Active Directory removes all existing user and group assignments\. You must manually reapply assignments after you have successfully changed your source\.
 
