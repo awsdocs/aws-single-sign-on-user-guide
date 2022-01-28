@@ -25,13 +25,11 @@ Use the following procedure to import the new certificate using the AWS SSO cons
 
 1. In the [AWS SSO console](https://console.aws.amazon.com/singlesignon), choose **Settings**\.
 
-1. On the **Settings** page, choose the **Identity source** tab, and then choose **Actions > Manage authentication**\.
+1. On the **Settings** page, under **Identity source**, next to **Authentication**, choose **View details**\.
 
-1. On the **Manage SAML 2\.0 authentication** page, under **Manage SAML 2\.0 certificates**, choose **Import certificate**\.
+1. On the **SAML 2\.0 authentication** page, under **Identity provider metadata**, choose **Manage certificates**\.
 
-1. On the **Manage SAML 2\.0 certificates** page, choose **Import certificate**\.
-
-1. On the **Import SAML 2\.0 certificate** dialog, choose **Choose file**, navigate to your certificate file and select it, and then choose **Import certificate**\.
+1. On the **Manage SAML 2\.0 certificates** page, choose **Import Certificate**\.
 
 At this point, AWS SSO will trust all incoming SAML messages signed from both of the certificates that you have imported\.
 

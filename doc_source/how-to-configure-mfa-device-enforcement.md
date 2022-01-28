@@ -8,7 +8,7 @@ Use the following procedure to determine whether your users must have a register
 
 1. In the left navigation pane, choose **Settings**\.
 
-1. On the **Settings** page, choose the **Network & security** tab, and then choose **Configure**\.
+1. On the **Settings** page, under **Multi\-factor authentication**, choose **Configure**\.
 
 1. On the **Configure multi\-factor authentication** page, under **If a user does not yet have a registered MFA device** choose one of the following choices based on your business needs:
    + **Require them to register an MFA device at sign in**

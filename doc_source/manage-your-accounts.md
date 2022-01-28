@@ -21,6 +21,7 @@ You can also connect an AWS account that is not part of your organization by set
 **Topics**
 + [Single sign\-on access](useraccess.md)
 + [Permission sets](permissionsets.md)
++ [Resiliency design and regional behavior](resiliency-regional-behavior.md)
 + [Attribute\-based access control](abac.md)
 + [IAM identity provider](idp.md)
 + [Service\-linked roles](slrconcept.md)

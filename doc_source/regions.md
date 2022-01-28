@@ -31,6 +31,6 @@ Use the following procedure when you need to delete your current AWS SSO configu
 
 1. In the left navigation pane, choose **Settings**\.
 
-1. On the **Settings** page, choose **Delete**\.
+1. On the **Settings** page, under **Delete AWS SSO configuration**, choose **Delete AWS SSO**\.
 
-1. In the **Delete AWS SSO configuration** dialog, select each of the check boxes to acknowledge you understand that your data that will be deleted\. Type **DELETE** in the text box, and then choose **Confirm**\.
+1. On the **Delete AWS SSO configuration** page, select each of the check boxes to acknowledge you understand the data that will be deleted\. Type **DELETE** in the text box, and then choose **Delete AWS SSO**\.

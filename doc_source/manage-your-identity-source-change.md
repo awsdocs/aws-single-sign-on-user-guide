@@ -8,16 +8,14 @@ You can change where you store users at any time\. Use the following procedure t
 
 1. Choose **Settings**
 
-1. On the **Settings** page, choose the **Identity source** tab, and then choose **Actions > Change identity source**\.
+1. On the **Settings** page, under **Identity source**, choose **Change**\.
 
-1. Under **Choose identity source**, select the source you want to switch to, and then choose **Next**\. 
-
-   If you are switching to a Microsoft AD directory, you must choose the available directory from the menu on the next page\. 
+1. On the **Change identity source** page, select the source you want to switch to, and then choose **Next**\. If you are switching to a Microsoft AD directory, you must choose the available directory from the provided menu\. 
 **Important**  
 Changing your source to or from Active Directory removes all existing user and group assignments\. You must manually reapply assignments after you have successfully changed your source\.
 
-   If you are switching to an external identity provider, we recommend that you following the procedure [How to connect to an external identity provider](manage-your-identity-source-idp.md#how-to-connect-idp) for additional instructions\.
+1. Choose **Next: Review**\.
 
-1. Once you have read the disclaimer and are ready to proceed, type **ACCEPT**\.
+1. Once you have read the disclaimer and are ready to proceed, type **CONFIRM**\.
 
-1. Choose **Change identity source**\.
+1. Choose **Finish**\.

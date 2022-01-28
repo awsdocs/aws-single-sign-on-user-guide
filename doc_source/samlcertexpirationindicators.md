@@ -9,6 +9,8 @@ While on the **Manage SAML 2\.0 certificates** page, you might notice colored st
 
 1. In the [AWS SSO console](https://console.aws.amazon.com/singlesignon), choose **Settings**\.
 
-1. On the **Settings** page, choose the **Identity source** tab, and then choose **Actions > Manage authentication**\.
+1. On the **Settings** page, under **Identity source**, next to **Authentication**, choose **View details**\.
 
-1. On the **Manage SAML 2\.0 authentication** page, under **Manage SAML 2\.0 certificates**, review the status of the certificates in the list as indicated in the **Expires on** column\. 
+1. On the **SAML 2\.0 authentication** page, under **Identity provider metadata**, choose **Manage certificates**\.
+
+1. On the **Manage SAML 2\.0 certificates** page, review the status of the certificates in the list as indicated in the **Expires on** column\.

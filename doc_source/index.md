@@ -73,6 +73,7 @@ Amazon's trademarks and trade dress may not be used in
          + [Set session duration](howtosessionduration.md)
          + [Set relay state](howtopermrelaystate.md)
       + [Delete permission sets](howtoremovepermissionset.md)
+   + [Resiliency design and regional behavior](resiliency-regional-behavior.md)
    + [Attribute-based access control](abac.md)
       + [Checklist: Configuring ABAC in AWS using AWS SSO](abac-checklist.md)
       + [Attributes for access control](attributesforaccesscontrol.md)
