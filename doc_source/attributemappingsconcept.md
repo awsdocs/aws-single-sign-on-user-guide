@@ -29,6 +29,12 @@ The following table lists all AWS Managed Microsoft AD directory attributes that
 
 You can specify any combination of supported Microsoft AD directory attributes to map to a single attribute in AWS SSO\. For example, you could choose the `preferredUsername` attribute under the **User attribute in AWS SSO** column\. Then map it to either `${dir:displayname}` or `${dir:lastname}${dir:firstname }` or any single supported attribute or any arbitrary combination of supported attributes\.
 
+If you use the [ListUsers](https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_ListUsers.html) or [ListGroups](https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_ListGroups.html) API actions or the [list\-users](https://docs.aws.amazon.com/cli/latest/reference/identitystore/list-users.html) and [list\-groups](https://docs.aws.amazon.com/cli/latest/reference/identitystore/list-groups.html) AWS CLI commands to assign users and groups access to AWS accounts, applications, and resources, you must specify the value for `AttributeValue` as an FQDN\. This value must be in the following format: user@example\.com\. In the following example, `AttributeValue` is set to `janedoe@example.com`\.
+
+```
+aws identitystore list-users --identity-store-id d-12345a678b --filters AttributePath=UserName,AttributeValue=janedoe@example.com
+```
+
 ## Supported AWS SSO attributes<a name="supportedssoattributes"></a>
 
 The following table lists all AWS SSO attributes that are supported and that can be mapped to user attributes in your AWS Managed Microsoft AD directory\. Later, after you set up your application attribute mappings, you can use these same AWS SSO attributes to map to actual attributes used by that application\.
