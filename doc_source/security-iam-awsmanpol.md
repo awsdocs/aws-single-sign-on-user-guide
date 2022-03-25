@@ -15,7 +15,7 @@ You can attach the `AWSSSOMasterAccountAdministrator` policy to your IAM identit
 **Permissions groupings**
 
 This policy is grouped into statements based on the set of permissions provided\.
-+ `AWSSSOMasterAccountAdministrator` – Allows AWS SSO to [pass the service role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_passrole.html) named `AWSServiceRoleforSSO` to SSO so that it can later assume the role and perform actions on their behalf\. This is necessary when the person or application attempts to enable SSO\. For more information, see [Manage SSO to your AWS accounts](manage-your-accounts.md)\.
++ `AWSSSOMasterAccountAdministrator` – Allows AWS SSO to [pass the service role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_passrole.html) named `AWSServiceRoleforSSO` to SSO so that it can later assume the role and perform actions on their behalf\. This is necessary when the person or application attempts to enable SSO\. For more information, see [Manage SSO access to your AWS accounts](manage-your-accounts.md)\.
 + `AWSSSOMemberAccountAdministrator` – Allows AWS SSO to perform account administrator actions in a multi\-account AWS environment\. For more information, see [AWS managed policy: AWSSSOMemberAccountAdministrator](#security-iam-awsmanpol-AWSSSOMemberAccountAdministrator)\.
 
 ```

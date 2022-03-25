@@ -20,50 +20,86 @@ Make sure that the AWS SSO console is using the Region where your AWS Managed Mi
 
 1. Choose **AWS accounts**\.
 
-1. Under the **AWS organization** tab, in the list of AWS accounts, choose one or more accounts to which you want to assign access\.
+1. On the **AWS Organization** page, a tree view list of your organization appears\. Select the check box next to one or more AWS accounts to which you want to assign SSO access\.
 **Note**  
-The AWS SSO console supports selecting up to 10 AWS accounts at a time per permission set when assigning user access\. If you need to assign more than 10 AWS accounts to the same set of users, repeat this procedure for the additional accounts, selecting the same users and permission set when prompted\.
+You can select up to 10 AWS accounts at a time per permission set when you assign SSO access to users and groups\. To assign more than 10 AWS accounts to the same set of users and groups, repeat this procedure as required for the additional accounts\. When prompted, select the same users, groups, and permission set\.
 
-1. Choose **Assign users**\. 
+1. Choose **Assign users or groups**\. 
 
-1. On the **Select users or groups** page, type a user or group name to filter the results\. You can specify multiple users or groups by selecting the applicable accounts as they appear in search results, and then choose **Next: Permission sets**\. 
+1. For **Step 1: Select users and groups**, on the **Assign users and groups to "*AWS\-account\-name*"** page, do the following:
 
-1. On the **Select permission sets** page, select the permission sets that you want to apply to the users or groups from the table\. Then choose **Finish**\. You can optionally choose to **Create a new permission set** if none of the permissions in the table meets your needs\. For detailed instructions, see [Create a permission set](howtocreatepermissionset.md)\. 
+   1. On the **Users** tab, select one or more users to grant SSO access to\.
 
-1. Choose **Finish** to begin the process of configuring your AWS account\.
+      To filter the results, start typing the name of the user that you want in the search box\.
+
+   1. On the **Groups **tab, select one or more groups to grant SSO access to\.
+
+      To filter the results, start typing the name of the group that you want in the search box\.
+
+   1. To display the users and groups that you selected, choose the sideways triangle next to **Selected users and groups**\.
+
+   1. After you confirm that the correct users and groups are selected, choose **Next**\.
+
+1. For **Step 2: Select permission sets**, on the **Assign permission sets to "*AWS\-account\-name*"** page, do the following:
+
+   1. Select one or more existing permission sets\. If required, you can create and select new permission sets\.
+      + To select one or more existing permission sets, under **Permission sets**, select the permission sets that you want to apply to the users and groups that you selected in the previous step\.
+      + To create one or more new permission sets, choose **Create permission set**, and follow the steps in [Create a permission set](howtocreatepermissionset.md)\. After you create the permission sets that you want to apply, in the SSO console, return to **AWS accounts** and follow the instructions until you reach **Step 2: Select permission sets**\. When you reach this step, select the new permission sets that you created, and proceed to the next step in this procedure\.
+
+   1. After you confirm that the correct permission sets are selected, choose **Next**\.
+
+1. For **Step 3: Review and Submit**, on the **Review and submit assignments to "*AWS\-account\-name*"** page, do the following:
+
+   1. Review the selected users, groups, and permission sets\.
+
+   1. After you confirm that the correct users, groups, and permission sets are selected, choose **Submit**\.
 **Important**  
-The user assignment process may take a few minutes to complete\. It is important that you leave this page open until the process successfully completes\.
+The user and group assignment process might take a few minutes to complete\. Leave this page open until the process successfully completes\.
 **Note**  
 You might need to grant users or groups permissions to operate in the AWS Organizations management account\. Because it is a highly privileged account, additional security restrictions require you to have the [IAMFullAccess](https://console.aws.amazon.com/iam/home#policies/arn:aws:iam::aws:policy/IAMFullAccess) policy or equivalent permissions before you can set this up\. These additional security restrictions are not required for any of the member accounts in your AWS organization\.
 
-## Remove user access<a name="howtoremoveaccess"></a>
+## Remove SSO user and group access<a name="howtoremoveaccess"></a>
 
-Use this procedure when you need to remove SSO access to an AWS account for a particular user or group in your connected directory\.
+Use this procedure to remove SSO access to an AWS account for one or more users and groups in your connected directory\.
 
-**To remove user access from an AWS account**
+**To remove SSO user and group access to an AWS account**
 
 1. Open the [AWS SSO console](https://console.aws.amazon.com/singlesignon)\.
 
 1. Choose **AWS accounts**\.
 
-1. In the table, select the AWS account with the user or group whose access you want to remove\.
+1. On the **AWS Organization** page, a tree view list of your organization appears\. Select the name of the AWS account that contains the users and groups for whom you want to remove SSO access\.
 
-1. On the **Details** page for the AWS account, under **Assigned users and groups**, locate the user or group in the table\. Then choose **Remove access**\.
+1. On the **Overview** page for the AWS account, under **Assigned users and groups**, select the name of one or more users or groups, and choose **Remove access**\.
 
-1. In the **Remove access** dialog box, confirm the user or group name\. Then choose **Remove access**\. 
+1. In the **Remove access** dialog box, confirm that the names of the users or groups are correct, and choose **Remove access**\. 
 
-## Delegate who can assign SSO access to users in the management account<a name="howtodelegatessoaccess"></a>
+## Delegate who can assign SSO access to users and groups in the management account<a name="howtodelegatessoaccess"></a>
 
 Assigning single sign\-on access to the management account using the AWS SSO console is a privileged action\. By default, only an AWS account root user, or a user who has the **AWSSSOMasterAccountAdministrator** and **IAMFullAccess** AWS managed policies attached, can assign SSO access to the management account\. The **AWSSSOMasterAccountAdministrator** and **IAMFullAccess** policies manage SSO access to the management account within an AWS Organizations organization\.
 
-Use the following steps to delegate permissions to manage SSO access to users in your directory\.
+Use the following steps to delegate permissions to manage SSO access to users and groups in your directory\.
 
-**To grant permissions to manage SSO access to users in your directory**
+**To grant permissions to manage SSO access to users and groups in your directory**
 
 1. Sign in to the AWS SSO console as a root user of the management account or with another IAM user who has IAM administrator permissions to the management account\.
 
-1. Use the procedure [Create a permission set](howtocreatepermissionset.md) to create a permission set\. When you get to the **Create new permission set** page, select the **Create a custom permission set** option, choose **Next: Details**, and then select the option **Attach AWS managed policies**\. In the list of IAM policies that appear in the table, choose both the **AWSSSOMasterAccountAdministrator** and **IAMFullAccess** AWS managed policies\. These policies grant permissions to any user who will be assigned access to this permission set in the future\.
+1. Follow the steps in [Create a permission set](howtocreatepermissionset.md) to create a permission set, and then do the following:
 
-1. Use the procedure [Assign user access](#assignusers) to assign the appropriate users to the permission set that you just created\.
+   1. On the **Create new permission set** page, select the **Create a custom permission set** check box, and then choose **Next: Details**\.
 
-1. Communicate the following to the assigned users: When they sign in to the user portal and select the **AWS Account** icon, they must choose the appropriate IAM role name to be authenticated with the permissions that you just delegated\.
+   1. On the **Create new permission set page**, specify a name for the custom permission set and optionally, a description\. If required, modify the session duration and specify a relay state URL\.
+
+   1. Under **What policies do you want to include in your permission set?**, select the **Attach AWS managed policies** check box\.
+
+   1. In the list of IAM policies, choose both the **AWSSSOMasterAccountAdministrator** and **IAMFullAccess** AWS managed policies\. These policies grant permissions to any user and groups who are assigned access to this permission set in the future\.
+
+   1. Choose **Next: Tags**\.
+
+   1. Under **Add tags \(optional\)**, specify values for **Key** and **Value \(optional\)**, and then choose **Next: Review**\. For more information about tags, see [Tagging AWS Single Sign\-On resources](tagging.md)\.
+
+   1. Review the selections you made, and then choose **Create**\.
+
+1. Follow the steps in [Assign user access](#assignusers) to assign the appropriate users and groups to the permission set that you just created\.
+
+1. Communicate the following to the assigned users: When they sign in to the user portal and select the **AWS Account** icon, they must choose the appropriate role name to be authenticated with the permissions that you just delegated\.

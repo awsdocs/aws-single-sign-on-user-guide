@@ -10,10 +10,10 @@ Make sure that the AWS SSO console is using one of the Regions where your AWS Ma
 
 1. Choose **Settings**\.
 
-1. Under **Identity source**, choose **Change**\.
+1. On the **Settings** page, choose the **Identity source** tab, and then choose **Actions > Change identity source**\.
 
-1. On the **Change identity source** page, choose **Active Directory**, choose the AWS Managed Microsoft AD directory from the list, and then choose **Next: Review**\.
+1. Under **Choose identity source**, select **Active Directory**, and then choose **Next**\.
 
-1. On the **Review and confirm** page, review the information and type **CONFIRM**\.
+1. Under **Connect active directory**, choose an existing AWS Managed Microsoft AD directory from the list, and then choose **Next**\.
 
-1. Choose **Change identity source**\.
+1. Under **Confirm change**, review the information and when ready type **ACCEPT**, and then choose **Change identity source**\.

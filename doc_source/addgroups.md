@@ -10,8 +10,8 @@ Use the following procedure to add groups to your AWS SSO store\.
 
 1. Choose **Create group**\.
 
-1. In the **Create group** dialog box, enter a **Group name** between 1 and 100 characters and **Description**\. The description should provide details on what permissions have been or will be assigned to the group\.
+1. Enter a **Group name** and **Description \- *optional***\. The description should provide details on what permissions have been or will be assigned to the group\. Under **Add users to group \- *optional***, locate the users you want to add as members\. Then select the check box next to each of them\.
 
-1. Choose **Create**\.
+1. Choose **Create group**\.
 
 After you add this group to your AWS SSO store, you can assign SSO access to this group\. For more information, see [Assign user access](useraccess.md#assignusers)\.

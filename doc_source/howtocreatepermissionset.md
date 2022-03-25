@@ -6,13 +6,11 @@ Use this procedure to create a permission set based on a custom permissions poli
 
 1. Open the [AWS SSO console](https://console.aws.amazon.com/singlesignon)\.
 
-1. Choose **AWS accounts**\.
-
-1. Select the **Permission sets** tab\.
+1. Choose **Permission sets**\.
 
 1. Choose **Create permission set**\.
 
-1. On the **Create new permission set** page, choose from one of the following options, and then follow the instructions provided under that option:
+1. On the **Create new permission set** page, choose one of the following options, and then follow the instructions provided for that option:
    + **Use an existing job function policy**
 
      1. Choose **Next: Details**\.
@@ -26,11 +24,11 @@ Use this procedure to create a permission set based on a custom permissions poli
 
      1. Choose **Next: Details**\.
 
-     1. Under **Create a custom permission set**, type a name that will identify this permission set in AWS SSO\. This name will also appear as an IAM role in the user portal for any users who have access to it\.
+     1. Under **Create a custom permission set**, type a name to identify this permission set in AWS SSO\. The name that you specify for this permission set appears in the user portal as an available role\. After users sign into the the user portal and access the AWS account, they can choose the role\. 
 
-     1. \(Optional\) You can also type a description\. This description will only appear in the AWS SSO console and will not be visible to users in the user portal\.
+     1. \(Optional\) You can also type a description\. The description appears in the AWS SSO console only, not the user portal\.
 
-     1. \(Optional\) Specify the value for **Session duration**\. This value is used to determine the length of time a user can be logged on before the console logs them out of their session\. For more information, see [Set session duration](howtosessionduration.md)\.
+     1. \(Optional\) Specify the value for **Session duration**\. This value determines the length of time that a user can be logged on before the console logs them out of their session\. For more information, see [Set session duration](howtosessionduration.md)\.
 
      1. \(Optional\) Specify the value for **Relay state**\. This value is used in the federation process to redirect users within the account\. For more information, see [Set relay state](howtopermrelaystate.md)\.
 

@@ -11,7 +11,7 @@ If you’re using an external IdP, you will not see the **Multi\-factor authenti
 
 1. In the left navigation pane, choose **Settings**\.
 
-1. On the **Settings** page, under **Multi\-factor authentication**, choose **Configure**\.
+1. On the **Settings** page, choose the **Network & security** tab, and then choose **Configure**\.
 
 1. On the **Configure multi\-factor authentication** page, choose one of the following authentication modes based on the level of security that your business needs:
    + **Only when their sign\-in context changes \(context\-aware\)**
@@ -29,3 +29,8 @@ If you’re using an external IdP, you will not see the **Multi\-factor authenti
 If you are already using RADIUS MFA with AWS Directory Service, and want to continue using it as your default MFA type, then you can leave the authentication mode as disabled to bypass AWS SSO MFA’s capabilities\. Changing from **Disabled** mode to **Context\-aware** or **Always\-on** mode will override the existing RADIUS MFA settings\. For more information, see [RADIUS MFA](about-radius.md)\.
 
 1. Choose **Save changes**\.
+
+   **Related Topics**
+   + [Configure MFA types](how-to-configure-mfa-types.md)
+   + [Configure MFA device enforcement](how-to-configure-mfa-device-enforcement.md)
+   + [Allow users to register their own MFA devices](how-to-allow-user-registration.md)

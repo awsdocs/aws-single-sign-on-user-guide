@@ -1,6 +1,6 @@
 # Set relay state<a name="howtopermrelaystate"></a>
 
-By default, when a user signs into the AWS SSO user portal, chooses an account, and then chooses an IAM role, AWS SSO redirects the user’s browser to the AWS Management Console\. You can change this behavior by setting the relay state to a different console URL\. Setting the relay state enables you to provide the user with quick access to the console that is most appropriate for their role\. For example, you can set the relay state to the Amazon EC2 console URL \(https://console\.aws\.amazon\.com/ec2/\) to redirect the user to that console when they choose the Amazon EC2 administrator role\. During the redirection to the default URL or relay state URL, AWS SSO routes the user’s browser to the console endpoint in the last AWS Region used by the user\. For example, if a user ended their last console session in the Europe \(Stockholm\) Region \(eu\-north\-1\), the user is redirected to the Amazon EC2 console in that Region\.
+By default, when a user signs into the AWS SSO user portal, chooses an account, and then chooses the role that AWS creates from the assigned permission set, AWS SSO redirects the user’s browser to the AWS Management Console\. You can change this behavior by setting the relay state to a different console URL\. Setting the relay state enables you to provide the user with quick access to the console that is most appropriate for their role\. For example, you can set the relay state to the Amazon EC2 console URL \(https://console\.aws\.amazon\.com/ec2/\) to redirect the user to that console when they choose the Amazon EC2 administrator role\. During the redirection to the default URL or relay state URL, AWS SSO routes the user’s browser to the console endpoint in the last AWS Region used by the user\. For example, if a user ended their last console session in the Europe \(Stockholm\) Region \(eu\-north\-1\), the user is redirected to the Amazon EC2 console in that Region\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/singlesignon/latest/userguide/images/permission_sets_relay_state_new.png)
 
@@ -12,9 +12,7 @@ Use the following procedure to configure the relay state URL for a permission se
 
 1. Open the [AWS SSO console](https://console.aws.amazon.com/singlesignon)\.
 
-1. Choose **AWS accounts**\.
-
-1. Choose the **Permission sets** tab\.
+1. Choose **Permission sets**\.
 
 1. Choose the name of the permission set for which you want to set the new relay state URL\.
 

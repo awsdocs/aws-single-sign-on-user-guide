@@ -20,7 +20,7 @@ When you create users and groups directly in AWS SSO, provisioning is automatic\
 + [Add groups](addgroups.md)
 + [Add users to groups](adduserstogroups.md)
 + [Edit user properties](edituser.md)
-+ [Disable a user](disableuser.md)
++ [Disable user access](disableuser.md)
 + [Reset a user password](resetuserpwd.md)
 + [Password requirements when managing identities in AWS SSO](password-requirements.md)
 + [Supported user and group attributes](supported-attributes.md)

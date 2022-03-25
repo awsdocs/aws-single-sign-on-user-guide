@@ -1,4 +1,4 @@
-# How to get credentials of an IAM role for use with CLI access to an AWS account<a name="howtogetcredentials"></a>
+# Getting IAM role credentials for CLI access<a name="howtogetcredentials"></a>
 
 Use this procedure in the user portal when you need temporary security credentials for short\-term access to resources in an AWS account using the AWS CLI\. The user portal makes it easy for you to quickly select an AWS account and get the temporary credentials for a given IAM role\. You can then copy the necessary CLI syntax \(including all necessary credentials\) and paste them into your AWS CLI command prompt\. 
 

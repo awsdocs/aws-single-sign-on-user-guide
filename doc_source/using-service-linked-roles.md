@@ -71,11 +71,9 @@ If the AWS SSO service is using the role when you try to delete the resources, t
 
 **To delete AWS SSO resources used by the AWSServiceRoleForSSO**
 
-1. [Remove user access](useraccess.md#howtoremoveaccess) for all users and groups that have access to the AWS account\.
+1. [Remove SSO user and group access](useraccess.md#howtoremoveaccess) for all users and groups that have access to the AWS account\.
 
 1. [Delete permission sets](howtoremovepermissionset.md) that you have associated with the AWS account\.
-
-1. [Remove the IAM identity provider](idp.md#removeidp) to delete the trust between AWS SSO and the AWS account\.
 
 **To manually delete the service\-linked role using IAM**
 

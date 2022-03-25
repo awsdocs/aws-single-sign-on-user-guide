@@ -1,4 +1,4 @@
-# How to sign in to the user portal<a name="howtosignin"></a>
+# Signing in to the user portal<a name="howtosignin"></a>
 
 By this time, you should have been provided a specific sign\-in URL to the user portal by an administrator or help desk employee\. Once you have this, you can proceed with the following steps to sign in to the portal\.
 

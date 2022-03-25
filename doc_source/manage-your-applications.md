@@ -9,7 +9,7 @@ After the application has been successfully added to the AWS SSO console, you ca
 + Cloud applications
 + Custom Security Assertion Markup Language \(SAML 2\.0\) applications
 
-You can also grant your employees access to the AWS Management Console for a given AWS account in your organization\. For more information on how to do this, see [Manage SSO to your AWS accounts](manage-your-accounts.md)\.
+You can also grant your employees access to the AWS Management Console for a given AWS account in your organization\. For more information on how to do this, see [Manage SSO access to your AWS accounts](manage-your-accounts.md)\.
 
 The following sections explain how to configure user access to your AWS applications and third\-party software as a service \(SaaS\) applications\. You can also configure any custom applications that support identity federation with SAML 2\.0\. 
 

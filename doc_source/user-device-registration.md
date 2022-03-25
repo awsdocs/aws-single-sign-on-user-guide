@@ -1,4 +1,4 @@
-# How to register a device for use with multi\-factor authentication<a name="user-device-registration"></a>
+# Registering a device for MFA<a name="user-device-registration"></a>
 
 Use the following procedure within the user portal to register your new device for multi\-factor authentication \(MFA\)\.
 
@@ -7,7 +7,7 @@ We recommend that you first download the appropriate Authenticator app onto your
 
 **To register your device for use with MFA**
 
-1. Sign in to your user portal\. For more information, see [How to sign in to the user portal](howtosignin.md)\.
+1. Sign in to your user portal\. For more information, see [Signing in to the user portal](howtosignin.md)\.
 
 1. Near the top\-right of the page, choose **MFA devices**\.
 
@@ -34,7 +34,7 @@ When you configure an MFA device for AWS SSO, we recommend that you save a copy 
 
      1. On the **Set up the authenticator app** page, under **Authenticator code**, enter the one\-time password that currently appears on the physical MFA device\.
 **Important**  
-Submit your request immediately after generating the code\. If you generate the code and then wait too long to submit the request, the MFA device is successfully associated with your user account\. But the MFA device is out of sync\. This happens because time\-based one\-time passwords \(TOTP\) expire after a short period of time\. If this happens, you can resync the device\.
+Submit your request immediately after generating the code\. If you generate the code and then wait too long to submit the request, the MFA device is successfully associated with your user account\. But the MFA device is out of sync\. This happens because time\-based one\-time passwords \(TOTP\) expire after a short period of time\. If this happens, you can sync the device again\.
 
      1. Choose **Assign MFA**\. The MFA device can now start generating one\-time passwords and is now ready for use with AWS\.
    + **Security key** or **Built\-in authenticator**

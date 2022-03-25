@@ -18,7 +18,7 @@ Use the following procedure to enable the attributes for access \(ABAC\) control
 
 1. Choose **Settings**
 
-1. On the **Settings** page, under **Identity source**, next to **Attributes for access control**, choose **Enable**\.
+1. On the **Settings** page, locate the **Attributes for access control** information box, and then choose **Enable**\. Continue to the next procedure to configure it\.
 
 ## Select your attributes<a name="configure-abac-attributes"></a>
 
@@ -30,9 +30,9 @@ Use the following procedure to set up attributes for your ABAC configuration\.
 
 1. Choose **Settings**
 
-1. On the **Settings** page, under **Identity source**, next to **Attributes for access control**, choose **View details**\.
+1. On the **Settings** page, choose the **Attributes for access control** tab, and then choose **Manage attributes**\.
 
-1. On the **Attributes for access control** page, notice the **Key** and **Value** columns as shown in the screenshot below\. This is where you will be mapping the attribute coming from your identity source to an attribute that AWS SSO passes as a session tag\.  
+1. On the **Attributes for access control** page, choose **Add attribute** and enter the **Key** and **Value** details\. This is where you will be mapping the attribute coming from your identity source to an attribute that AWS SSO passes as a session tag\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/singlesignon/latest/userguide/images/abac_key_value.png)
 
    **Key** represents the name you are giving to the attribute for use in policies\. This can be any arbitrary name but you need to specify that exact name in the policies you author for access control\. For example, lets say that you are using Okta \(an external IdP\) as your identity source and need to pass your organization's cost center data along as session tags\. In **Key**, you would enter a similarly matched name like **CostCenter** as your key name\. It's important to note that whichever name you choose here, it must also be named exactly the same in your `aws:PrincipalTag condition key` \(i\.e\., `"ec2:ResourceTag/CostCenter": "${aws:PrincipalTag/CostCenter}"`\)\.
@@ -82,8 +82,8 @@ Use the following procedure to disable the ABAC feature and delete all of the at
 
 1. Choose **Settings**
 
-1. On the **Settings** page, under **Identity source**, next to **Attributes for access control**, choose **View details**\.
+1. On the **Settings** page, choose the **Attributes for access control** tab, and then choose **Disable**\.
 
-1. On the **Attributes for access control**, choose **Disable**\.
+1. In the **Disable attributes for access control** dialog, review the information and when ready enter DELETE, and then choose **Confirm**\.
 **Important**  
 This step deletes all attributes that have been configured\. Once deleted, any attributes that are received from an identity source and any custom attributes you have previously configured will not be passed\.

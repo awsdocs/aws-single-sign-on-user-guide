@@ -10,8 +10,8 @@ Use the following procedure to add users as members of a group that you previous
 
 1. Choose the group from the list\.
 
-1. On the group **Details** page, under **Group members**, choose **Add users**\.
+1. Under **Users in this group**, choose **Add users to group**\.
 
-1. On the **Add users to group** page, locate the users you want to add as members\. Then select the check box next to each of them\.
+1. On the **Add users to group** page, under **Other users**, locate the users you want to add as members\. Then, select the check box next to each of them\.
 
-1. Choose **Add user**\.
+1. Choose **Add users**\.

@@ -10,7 +10,7 @@ Use the following procedure to reset the password for a user in your AWS SSO sto
 
 1. Choose the user whose password you want to reset\.
 
-1. On the user **Profile** page, choose **Reset password**\.
+1. On the top right corner of the page, choose **Reset password**\.
 
 1. In the **Reset password** dialog box, select one of the following choices, and then choose **Reset password**:
 

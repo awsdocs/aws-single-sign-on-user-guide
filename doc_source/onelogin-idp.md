@@ -32,7 +32,7 @@ In this first step, you use the AWS SSO console to enable automatic provisioning
 
 1. Choose **Settings** in the left navigation pane\.
 
-1. On the **Settings** page, under **Identity source**, next to **Provisioning**, choose **Enable automatic provisioning**\. This immediately enables automatic provisioning in AWS SSO and displays the necessary endpoint and access token information\.
+1. On the **Settings** page, locate the **Automatic provisioning** information box, and then choose **Enable**\. This immediately enables automatic provisioning in AWS SSO and displays the necessary SCIM endpoint and access token information\.
 
 1. In the **Inbound automatic provisioning** dialog box, copy each of the values for the following options\. You will need to paste these in later when you configure provisioning in your IdP\.
 

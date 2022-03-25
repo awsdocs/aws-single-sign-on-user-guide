@@ -1,4 +1,4 @@
-# How to search for an AWS account or application<a name="howtosearchforapp"></a>
+# Searching for an AWS account or application<a name="howtosearchforapp"></a>
 
 If your list of applications or AWS accounts is too large to find what you need, you can use the **Search** box\.
 

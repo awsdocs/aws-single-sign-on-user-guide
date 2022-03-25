@@ -49,7 +49,7 @@ The following tables describe quotas within AWS SSO\.
 
 | Resource | Default quota | 
 | --- | --- | 
-| AWS SSO APIs | All [AWS SSO APIs](https://docs.aws.amazon.com/singlesignon/latest/APIReference/API_Operations.html) have a throttle limit maximum of 20 transactions per second \(TPS\)\. The [CreateAccountAssignment](https://docs.aws.amazon.com/singlesignon/latest/APIReference/API_CreateAccountAssignment.html) has a maximum rate of 10 outstanding async calls\. These quotas cannot be changed\. | 
+| AWS SSO APIs | [AWS SSO APIs](https://docs.aws.amazon.com/singlesignon/latest/APIReference/API_Operations.html) have a collective throttle limit maximum of 20 transactions per second \(TPS\)\. The [CreateAccountAssignment](https://docs.aws.amazon.com/singlesignon/latest/APIReference/API_CreateAccountAssignment.html) has a maximum rate of 10 outstanding async calls\. These quotas cannot be changed\. | 
 
 ## Additional quotas<a name="additionallimits"></a>
 

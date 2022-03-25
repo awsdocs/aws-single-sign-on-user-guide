@@ -1,4 +1,4 @@
-# How to reset your password<a name="howtoresetpassword"></a>
+# Resetting your password<a name="howtoresetpassword"></a>
 
 From time to time you may need to reset your password, depending on your company policies\. 
 

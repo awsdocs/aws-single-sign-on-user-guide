@@ -1,4 +1,4 @@
-# How to customize the user portal URL<a name="howtochangeURL"></a>
+# Customizing the user portal URL<a name="howtochangeURL"></a>
 
 By default, your AWS SSO user portal is accessible through a URL of the form `d-xxxxxxxxxx.awsapps.com/start`\. However, you can customize the URL to `your_subdomain.awsapps.com/start`\. This change to the user portal URL is permanent, and you will not be able to edit it later\.
 

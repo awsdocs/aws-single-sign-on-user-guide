@@ -1,4 +1,4 @@
-# How to bookmark an IAM role for quick access to your management console<a name="howtobookmark"></a>
+# Bookmarking an IAM role<a name="howtobookmark"></a>
 
 To make it easier for you to access frequently\-used IAM roles from the user portal, you can create a bookmark for a given role associated with a specific AWS account\. 
 
