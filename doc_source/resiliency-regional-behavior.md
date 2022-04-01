@@ -2,7 +2,7 @@
 
 The AWS SSO service is fully managed and uses highly available and durable AWS services, such as Amazon S3 and Amazon EC2\. To ensure availability in the event of an availability zone disruption, AWS SSO operates across multiple availability zones\.
 
-You enable AWS SSO in your AWS Organizations management account\. This is required so that AWS SSO can provision, de\-provision, and update roles across all your AWS accounts\. When you enable AWS SSO, you must select a single AWS Region in which to deploy the service\. This primary Region can be the same or different Region than your AWS Organizations primary Region\. 
+You enable AWS SSO in your AWS Organizations management account\. This is required so that AWS SSO can provision, de\-provision, and update roles across all your AWS accounts\. When you enable AWS SSO, it is deployed to the AWS Region that is currently selected\. If you want to deploy to a specific AWS Region, change the region selection before enabling AWS SSO\. 
 
 **Note**  
 AWS SSO controls access to its permission sets and applications from its primary Region only\. We recommend that you consider the risks associated with access control when AWS SSO operates in a single Region\.

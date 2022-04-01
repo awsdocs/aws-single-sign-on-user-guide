@@ -67,7 +67,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Other identity providers](other-idps.md)
 + [Manage SSO access to your AWS accounts](manage-your-accounts.md)
    + [Single sign-on access](useraccess.md)
-   + [Permission sets](permissionsets.md)
+   + [Create and manage permission sets](permissionsets.md)
       + [Create a permission set](howtocreatepermissionset.md)
       + [Configure permission set properties](permproperties.md)
          + [Set session duration](howtosessionduration.md)

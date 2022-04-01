@@ -1,6 +1,6 @@
 # Delete permission sets<a name="howtoremovepermissionset"></a>
 
-You must remove permission sets from the provisioned AWS accounts before deleting them from AWS SSO\.
+Before you can delete a permission set from AWS SSO, you must remove it from all AWS accounts that use the permission set\.
 
 **To remove a permission set from an AWS account**
 
@@ -10,7 +10,7 @@ You must remove permission sets from the provisioned AWS accounts before deletin
 
 1. On the **AWS Organization** page, a tree view list of your organization appears\. Select the name of the AWS account from which you want to remove the permission set\.
 
-1. On the **Overview** page for the AWS account, choose **Permission sets**\.
+1. On the **Overview** page for the AWS account, choose the **Permission sets** tab\.
 
 1. Select the check box next to the permission set that you want to remove, and then choose **Remove**\.
 
@@ -29,4 +29,4 @@ All users and groups that have been assigned this permission set, regardless of 
 
 1. Select the permission set that you want to delete, and then choose **Delete**\.
 
-1. In the **Delete permission set** dialog box, type the name of the permission set to confirm deletion, and then choose **Delete**\.
+1. In the **Delete permission set** dialog box, type the name of the permission set to confirm deletion, and then choose **Delete**\. The name is case\-sensitive\.

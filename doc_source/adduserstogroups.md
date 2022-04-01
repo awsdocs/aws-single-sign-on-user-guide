@@ -1,6 +1,6 @@
 # Add users to groups<a name="adduserstogroups"></a>
 
-Use the following procedure to add users as members of a group that you previously created in your AWS SSO store\.
+Use the following procedure to add users as members of a group that you previously created in your AWS SSO identity store\.
 
 **To add a user as a member of a group**
 

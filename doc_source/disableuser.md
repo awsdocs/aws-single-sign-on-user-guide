@@ -1,6 +1,6 @@
 # Disable user access<a name="disableuser"></a>
 
-When you disable user access, you cannot edit their user details, reset their password, add the user to a group, or view their group membership\. Use the following procedure to disable user access in your AWS SSO store\. 
+When you disable user access, you cannot edit their user details, reset their password, add the user to a group, or view their group membership\. Use the following procedure to disable user access in your AWS SSO identity store\. 
 
 **Note**  
 When you disable user access or delete a user in AWS SSO, that user will immediately be prevented from signing in to the user portal and will not be able to create new AWS SSO sign in sessions\. For more information, see [Authentication sessions](authconcept.md#sessionsconcept)\.

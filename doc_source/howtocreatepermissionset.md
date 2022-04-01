@@ -1,6 +1,6 @@
 # Create a permission set<a name="howtocreatepermissionset"></a>
 
-Use this procedure to create a permission set based on a custom permissions policy that you create, or on predefined AWS managed policies that exist in IAM, or both\.
+Use this procedure to create a predefined permission set that uses a single AWS managed policy, or a custom permission set that uses up to 10 AWS managed policies and an inline policy\.
 
 **To create a permission set**
 
@@ -10,38 +10,46 @@ Use this procedure to create a permission set based on a custom permissions poli
 
 1. Choose **Create permission set**\.
 
-1. On the **Create new permission set** page, choose one of the following options, and then follow the instructions provided for that option:
-   + **Use an existing job function policy**
+1. On the **Select permission set type** page, under **Permission set type**, select a permission set type\.
 
-     1. Choose **Next: Details**\.
+1. Specify one or more policies as required for the permission set, based on the permission set type:
+   + **Predefined permission set**
 
-     1. Under **Select job function policy**, select one of the default IAM job function policies in the list, and then choose **Next: Tags**\. For more information, see [AWS managed policies for job functions](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html)\.
+     1. Choose **Predefined permission set**\.
 
-     1. Under **Add tags \(optional\)**, specify values for **Key** and **Value \(optional\)**, and then choose **Next: Review**\. For more information about tags, see [Tagging AWS Single Sign\-On resources](tagging.md)\.
+     1. Under **Policy for predefined permission set**, select an AWS managed policy\.
 
-     1. Review the selections you made, and then choose **Create**\.
-   + **Create a custom permission set**
+        For more information, see [AWS managed policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#aws-managed-policies)\.
 
-     1. Choose **Next: Details**\.
+     1. Choose **Next**\.
+   + **Custom permission set**
 
-     1. Under **Create a custom permission set**, type a name to identify this permission set in AWS SSO\. The name that you specify for this permission set appears in the user portal as an available role\. After users sign into the the user portal and access the AWS account, they can choose the role\. 
+     1. Choose **Custom permission set**, and then choose **Next**\.
 
-     1. \(Optional\) You can also type a description\. The description appears in the AWS SSO console only, not the user portal\.
+     1. On the **Specify policies **page, do either or both of the following:
+        + To specify one or more AWS managed policies, expand **AWS managed policies**, and then select up to 10 policies from the list\. 
+        + To specify an inline policy, expand **Inline policy**, and then create or paste a policy document that specifies custom permissions\. For a list of example policies to use for delegating AWS SSO tasks, see [Custom policy examples](iam-auth-access-using-id-policies.md#policyexample)\.
 
-     1. \(Optional\) Specify the value for **Session duration**\. This value determines the length of time that a user can be logged on before the console logs them out of their session\. For more information, see [Set session duration](howtosessionduration.md)\.
+          When you create a JSON policy or edit an existing policy, the policy is validated automatically\. If the policy syntax is not valid, you receive a notification and must fix the problem before you can continue\. The findings from the policy validation are automatically returned if you have permissions for `access-analyzer:ValidatePolicy`\.
 
-     1. \(Optional\) Specify the value for **Relay state**\. This value is used in the federation process to redirect users within the account\. For more information, see [Set relay state](howtopermrelaystate.md)\.
+     1. Choose **Next**\.
 
-     1. Select either **Attach AWS managed policies** or **Create a custom permissions policy**\. Or select both if you need to link more than one policy type to this permission set\.
+1. On the **Specify permission set details** page, do the following:
 
-     1. If you chose **Attach AWS managed policies**, select up to 10 job\-related or service\-specific AWS managed policies from the list\. 
+   1. Under **Permission set name**, type a name to identify this permission set in AWS SSO\. The name that you specify for this permission set appears in the AWS SSO user portal as an available role\. Users sign into the user portal, choose an AWS account, and then choose the role\. 
 
-     1. If you chose **Create a custom permissions policy**, under **Create a custom permissions policy**, paste in a policy document with your preferred permissions\. For a list of example policies to use for delegating AWS SSO tasks, see [Custom policy examples](iam-auth-access-using-id-policies.md#policyexample)\.
+   1. \(Optional\) You can also type a description\. The description appears in the AWS SSO console only, not the user portal\.
 
-        For more information about the access policy language, see [Overview of policies](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html) in the *IAM User Guide*\. To test the effects of this policy before applying your changes, use the [IAM policy simulator](http://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_testing-policies.html)\.
+   1. \(Optional\) Specify the value for **Session duration**\. This value determines the length of time that a user can be logged on before the console logs them out of their session\. For more information, see [Set session duration](howtosessionduration.md)\.
 
-     1. Choose **Next: Tags**\.
+   1. \(Optional\) Specify the value for **Relay state**\. This value is used in the federation process to redirect users within the account\. For more information, see [Set relay state](howtopermrelaystate.md)\.
 
-     1. Under **Add tags \(optional\)**, specify values for **Key** and **Value \(optional\)**, and then choose **Next: Review**\. For more information about tags, see [Tagging AWS Single Sign\-On resources](tagging.md)\.
+   1. Expand **Tags \(optional\)**, choose **Add tag**, and then specify values for **Key** and **Value \(optional\)**\. 
 
-     1. Review the selections you made, and then choose **Create**\.
+      For information about tags, see [Tagging AWS Single Sign\-On resources](tagging.md)\.
+
+   1. Choose **Next**\.
+
+1. On the **Review and create** page, review the selections that you made, and then choose **Create**\.
+
+1. By default, when you create a permission set, the permission set isn't provisioned \(used in any AWS accounts\)\. To provision a permission set in an AWS account, you must assign AWS SSO access to users and groups in the account, and then apply the permission set to those users and groups\. For more information, see [Single sign\-on access](useraccess.md)\.

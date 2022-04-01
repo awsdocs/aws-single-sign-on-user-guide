@@ -8,6 +8,7 @@ The following tables describe quotas within AWS SSO\.
 | Resource | Default quota | Can be increased | 
 | --- | --- | --- | 
 |  File size of service provider SAML certificates \(in PEM format\)  | 2 KB | No | 
+| File size limit of the IdP certificate uploaded to SSO | 2500 \(UTF\-8\) characters | No | 
 
 ## AWS account quotas<a name="awsaccountlimits"></a>
 

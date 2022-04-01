@@ -2,7 +2,7 @@
 
 AWS Single Sign\-On is integrated with AWS Organizations so that administrators can pick multiple AWS accounts whose users need single sign\-on \(SSO\) access to the AWS Management Console\. These AWS accounts can be either the management account of the AWS Organizations or a member account\. A management account is the AWS account that is used to create the organization\. The rest of the accounts that belong to an organization are called member accounts\. For more information about the different account types, see [AWS Organizations Terminology and Concepts](http://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html) in the *AWS Organizations User Guide*\.
 
-Once you assign access from the AWS SSO console, you can use permission sets to further refine what users can do in the AWS Management Console\. For more information about permission sets, see [Permission sets](permissionsets.md)\. 
+Once you assign access from the AWS SSO console, you can use permission sets to further refine what users can do in the AWS Management Console\. For more information about permission sets, see [Create and manage permission sets](permissionsets.md)\. 
 
 Users follow a simple sign\-in process:
 
@@ -20,7 +20,7 @@ You can also connect an AWS account that is not part of your organization by set
 
 **Topics**
 + [Single sign\-on access](useraccess.md)
-+ [Permission sets](permissionsets.md)
++ [Create and manage permission sets](permissionsets.md)
 + [Resiliency design and regional behavior](resiliency-regional-behavior.md)
 + [Attribute\-based access control](abac.md)
 + [IAM identity provider](idp.md)

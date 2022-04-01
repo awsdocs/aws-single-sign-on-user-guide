@@ -6,7 +6,7 @@ Authentication to the AWS SSO user portal is controlled by the directory that yo
 
 1. Who has been assigned access to those AWS accounts in the AWS SSO console\. For more information, see [Single sign\-on access](useraccess.md)\.
 
-1. What level of permissions have been granted to the end users in the AWS SSO console to allow them the appropriate access to those AWS accounts\. For more information, see [Permission sets](permissionsets.md)\.
+1. What level of permissions have been granted to the end users in the AWS SSO console to allow them the appropriate access to those AWS accounts\. For more information, see [Create and manage permission sets](permissionsets.md)\.
 
 The following sections explain how you as an administrator can control access to the AWS SSO console or can delegate administrative access for day\-to\-day tasks from the AWS SSO console\. 
 + [Authentication](#authentication)

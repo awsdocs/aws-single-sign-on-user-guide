@@ -1,6 +1,6 @@
 # Add users<a name="addusers"></a>
 
-Users and groups that you create in your AWS SSO store are available in AWS SSO only\. Use the following procedure to add users to your AWS SSO store\. 
+Users and groups that you create in your AWS SSO identity store are available in AWS SSO only\. Use the following procedure to add users to your AWS SSO identity store\. 
 
 **To add a user**
 
@@ -16,7 +16,7 @@ Users and groups that you create in your AWS SSO store are available in AWS SSO 
 
       1. **Send an email to the user with password setup instructions\.** – This option automatically sends the user an email addressed from Amazon Web Services\. The email invites the user on behalf of your company to access the AWS SSO user portal\.
 **Note**  
-All emails sent by the AWS SSO service will come from either the address [no-reply@signin.aws](no-reply@signin.aws) or [no-reply@login.awsapps.com](no-reply@login.awsapps.com)\. We recommend that you configure your mail system so that it accepts emails from these sender email addresses and does not handle them as junk or spam\. 
+All emails sent by the AWS SSO service will come from either the address [no-reply@signin.aws](no-reply@signin.aws) or [no-reply@login.awsapps.com](no-reply@login.awsapps.com)\. We recommend that you configure your email system so that it accepts emails from these sender email addresses and does not handle them as junk or spam\. 
 
       1. **Generate a one\-time password that you can share with the user\.** – This option provides you with the user portal URL and password details that you can manually send to the user from your email address\.
 

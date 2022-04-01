@@ -1,6 +1,6 @@
 # Add groups<a name="addgroups"></a>
 
-Use the following procedure to add groups to your AWS SSO store\.
+Use the following procedure to add groups to your AWS SSO identity store\.
 
 **To add a group**
 
@@ -14,4 +14,4 @@ Use the following procedure to add groups to your AWS SSO store\.
 
 1. Choose **Create group**\.
 
-After you add this group to your AWS SSO store, you can assign SSO access to this group\. For more information, see [Assign user access](useraccess.md#assignusers)\.
+After you add this group to your AWS SSO identity store, you can assign SSO access to this group\. For more information, see [Assign user access](useraccess.md#assignusers)\.

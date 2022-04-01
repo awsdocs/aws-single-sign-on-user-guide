@@ -1,6 +1,6 @@
 # Reset a user password<a name="resetuserpwd"></a>
 
-Use the following procedure to reset the password for a user in your AWS SSO store\. 
+Use the following procedure to reset the password for a user in your AWS SSO identity store\. 
 
 **To reset a user password**
 

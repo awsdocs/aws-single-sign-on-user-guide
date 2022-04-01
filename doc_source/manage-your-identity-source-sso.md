@@ -8,7 +8,7 @@ If you prefer to manage users in AWS Managed Microsoft AD, you can discontinue u
 If you prefer to manage users in an external identity provider \(IdP\), you can connect AWS SSO to your IdP and enable automatic provisioning\. For more information, see [Connect to your external identity provider](manage-your-identity-source-idp.md)\.
 
 **Note**  
-When identities are deleted in the AWS SSO store, corresponding assignments also get deleted in AWS SSO\. However in Microsoft AD, when identities are deleted \(either in AD or the synced in identities\), corresponding assignments are not deleted\. 
+When identities are deleted in the AWS SSO identity store, corresponding assignments also get deleted in AWS SSO\. However in Microsoft AD, when identities are deleted \(either in AD or the synced in identities\), corresponding assignments are not deleted\. 
 
 ## Provisioning when users are in AWS SSO<a name="provision-users-sso"></a>
 

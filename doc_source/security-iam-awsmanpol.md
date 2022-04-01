@@ -64,6 +64,7 @@ This policy is grouped into statements based on the set of permissions provided\
             "organizations:ListParents",
             "sso:*",
             "sso-directory:*",
+            "identitystore:*",
             "ds:CreateAlias"
          ],
          "Resource":"*"
@@ -74,7 +75,7 @@ This policy is grouped into statements based on the set of permissions provided\
 
 ### Additional information about this policy<a name="security-iam-awsmanpol-additional-info"></a>
 
-When AWS SSO is enabled for the first time, the SSO service creates a [service linked role](https://docs.aws.amazon.com/singlesignon/latest/userguide/using-service-linked-roles.html) in the AWS Organizations management account \(formerly master account\) so that AWS SSO can manage the resources in your account\. The actions required are `iam:CreateServiceLinkedRole` and `iam:PassRole` which are shown below\.
+When AWS SSO is enabled for the first time, the SSO service creates a [service linked role](https://docs.aws.amazon.com/singlesignon/latest/userguide/using-service-linked-roles.html) in the AWS Organizations management account \(formerly master account\) so that AWS SSO can manage the resources in your account\. The actions required are `iam:CreateServiceLinkedRole` and `iam:PassRole`, which are shown in the following snippets\.
 
 ```
 {
@@ -110,7 +111,7 @@ When AWS SSO is enabled for the first time, the SSO service creates a [service l
 
 The `AWSSSOMemberAccountAdministrator` policy provides required administrative actions to principals\. The policy is intended for principals who perform the job role of an AWS SSO administrator\. Over time the list of actions provided will be updated to match the existing functionality of AWS SSO and the actions that are required as an administrator\.
 
-You can attach the `AWSSSOMemberAccountAdministrator` policy to your IAM identities\. When you attach the `AWSSSOMemberAccountAdministrator` policy to an identity, you grant administrative AWS Single Sign\-On permissions\. Principals with this policy can access AWS SSO within the AWS Organizations management account and all member accounts\. This principal can fully manage all AWS SSO operations, including the ability to create users, permission sets, and assignments\. The principal can also instantiate those assignments throughout the AWS organization member accounts and establish connections between AWS Directory Service managed directories and AWS SSO\. As new administrative features are released, the account administrator will be granted these permissions automatically\.
+You can attach the `AWSSSOMemberAccountAdministrator` policy to your IAM identities\. When you attach the `AWSSSOMemberAccountAdministrator` policy to an identity, you grant administrative AWS Single Sign\-On permissions\. Principals with this policy can access AWS SSO within the AWS Organizations management account and all member accounts\. This principal can fully manage all AWS SSO operations, including the ability to create users, permission sets, and assignments\. The principal can also instantiate those assignments throughout the AWS organization member accounts and establish connections between AWS Directory Service managed directories and AWS SSO\. As new administrative features are released, the account administrator is granted these permissions automatically\.
 
 ```
 {
@@ -136,6 +137,7 @@ You can attach the `AWSSSOMemberAccountAdministrator` policy to your IAM identit
         "organizations:ListOrganizationalUnitsForParent",
         "sso:*",
         "sso-directory:*",
+        "identitystore:*",
         "ds:CreateAlias"
       ],
       "Resource": "*"
@@ -173,7 +175,7 @@ AWS SSO administrators need limited access to the following AWS Organizations ac
 + `"organizations:DescribeAccount"`
 + `"organizations:ListParents"`
 
-These permissions allow AWS SSO administrators the ability to work with organization resources \(accounts\) for basic SSO administrative tasks such as the following:
+These permissions allow AWS SSO administrators the ability to work with organization resources \(accounts\) for basic AWS SSO administrative tasks such as the following:
 + Identifying the management account that belongs to the organization
 + Identifying the member accounts that belong to the organization
 + Enabling AWS service access for accounts
@@ -195,6 +197,7 @@ This policy grants administrative permissions over AWS SSO users and groups\. Pr
             "Effect": "Allow",
             "Action": [
                 "sso-directory:*",
+                "identitystore:*",
                 "sso:ListDirectoryAssociations"
             ],
             "Resource": "*"
@@ -244,7 +247,7 @@ This policy grants read\-only permissions that allow users to view information i
 
 You can attach the `AWSSSODirectoryReadOnly` policy to your IAM identities\.
 
-This policy grants read\-only permissions that allow users to view users and groups in AWS SSO\. Principals with this policy attached cannot view AWS SSO assignments, permission sets, applications or settings\. Principals with this policy attached cannot make any updates in AWS SSO\. For example, principals with these permissions can view AWS SSO users, but cannot change any of the user attributes or assign MFA devices\. The content of this policy statement is shown in the following snippet\.
+This policy grants read\-only permissions that allow users to view users and groups in AWS SSO\. Principals with this policy attached cannot view AWS SSO assignments, permission sets, applications, or settings\. Principals with this policy attached can't make any updates in AWS SSO\. For example, principals with these permissions can view AWS SSO users, but they can't change any user attributes or assign MFA devices\. The content of this policy statement is shown in the following snippet\.
 
 ```
 {
@@ -257,7 +260,9 @@ This policy grants read\-only permissions that allow users to view users and gro
                 "sso-directory:Search*",
                 "sso-directory:Describe*",
                 "sso-directory:List*",
-                "sso-directory:Get*"
+                "sso-directory:Get*",
+                "identitystore:Describe*",
+                "identitystore:List*"
             ],
             "Resource": "*"
         }
@@ -267,14 +272,14 @@ This policy grants read\-only permissions that allow users to view users and gro
 
 ## AWS SSO updates to AWS managed policies<a name="security-iam-awsmanpol-updates"></a>
 
-View details about updates to AWS managed policies for AWS SSO since August 4, 2021\. For automatic alerts about changes to this page, subscribe to the RSS feed on the AWS SSO Document history page\.
+The following table describes the updates to AWS managed policies for AWS SSO since this service began tracking these changes\. For automatic alerts about changes to this page, subscribe to the RSS feed on the AWS SSO Document history page\.
 
 
 | Change | Description | Date | 
 | --- | --- | --- | 
-| [AWSSSOMasterAccountAdministrator](#security-iam-awsmanpol-AWSSSOMasterAccountAdministrator) |  Add Organizations permissions that allow AWS SSO to create the AWS SSO service\-linked role in the organization's management account so that administrators can fully enable AWS SSO within the organization\. This policy also allows full access to sso\-directory permissions\.  | August 4, 2021 | 
-| [AWSSSOMemberAccountAdministrator](#security-iam-awsmanpol-AWSSSOMemberAccountAdministrator) |  This policy also allows full access to sso\-directory permissions\.  | August 4, 2021 | 
-| [AWSSSODirectoryAdministrator](#security-iam-awsmanpol-AWSSSODirectoryAdministrator) |  Add permissions that allow a principal to fully administer all AWS SSO configuration settings\.   | August 4, 2021 | 
-| [AWSSSOReadOnly](#security-iam-awsmanpol-AWSSSOReadOnly) |  Add read\-only permissions that allow a principal to view AWS SSO configuration settings\.   | August 4, 2021 | 
-| [AWSSSODirectoryReadOnly](#security-iam-awsmanpol-AWSSSODirectoryReadOnly) |  Add read\-only permissions that allow a principal to get individual AWS SSO directory resources\.  | August 4, 2021 | 
+| [AWSSSOMasterAccountAdministrator](#security-iam-awsmanpol-AWSSSOMasterAccountAdministrator) |  This policy now allows all AWS SSO Identity Store service actions\. For information about the actions available in the AWS SSO Identity Store service, see the [AWS SSO Identity Store API Reference](https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/welcome.html)\.  | March 29, 2022 | 
+| [AWSSSOMemberAccountAdministrator](#security-iam-awsmanpol-AWSSSOMemberAccountAdministrator) |  This policy now allows all AWS SSO Identity Store service actions\.  | March 29, 2022 | 
+| [AWSSSODirectoryAdministrator](#security-iam-awsmanpol-AWSSSODirectoryAdministrator) |  This policy now allows all AWS SSO Identity Store service actions\.  | March 29, 2022 | 
+| [AWSSSOReadOnly](#security-iam-awsmanpol-AWSSSOReadOnly) |  Adds read\-only permissions that allow a principal to view AWS SSO configuration settings\.   | August 4, 2021 | 
+| [AWSSSODirectoryReadOnly](#security-iam-awsmanpol-AWSSSODirectoryReadOnly) |  This policy now grants access to the AWS SSO Identity Store service read actions\. This access is required to retrieve user and group information from the AWS SSO Identity Store service\.  | March 29, 2022 | 
 | AWS SSO started tracking changes | AWS SSO started tracking changes for AWS managed policies\. | August 4, 2021 | 
