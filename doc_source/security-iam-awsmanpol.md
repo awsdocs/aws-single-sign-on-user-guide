@@ -65,7 +65,8 @@ This policy is grouped into statements based on the set of permissions provided\
             "sso:*",
             "sso-directory:*",
             "identitystore:*",
-            "ds:CreateAlias"
+            "ds:CreateAlias",
+            "access-analyzer:ValidatePolicy"
          ],
          "Resource":"*"
       }
@@ -138,7 +139,8 @@ You can attach the `AWSSSOMemberAccountAdministrator` policy to your IAM identit
         "sso:*",
         "sso-directory:*",
         "identitystore:*",
-        "ds:CreateAlias"
+        "ds:CreateAlias",
+        "access-analyzer:ValidatePolicy"
       ],
       "Resource": "*"
     }
@@ -161,8 +163,9 @@ AWS SSO administrators need limited permissions to the following AWS Directory S
 
 These permissions allow AWS SSO administrators to identify existing directories and manage applications so that they can be configured for use with AWS SSO\. For more information about each of these actions, see [AWS Directory Service API permissions: Actions, resources, and conditions reference](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html)\.
 
-AWS SSO uses IAM policies to grant permissions to AWS SSO users\. AWS SSO administrators create permission sets and attach polices to them\. The AWS SSO administrator needs to have the following permissions to list the existing policies so that they can choose which polices to use with the permission set they are creating or updating\.
+AWS SSO uses IAM policies to grant permissions to AWS SSO users\. AWS SSO administrators create permission sets and attach polices to them\. The AWS SSO administrator must have the permissions to list the existing policies so that they can choose which polices to use with the permission set they are creating or updating\. To set secure and functional permissions, the AWS SSO administrator must have permissions to run the IAM Access Analyzer policy validation\.
 + `"iam:ListPolicies"`
++ `"access-analyzer:ValidatePolicy"`
 
 AWS SSO administrators need limited access to the following AWS Organizations actions to perform daily tasks:
 + `"organizations:EnableAWSServiceAccess"`
@@ -235,7 +238,8 @@ This policy grants read\-only permissions that allow users to view information i
                 "sso:Get*",
                 "sso:List*",
                 "sso:Search*",
-                "sso-directory:DescribeDirectory"
+                "sso-directory:DescribeDirectory",
+                "access-analyzer:ValidatePolicy"
             ],
             "Resource": "*"
         }
@@ -270,6 +274,77 @@ This policy grants read\-only permissions that allow users to view users and gro
 }
 ```
 
+## AWS managed policy: AWSIdentitySyncFullAccess<a name="security-iam-awsmanpol-AWSIdentitySyncFullAccess"></a>
+
+You can attach the `AWSIdentitySyncFullAccess` policy to your IAM identities\.
+
+Principals with this policy attached have full access permissions to create and delete sync profiles, associate or update a sync profile with a sync target, create, list and delete sync filters, and start or stop synchronization\.
+
+**Permission details**
+
+This policy includes the following permissions when accessing Active Directory\.
++ `ds:AuthorizeApplication` – Allows identity\-sync to grant access to the application during the sync profile creation process\.
++ `ds:UnauthorizeApplication` – Allows identity\-sync to remove access to the application during the sync profile deletion process\.
+
+The content of this policy statement is shown in the following snippet\.
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ds:AuthorizeApplication",
+                "ds:UnauthorizeApplication"
+            ],
+            "Resource": "*"
+        },  
+        {
+            "Effect": "Allow",
+            "Action": [
+                "identity-sync:DeleteSyncProfile",
+                "identity-sync:CreateSyncProfile",
+                "identity-sync:GetSyncProfile",
+                "identity-sync:StartSync",
+                "identity-sync:StopSync",
+                "identity-sync:CreateSyncFilter",
+                "identity-sync:DeleteSyncFilter",
+                "identity-sync:ListSyncFilters",
+                "identity-sync:CreateSyncTarget",
+                "identity-sync:DeleteSyncTarget",
+                "identity-sync:GetSyncTarget",
+                "identity-sync:UpdateSyncTarget"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
+
+## AWS managed policy: AWSIdentitySyncReadOnlyAccess<a name="security-iam-awsmanpol-AWSIdentitySyncReadOnlyAccess"></a>
+
+You can attach the `AWSIdentitySyncReadOnlyAccess` policy to your IAM identities\.
+
+This policy grants read\-only permissions that allow users to view information about the identity synchronization profile, filters, and target settings\. Principals with this policy attached can't make any updates to synchronization settings\. For example, principals with these permissions can view identity synchronization settings, but can't change any of the profile or filter values\. The content of this policy statement is shown in the following snippet\.
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [ 
+        {
+            "Effect": "Allow",
+            "Action": [
+                "identity-sync:GetSyncProfile",
+                "identity-sync:ListSyncFilters",
+                "identity-sync:GetSyncTarget",
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
+
 ## AWS SSO updates to AWS managed policies<a name="security-iam-awsmanpol-updates"></a>
 
 The following table describes the updates to AWS managed policies for AWS SSO since this service began tracking these changes\. For automatic alerts about changes to this page, subscribe to the RSS feed on the AWS SSO Document history page\.
@@ -277,9 +352,12 @@ The following table describes the updates to AWS managed policies for AWS SSO si
 
 | Change | Description | Date | 
 | --- | --- | --- | 
+|  [AWSSSOMasterAccountAdministrator](#security-iam-awsmanpol-AWSSSOMasterAccountAdministrator) [AWSSSOMemberAccountAdministrator](#security-iam-awsmanpol-AWSSSOMemberAccountAdministrator) [AWSSSOReadOnly](#security-iam-awsmanpol-AWSSSOReadOnly)  | Add IAM Access Analyzer permissions that allow a principal to use the policy checks for validation\. | April 28, 2022 | 
 | [AWSSSOMasterAccountAdministrator](#security-iam-awsmanpol-AWSSSOMasterAccountAdministrator) |  This policy now allows all AWS SSO Identity Store service actions\. For information about the actions available in the AWS SSO Identity Store service, see the [AWS SSO Identity Store API Reference](https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/welcome.html)\.  | March 29, 2022 | 
 | [AWSSSOMemberAccountAdministrator](#security-iam-awsmanpol-AWSSSOMemberAccountAdministrator) |  This policy now allows all AWS SSO Identity Store service actions\.  | March 29, 2022 | 
 | [AWSSSODirectoryAdministrator](#security-iam-awsmanpol-AWSSSODirectoryAdministrator) |  This policy now allows all AWS SSO Identity Store service actions\.  | March 29, 2022 | 
-| [AWSSSOReadOnly](#security-iam-awsmanpol-AWSSSOReadOnly) |  Adds read\-only permissions that allow a principal to view AWS SSO configuration settings\.   | August 4, 2021 | 
 | [AWSSSODirectoryReadOnly](#security-iam-awsmanpol-AWSSSODirectoryReadOnly) |  This policy now grants access to the AWS SSO Identity Store service read actions\. This access is required to retrieve user and group information from the AWS SSO Identity Store service\.  | March 29, 2022 | 
+| [AWSIdentitySyncFullAccess](#security-iam-awsmanpol-AWSIdentitySyncFullAccess) |  This policy allows full access to identity\-sync permissions\.  | March 3, 2022 | 
+| [AWSIdentitySyncReadOnlyAccess](#security-iam-awsmanpol-AWSIdentitySyncReadOnlyAccess) |  This policy grants read\-only permissions that allow a principal to view identity\-sync settings\.  | March 3, 2022 | 
+| [AWSSSOReadOnly](#security-iam-awsmanpol-AWSSSOReadOnly) |  This policy grants read\-only permissions that allow a principal to view AWS SSO configuration settings\.   | August 4, 2021 | 
 | AWS SSO started tracking changes | AWS SSO started tracking changes for AWS managed policies\. | August 4, 2021 | 

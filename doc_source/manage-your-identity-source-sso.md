@@ -3,7 +3,7 @@
 + Add your users as members to the groups\. 
 + Assign the groups with the desired level of access to your AWS accounts and applications\. 
 
-If you prefer to manage users in AWS Managed Microsoft AD, you can discontinue use of your AWS SSO store at any time and instead connect AWS SSO to your Microsoft AD using AWS Directory Service\. For more information, see [Connect to your Microsoft AD directory](manage-your-identity-source-ad.md)\.
+If you prefer to manage users in AWS Managed Microsoft AD, you can discontinue use of your AWS SSO store at any time and instead connect AWS SSO to your directory in Microsoft AD using AWS Directory Service\. For more information, see [Connect to your Microsoft AD directory](manage-your-identity-source-ad.md)\.
 
 If you prefer to manage users in an external identity provider \(IdP\), you can connect AWS SSO to your IdP and enable automatic provisioning\. For more information, see [Connect to your external identity provider](manage-your-identity-source-idp.md)\.
 
