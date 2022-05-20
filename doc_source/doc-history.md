@@ -1,12 +1,14 @@
 # Document history<a name="doc-history"></a>
 
 The following table describes important additions to the AWS Single Sign\-On documentation\. We also update the documentation frequently to address the feedback that you send us\.
-+ **Latest major documentation update: **April 28, 2022
++ **Latest major documentation update: **May 11, 2022
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updates for AWS managed policies](https://docs.aws.amazon.com/singlesignon/latest/userguide/security-iam-awsmanpol.html) | Updated permissions for the `AWSSSOServiceRolePolicy` AWS managed policy\. | May 11, 2022 | 
+| [Support for delegated administration](https://docs.aws.amazon.com/singlesignon/latest/userguide/delegated-admin.html) | Added content for the delegated administration feature\. | May 11, 2022 | 
 | [Updates for AWS managed policies](https://docs.aws.amazon.com/singlesignon/latest/userguide/security-iam-awsmanpol.html) | Updated permissions for the `AWSSSOMasterAccountAdministrator`, `AWSSSOMemberAccountAdministrator`, and `AWSSSOReadOnly` AWS managed policies\. | April 28, 2022 | 
-| [Support for configurable AD sync](https://docs.aws.amazon.com/singlesignon/latest/userguide/provision-users-from-ad-configurable-ADsync.html) | Added content for configurable AD sync feature\. | April 14, 2022 | 
+| [Support for configurable AD sync](https://docs.aws.amazon.com/singlesignon/latest/userguide/provision-users-from-ad-configurable-ADsync.html) | Added content for the configurable AD sync feature\. | April 14, 2022 | 
 | [New AWS managed policy topic](https://docs.aws.amazon.com/singlesignon/latest/userguide/security-iam-awsmanpol.html) | Added details for the `AWSSSOMasterAccountAdministrator` AWS managed policy\. | August 4, 2021 | 
 | [Updates for quotas](https://docs.aws.amazon.com/singlesignon/latest/userguide/limits.html) | Adjustments to quota tables\. | December 21, 2020 | 
 | [New example policies](https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html) | Added new customer managed policy examples and updates to the permissions required section\. | December 21, 2020 | 

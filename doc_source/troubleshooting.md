@@ -135,3 +135,7 @@ Time\-based one\-time password \(TOTP\) systems, such as those used by AWS SSO i
 ## My users are not receiving emails from AWS SSO<a name="issue14"></a>
 
 All emails sent by the AWS SSO service will come from either the address [no-reply@signin.aws](no-reply@signin.aws) or [no-reply@login.awsapps.com](no-reply@login.awsapps.com)\. Your mail system must be configured so that it accepts emails from these sender email addresses and does not handle them as junk or spam\.
+
+## Error: You can't delete/modify/remove/assign access to permission sets provisioned in the management account<a name="issue15"></a>
+
+This message indicates that the [Delegated administration](delegated-admin.md) feature has been enabled and that the operation you previously attempted can only be successfully performed by someone who has management account privileges in AWS Organizations\. To resolve this issue, sign in as a user who has these privileges and try performing the task again or assign this task to someone who has the correct permissions\. For more information, see [What tasks can be performed in the delegated administrator account](delegated-admin.md#delegated-admin-tasks-member-account)\.

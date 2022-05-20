@@ -34,6 +34,8 @@ The AWSServiceRoleForSSO service\-linked role permissions policy allows AWS SSO 
 + `organizations:DescribeAccount`
 + `organizations:DescribeOrganization`
 + `organizations:ListAccounts`
++ `organizations:ListAWSServiceAccessForOrganization`
++ `organizations:ListDelegatedAdministrators`
 
 The AWSServiceRoleForSSO service\-linked role permissions policy allows AWS SSO to complete the following on all IAM roles \(\*\):
 + `iam:listRoles`
@@ -41,6 +43,148 @@ The AWSServiceRoleForSSO service\-linked role permissions policy allows AWS SSO 
 The AWSServiceRoleForSSO service\-linked role permissions policy allows AWS SSO to complete the following on “arn:aws:iam::\*:role/aws\-service\-role/sso\.amazonaws\.com/AWSServiceRoleForSSO”:
 + `iam:GetServiceLinkedRoleDeletionStatus`
 + `iam:DeleteServiceLinkedRole`
+
+The role permissions policy allows AWS SSO to complete the following actions on resources\.
+
+```
+{
+   "Version":"2012-10-17",
+   "Statement":[
+      {
+         "Sid":"IAMRoleProvisioningActions",
+         "Effect":"Allow",
+         "Action":[
+            "iam:AttachRolePolicy",
+            "iam:CreateRole",
+            "iam:PutRolePolicy",
+            "iam:UpdateRole",
+            "iam:UpdateRoleDescription",
+            "iam:UpdateAssumeRolePolicy"
+         ],
+         "Resource":[
+            "arn:aws:iam::*:role/aws-reserved/sso.amazonaws.com/*"
+         ],
+         "Condition":{
+            "StringNotEquals":{
+               "aws:PrincipalOrgMasterAccountId":"${aws:PrincipalAccount}"
+            }
+         }
+      },
+      {
+         "Sid":"IAMRoleReadActions",
+         "Effect":"Allow",
+         "Action":[
+            "iam:GetRole",
+            "iam:ListRoles"
+         ],
+         "Resource":[
+            "*"
+         ]
+      },
+      {
+         "Sid":"IAMRoleCleanupActions",
+         "Effect":"Allow",
+         "Action":[
+            "iam:DeleteRole",
+            "iam:DeleteRolePolicy",
+            "iam:DetachRolePolicy",
+            "iam:ListRolePolicies",
+            "iam:ListAttachedRolePolicies"
+         ],
+         "Resource":[
+            "arn:aws:iam::*:role/aws-reserved/sso.amazonaws.com/*"
+         ]
+      },
+      {
+         "Sid":"IAMSLRCleanupActions",
+         "Effect":"Allow",
+         "Action":[
+            "iam:DeleteServiceLinkedRole",
+            "iam:GetServiceLinkedRoleDeletionStatus",
+            "iam:DeleteRole",
+            "iam:GetRole"
+         ],
+         "Resource":[
+            "arn:aws:iam::*:role/aws-service-role/sso.amazonaws.com/AWSServiceRoleForSSO"
+         ]
+      },
+      {
+         "Sid":"IAMSAMLProviderProvisioningActions",
+         "Effect":"Allow",
+         "Action":[
+            "iam:CreateSAMLProvider",
+            "iam:UpdateSAMLProvider"
+         ],
+         "Resource":[
+            "arn:aws:iam::*:saml-provider/AWSSSO_*"
+         ],
+         "Condition":{
+            "StringNotEquals":{
+               "aws:PrincipalOrgMasterAccountId":"${aws:PrincipalAccount}"
+            }
+         }
+      },
+      {
+         "Sid":"IAMSAMLProviderCleanupActions",
+         "Effect":"Allow",
+         "Action":[
+            "iam:DeleteSAMLProvider",
+            "iam:GetSAMLProvider"
+         ],
+         "Resource":[
+            "arn:aws:iam::*:saml-provider/AWSSSO_*"
+         ]
+      },
+      {
+         "Effect":"Allow",
+         "Action":[
+            "organizations:DescribeAccount",
+            "organizations:DescribeOrganization",
+            "organizations:ListAccounts",
+            "organizations:ListAWSServiceAccessForOrganization"
+            "organizations:ListDelegatedAdministrators"
+         ],
+         "Resource":[
+            "*"
+         ]
+      },
+      {
+         "Sid":"AllowUnauthAppForDirectory",
+         "Effect":"Allow",
+         "Action":[
+            "ds:UnauthorizeApplication"
+         ],
+         "Resource":[
+            "*"
+         ]
+      },
+      {
+         "Sid":"AllowDescribeForDirectory",
+         "Effect":"Allow",
+         "Action":[
+            "ds:DescribeDirectories",
+            "ds:DescribeTrusts"
+         ],
+         "Resource":[
+            "*"
+         ]
+      },
+      {
+         "Sid":"AllowDescribeAndListOperationsOnIdentitySource",
+         "Effect":"Allow",
+         "Action":[
+            "identitystore:DescribeUser",
+            "identitystore:DescribeGroup",
+            "identitystore:ListGroups",
+            "identitystore:ListUsers"
+         ],
+         "Resource":[
+            "*"
+         ]
+      }
+   ]
+}
+```
 
 You must configure permissions to allow an IAM entity \(such as a user, group, or role\) to create, edit, or delete a service\-linked role\. For more information, see [Service\-linked role permissions](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#service-linked-role-permissions) in the *IAM User Guide*\.
 

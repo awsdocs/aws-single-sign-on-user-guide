@@ -345,6 +345,12 @@ This policy grants read\-only permissions that allow users to view information a
 }
 ```
 
+## AWS managed policy: AWSSSOServiceRolePolicy<a name="security-iam-awsmanpol-AWSSSOServiceRolePolicy"></a>
+
+You can't attach the `AWSSSOServiceRolePolicy` policy to your IAM identities\.
+
+This policy is attached to a service\-linked role that allows AWS SSO to delegate and enforce which users have SSO access to specific AWS accounts in AWS Organizations\. During the process to [Enable AWS SSO](step1.md), a service\-linked role is created in all of the AWS accounts within your organization\. AWS SSO also creates the same service\-linked role in every account that is subsequently added to your organization\. This role allows AWS SSO to access each account's resources on your behalf\. Service\-linked roles that are created in each AWS account are named `AWSServiceRoleForSSO`\. For more information, see [Using service\-linked roles for AWS SSO](using-service-linked-roles.md)\.
+
 ## AWS SSO updates to AWS managed policies<a name="security-iam-awsmanpol-updates"></a>
 
 The following table describes the updates to AWS managed policies for AWS SSO since this service began tracking these changes\. For automatic alerts about changes to this page, subscribe to the RSS feed on the AWS SSO Document history page\.
@@ -352,6 +358,7 @@ The following table describes the updates to AWS managed policies for AWS SSO si
 
 | Change | Description | Date | 
 | --- | --- | --- | 
+| [AWSSSOServiceRolePolicy](#security-iam-awsmanpol-AWSSSOServiceRolePolicy) |  This policy now includes new permissions that allow calls to `[ListAWSServiceAccessForOrganization](https://docs.aws.amazon.com/organizations/latest/APIReference/API_ListAWSServiceAccessForOrganization.html) and [ListDelegatedAdministrators](https://docs.aws.amazon.com/organizations/latest/APIReference/API_ListDelegatedAdministrators.html)` in AWS Organizations\.  | May 11, 2022 | 
 |  [AWSSSOMasterAccountAdministrator](#security-iam-awsmanpol-AWSSSOMasterAccountAdministrator) [AWSSSOMemberAccountAdministrator](#security-iam-awsmanpol-AWSSSOMemberAccountAdministrator) [AWSSSOReadOnly](#security-iam-awsmanpol-AWSSSOReadOnly)  | Add IAM Access Analyzer permissions that allow a principal to use the policy checks for validation\. | April 28, 2022 | 
 | [AWSSSOMasterAccountAdministrator](#security-iam-awsmanpol-AWSSSOMasterAccountAdministrator) |  This policy now allows all AWS SSO Identity Store service actions\. For information about the actions available in the AWS SSO Identity Store service, see the [AWS SSO Identity Store API Reference](https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/welcome.html)\.  | March 29, 2022 | 
 | [AWSSSOMemberAccountAdministrator](#security-iam-awsmanpol-AWSSSOMemberAccountAdministrator) |  This policy now allows all AWS SSO Identity Store service actions\.  | March 29, 2022 | 

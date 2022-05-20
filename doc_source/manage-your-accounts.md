@@ -19,6 +19,7 @@ To use AWS SSO with AWS Organizations, you must first [Enable AWS SSO](step1.md)
 You can also connect an AWS account that is not part of your organization by setting up the account as a custom SAML application in AWS SSO\. In this scenario, you provision and manage the IAM roles and trust relationships that are required to enable SSO access\. For more information on how to do this, see [Add and configure a custom SAML 2\.0 application](samlapps.md#addconfigcustomapp)\.
 
 **Topics**
++ [Delegated administration](delegated-admin.md)
 + [Single sign\-on access](useraccess.md)
 + [Create and manage permission sets](permissionsets.md)
 + [Resiliency design and regional behavior](resiliency-regional-behavior.md)

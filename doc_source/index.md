@@ -69,6 +69,7 @@ Amazon's trademarks and trade dress may not be used in
             + [PingOne](pingone-idp.md)
       + [Other identity providers](other-idps.md)
 + [Manage SSO access to your AWS accounts](manage-your-accounts.md)
+   + [Delegated administration](delegated-admin.md)
    + [Single sign-on access](useraccess.md)
    + [Create and manage permission sets](permissionsets.md)
       + [Create a permission set](howtocreatepermissionset.md)
