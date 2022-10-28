@@ -1,6 +1,6 @@
 # Bookmarking an IAM role<a name="howtobookmark"></a>
 
-To make it easier for you to access frequently\-used IAM roles from the user portal, you can create a bookmark for a given role associated with a specific AWS account\. 
+To make it easier for you to access frequently\-used IAM roles from the AWS access portal, you can create a bookmark for a given role associated with a specific AWS account\. 
 
 **To bookmark an IAM role for a specific AWS account**
 

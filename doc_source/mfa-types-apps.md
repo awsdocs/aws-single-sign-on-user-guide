@@ -6,7 +6,7 @@ When prompted for MFA, users must enter a valid code from their authenticator ap
 
 ## Tested authenticator apps<a name="mfa-types-apps-tested"></a>
 
-Although any TOTP\-compliant application will work with AWS SSO MFA, the following table lists well\-known third\-party authenticator apps to choose from\.
+Although any TOTP\-compliant application will work with IAM Identity Center MFA, the following table lists well\-known third\-party authenticator apps to choose from\.
 
 
 | Operating system | Tested authenticator app | 

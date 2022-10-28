@@ -1,6 +1,6 @@
 # Supported identity providers<a name="supported-idps"></a>
 
-The following external identity providers have been tested with the AWS SSO SCIM implementation\.
+The following external identity providers have been tested with the IAM Identity Center SCIM implementation\.
 
 **Topics**
 + [Azure AD](azure-ad-idp.md)

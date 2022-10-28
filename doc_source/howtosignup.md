@@ -1,4 +1,4 @@
-# Signing up in the user portal<a name="howtosignup"></a>
+# Signing up in the AWS access portal<a name="howtosignup"></a>
 
 When you sign up for an AWS account, you create a personal or business account\. This helps us determine what information we need to collect during sign\-up\.
 
@@ -10,7 +10,7 @@ When you sign up for an AWS account, you create a personal or business account\.
 
 1. Choose **Verify email address**\. We then send a verification code to your email address\.
 **Note**  
-Email from the AWS SSO service comes from the address [no-reply@signin.aws](no-reply@signin.aws)\. We recommend that you configure your mail system so that it accepts  email from this address and does not treat it as junk or spam\.  
+Email from the IAM Identity Center service comes from the address [no-reply@signin.aws](no-reply@signin.aws)\. We recommend that you configure your mail system so that it accepts email from this address and does not treat it as junk or spam\.  
 You might receive a different email from us if there is a problem creating your account\. Review this email and follow its instructions to correct the problem\.
 
 1. Under **Verification code**, enter the code that you received\. Then choose **Verify**\.

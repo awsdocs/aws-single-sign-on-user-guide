@@ -1,34 +1,34 @@
-# Identity\-based policy examples for AWS SSO<a name="iam-auth-access-using-id-policies"></a>
+# Identity\-based policy examples for IAM Identity Center<a name="iam-auth-access-using-id-policies"></a>
 
-This topic provides examples of permissions policies that you can attach to AWS identities, including IAM users, groups, and roles, and AWS SSO users \(as part of a custom permissions policy\), for administration of AWS SSO\. 
+This topic provides examples of permissions policies that you can attach to AWS identities, including IAM users, groups, and roles, and IAM Identity Center users \(as part of a custom permissions policy\), for administration of IAM Identity Center\. 
 
 **Important**  
-We recommend that you first review the introductory topics that explain the basic concepts and options available for you to manage access to your AWS SSO resources\. For more information, see [Overview of managing access permissions to your AWS SSO resources](iam-auth-access-overview.md)\.
+We recommend that you first review the introductory topics that explain the basic concepts and options available for you to manage access to your IAM Identity Center resources\. For more information, see [Overview of managing access permissions to your IAM Identity Center resources](iam-auth-access-overview.md)\.
 
 The sections in this topic cover the following:
 + [Custom policy examples](#policyexample)
-+ [Permissions required to use the AWS SSO console](#requiredpermissionsconsole)
++ [Permissions required to use the IAM Identity Center console](#requiredpermissionsconsole)
 
 ## Custom policy examples<a name="policyexample"></a>
 
-This section provides examples of common use cases that require a custom IAM policy\. These example policies are identity\-based policies, which do not specify the Principal element\. This is because with an identity\-based policy, you don't specify the principal who gets the permission\. Instead, you attach the policy to the principal\. When you attach an identity\-based permission policy to an IAM role, the principal identified in the role's trust policy gets the permissions\. You can create identity\-based policies in IAM and attach them to users, groups, and/or roles\. You can also apply these policies to AWS SSO users when you create a permission set in AWS SSO\.
+This section provides examples of common use cases that require a custom IAM policy\. These example policies are identity\-based policies, which do not specify the Principal element\. This is because with an identity\-based policy, you don't specify the principal who gets the permission\. Instead, you attach the policy to the principal\. When you attach an identity\-based permission policy to an IAM role, the principal identified in the role's trust policy gets the permissions\. You can create identity\-based policies in IAM and attach them to users, groups, and/or roles\. You can also apply these policies to IAM Identity Center users when you create a permission set in IAM Identity Center\.
 
 **Note**  
 Use these examples when you create policies for your environment and make sure to test for both positive \(“access granted”\) and negative \(“access denied”\) test cases before you deploy these policies in your production environment\. For more information about testing IAM policies, see [Testing IAM policies with the IAM policy simulator](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#aws-managed-policies) in the *IAM User Guide*\.
 
 **Topics**
-+ [Example 1: Allow a user to view AWS SSO](#policyexamplesetupenable)
-+ [Example 2: Allow a user to manage permissions to AWS accounts in AWS SSO](#policyexamplemanageconnecteddirectory)
-+ [Example 3: Allow a user to manage applications in AWS SSO](#policyexamplemanageapplication)
-+ [Example 4: Allow a user to manage users and groups in your AWS SSO directory](#policyexamplemanageusersgroups)
-+ [Example 5: Allow a user to administer AWS SSO for specific accounts](#policyexamplemanageaccount)
++ [Example 1: Allow a user to view IAM Identity Center](#policyexamplesetupenable)
++ [Example 2: Allow a user to manage permissions to AWS accounts in IAM Identity Center](#policyexamplemanageconnecteddirectory)
++ [Example 3: Allow a user to manage applications in IAM Identity Center](#policyexamplemanageapplication)
++ [Example 4: Allow a user to manage users and groups in your Identity Center directory](#policyexamplemanageusersgroups)
++ [Example 5: Allow a user to administer IAM Identity Center for specific accounts](#policyexamplemanageaccount)
 
-### Example 1: Allow a user to view AWS SSO<a name="policyexamplesetupenable"></a>
+### Example 1: Allow a user to view IAM Identity Center<a name="policyexamplesetupenable"></a>
 
-The following permissions policy grants read\-only permissions to a user so they can view all the settings and directory information configured in AWS SSO\. 
+The following permissions policy grants read\-only permissions to a user so they can view all the settings and directory information configured in IAM Identity Center\. 
 
 **Note**  
-This policy is provided for example purposes only\. In a production environment, we recommend that you use the `ViewOnlyAccess` AWS managed policy for AWS SSO\.
+This policy is provided for example purposes only\. In a production environment, we recommend that you use the `ViewOnlyAccess` AWS managed policy for IAM Identity Center\.
 
 ```
  1. {
@@ -67,7 +67,7 @@ This policy is provided for example purposes only\. In a production environment,
 34. }
 ```
 
-### Example 2: Allow a user to manage permissions to AWS accounts in AWS SSO<a name="policyexamplemanageconnecteddirectory"></a>
+### Example 2: Allow a user to manage permissions to AWS accounts in IAM Identity Center<a name="policyexamplemanageconnecteddirectory"></a>
 
 The following permissions policy grants permissions to allow a user to create, manage, and deploy permission sets for your AWS accounts\. 
 
@@ -132,12 +132,12 @@ The following permissions policy grants permissions to allow a user to create, m
 **Note**  
 The additional permissions listed under the `"Sid": "IAMListPermissions"`, and `"Sid": "AccessToSSOProvisiondRoles"` sections are required only to enable the user to create assignments in the AWS Organizations management account\.
 
-### Example 3: Allow a user to manage applications in AWS SSO<a name="policyexamplemanageapplication"></a>
+### Example 3: Allow a user to manage applications in IAM Identity Center<a name="policyexamplemanageapplication"></a>
 
-The following permissions policy grants permissions to allow a user to view and configure applications in AWS SSO, including pre\-integrated SaaS applications from within the AWS SSO catalog\. 
+The following permissions policy grants permissions to allow a user to view and configure applications in IAM Identity Center, including pre\-integrated SaaS applications from within the IAM Identity Center catalog\. 
 
 **Note**  
-The `sso:AssociateProfile` operation used in the following policy example is required for management of user and group assignments to applications\. It also allows a user to assign users and groups to AWS accounts by using existing permission sets\. If a user must manage AWS account access within AWS SSO, and requires permissions necessary to manage permission sets, see [Example 2: Allow a user to manage permissions to AWS accounts in AWS SSO](#policyexamplemanageconnecteddirectory)\.
+The `sso:AssociateProfile` operation used in the following policy example is required for management of user and group assignments to applications\. It also allows a user to assign users and groups to AWS accounts by using existing permission sets\. If a user must manage AWS account access within IAM Identity Center, and requires permissions necessary to manage permission sets, see [Example 2: Allow a user to manage permissions to AWS accounts in IAM Identity Center](#policyexamplemanageconnecteddirectory)\.
 
 As of October 2020, many of these operations are available only through the AWS console\. This example policy includes “read” actions such as list, get, and search, which are relevant to the error\-free operation of the console for this case\.
 
@@ -192,11 +192,11 @@ As of October 2020, many of these operations are available only through the AWS 
 48. }
 ```
 
-### Example 4: Allow a user to manage users and groups in your AWS SSO directory<a name="policyexamplemanageusersgroups"></a>
+### Example 4: Allow a user to manage users and groups in your Identity Center directory<a name="policyexamplemanageusersgroups"></a>
 
-The following permissions policy grants permissions to allow a user to create, view, modify, and delete users and groups in AWS SSO\. 
+The following permissions policy grants permissions to allow a user to create, view, modify, and delete users and groups in IAM Identity Center\. 
 
-In some cases, direct modifications to users and groups in AWS SSO are restricted\. For example, when Active Directory, or an external identity provider with Automatic Provisioning enabled, is selected as the identity source\.
+In some cases, direct modifications to users and groups in IAM Identity Center are restricted\. For example, when Active Directory, or an external identity provider with Automatic Provisioning enabled, is selected as the identity source\.
 
 ```
  1. {
@@ -230,9 +230,9 @@ In some cases, direct modifications to users and groups in AWS SSO are restricte
 29. }
 ```
 
-### Example 5: Allow a user to administer AWS SSO for specific accounts<a name="policyexamplemanageaccount"></a>
+### Example 5: Allow a user to administer IAM Identity Center for specific accounts<a name="policyexamplemanageaccount"></a>
 
-As your team grows, consider implementing a delegation model that enables AWS account administrators to manage their users' SSO access to their resources\. By using this model and the following example policy, you can delegate permissions for administering AWS accounts\. After you create this policy, you can select the same policy any time you need to delegate the same permissions to other administrative users\.
+As your team grows, consider implementing a delegation model that enables AWS account administrators to manage their users' single sign\-on access to their resources\. By using this model and the following example policy, you can delegate permissions for administering AWS accounts\. After you create this policy, you can select the same policy any time you need to delegate the same permissions to other administrative users\.
 
 **Account\-based delegation**
 
@@ -274,11 +274,11 @@ The following policy grants permissions that allow you to delegate access for ea
 
 **More information**
 
-For an example walkthrough that covers how to delegate administration of user identities in an IAM environment, see [How to delegate management of identity in AWS Single Sign\-On](https://aws.amazon.com/blogs/security/how-to-delegate-management-of-identity-in-aws-single-sign-on/) on the AWS Security Blog\.
+For an example walkthrough that covers how to delegate administration of user identities in an IAM environment, see [How to delegate management of identity in AWS IAM Identity Center \(successor to AWS Single Sign\-On\)](https://aws.amazon.com/blogs/security/how-to-delegate-management-of-identity-in-aws-single-sign-on/) on the AWS Security Blog\.
 
-## Permissions required to use the AWS SSO console<a name="requiredpermissionsconsole"></a>
+## Permissions required to use the IAM Identity Center console<a name="requiredpermissionsconsole"></a>
 
-For a user to work with the AWS SSO console without errors, additional permissions are required\. If an IAM policy has been created that is more restrictive than the minimum required permissions, the console won't function as intended for users with that policy\. The following example lists the set of permissions that might be needed to ensure error\-free operation within the AWS SSO console\.
+For a user to work with the IAM Identity Center console without errors, additional permissions are required\. If an IAM policy has been created that is more restrictive than the minimum required permissions, the console won't function as intended for users with that policy\. The following example lists the set of permissions that might be needed to ensure error\-free operation within the IAM Identity Center console\.
 
 ```
 {

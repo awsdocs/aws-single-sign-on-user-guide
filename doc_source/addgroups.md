@@ -1,10 +1,10 @@
 # Add groups<a name="addgroups"></a>
 
-Use the following procedure to add groups to your AWS SSO identity store\.
+Use the following procedure to add groups to your Identity Center directory\. Alternatively, you can call the AWS API operation [CreateGroup](https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_CreateGroup.html) to add groups\.
 
 **To add a group**
 
-1. Open the [AWS SSO console](https://console.aws.amazon.com/singlesignon)\.
+1. Open the [IAM Identity Center console](https://console.aws.amazon.com/singlesignon)\.
 
 1. Choose **Groups**\.
 
@@ -14,4 +14,4 @@ Use the following procedure to add groups to your AWS SSO identity store\.
 
 1. Choose **Create group**\.
 
-After you add this group to your AWS SSO identity store, you can assign SSO access to this group\. For more information, see [Assign user access](useraccess.md#assignusers)\.
+After you add this group to your Identity Center directory, you can assign single sign\-on access to this group\. For more information, see [Assign user access](useraccess.md#assignusers)\.

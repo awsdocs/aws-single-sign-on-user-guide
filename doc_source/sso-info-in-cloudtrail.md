@@ -1,16 +1,16 @@
-# AWS SSO information in CloudTrail<a name="sso-info-in-cloudtrail"></a>
+# IAM Identity Center information in CloudTrail<a name="sso-info-in-cloudtrail"></a>
 
-CloudTrail is enabled on your AWS account when you create the account\. When activity occurs in AWS SSO, that activity is recorded in a CloudTrail event along with other AWS service events in **Event history**\. You can view, search, and download recent events in your AWS account\. For more information, see [Viewing events with CloudTrail event history](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/view-cloudtrail-events.html)\. 
+CloudTrail is enabled on your AWS account when you create the account\. When activity occurs in IAM Identity Center, that activity is recorded in a CloudTrail event along with other AWS service events in **Event history**\. You can view, search, and download recent events in your AWS account\. For more information, see [Viewing events with CloudTrail event history](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/view-cloudtrail-events.html)\. 
 
-For an ongoing record of events in your AWS account, including events for AWS SSO, create a trail\. A *trail* enables CloudTrail to deliver log files to an Amazon S3 bucket\. By default, when you create a trail in the console, the trail applies to all AWS Regions\. The trail logs events from all Regions in the AWS partition and delivers the log files to the Amazon S3 bucket that you specify\. Additionally, you can configure other AWS services to further analyze and act upon the event data collected in CloudTrail logs\. For more information, see the following: 
+For an ongoing record of events in your AWS account, including events for IAM Identity Center, create a trail\. A *trail* enables CloudTrail to deliver log files to an Amazon S3 bucket\. By default, when you create a trail in the console, the trail applies to all AWS Regions\. The trail logs events from all Regions in the AWS partition and delivers the log files to the Amazon S3 bucket that you specify\. Additionally, you can configure other AWS services to further analyze and act upon the event data collected in CloudTrail logs\. For more information, see the following: 
 + [Overview for creating a trail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-and-update-a-trail.html)
 + [CloudTrail supported services and integrations](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-aws-service-specific-topics.html#cloudtrail-aws-service-specific-topics-integrations)
 + [Configuring Amazon SNS notifications for CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/getting_notifications_top_level.html)
 + [Receiving CloudTrail log files from multiple Regions](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/receive-cloudtrail-log-files-from-multiple-regions.html) and [Receiving CloudTrail log files from multiple accounts](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-receive-logs-from-multiple-accounts.html)
 
-When CloudTrail logging is enabled in your AWS account, API calls made to AWS SSO actions are tracked in log files\. AWS SSO records are written together with other AWS service records in a log file\. CloudTrail determines when to create and write to a new file based on a time period and file size\.
+When CloudTrail logging is enabled in your AWS account, API calls made to IAM Identity Center actions are tracked in log files\. IAM Identity Center records are written together with other AWS service records in a log file\. CloudTrail determines when to create and write to a new file based on a time period and file size\.
 
-The following AWS SSO CloudTrail operations are supported:
+The following IAM Identity Center CloudTrail operations are supported:
 
 
 ****  
@@ -19,35 +19,38 @@ The following AWS SSO CloudTrail operations are supported:
 | --- | --- | 
 | AssociateDirectory | AttachManagedPolicyToPermissionSet | 
 | AssociateProfile | CreateAccountAssignment | 
-| CreateApplicationInstance | CreateInstanceAccessControlAttributeConfiguration | 
-| CreateApplicationInstanceCertificate | CreatePermissionSet | 
-| CreatePermissionSet | DeleteAccountAssignment | 
-| CreateProfile | DeleteInlinePolicyFromPermissionSet | 
-| DeleteApplicationInstance | DeleteInstanceAccessControlAttributeConfiguration | 
-| DeleteApplicationInstanceCertificate | DeletePermissionSet | 
-| DeletePermissionsPolicy | DescribeAccountAssignmentCreationStatus | 
-| DeletePermissionSet | DescribeAccountAssignmentDeletionStatus | 
-| DeleteProfile | DescribeInstanceAccessControlAttributeConfiguration | 
-| DescribePermissionsPolicies | DescribePermissionSet | 
-| DisassociateDirectory | DescribePermissionSetProvisioningStatus | 
-| DisassociateProfile | DetachManagedPolicyFromPermissionSet | 
-| GetApplicationInstance | GetInlinePolicyForPermissionSet | 
-| GetApplicationTemplate | ListAccountAssignmentCreationStatus | 
-| GetMfaDeviceManagementForDirectory | ListAccountAssignmentDeletionStatus | 
-| GetPermissionSet | ListAccountAssignments | 
-| GetSSOStatus | ListAccountsForProvisionedPermissionSet | 
-| ImportApplicationInstanceServiceProviderMetadata | ListInstances | 
-| ListApplicationInstances | ListManagedPoliciesInPermissionSet | 
-| ListApplicationInstanceCertificates | ListPermissionSetProvisioningStatus | 
-| ListApplicationTemplates | ListPermissionSets | 
-| ListDirectoryAssociations | ListPermissionSetsProvisionedToAccount | 
-| ListPermissionSets | ListTagsForResource | 
-| ListProfileAssociations | ProvisionPermissionSet | 
-| ListProfiles | PutInlinePolicyToPermissionSet | 
-| PutMfaDeviceManagementForDirectory | TagResource | 
-| PutPermissionsPolicy | UntagResource | 
-| StartSSO | UpdateInstanceAccessControlAttributeConfiguration | 
-| UpdateApplicationInstanceActiveCertificate | UpdatePermissionSet | 
+| BatchDeleteSession | CreateInstanceAccessControlAttributeConfiguration | 
+| BatchGetSession | CreatePermissionSet | 
+| CreateApplicationInstance | DeleteAccountAssignment | 
+| CreateApplicationInstanceCertificate | DeleteInlinePolicyFromPermissionSet | 
+| CreatePermissionSet | DeleteInstanceAccessControlAttributeConfiguration | 
+| CreateProfile | DeletePermissionSet | 
+| DeleteApplicationInstance | DescribeAccountAssignmentCreationStatus | 
+| DeleteApplicationInstanceCertificate | DescribeAccountAssignmentDeletionStatus | 
+| DeletePermissionsPolicy | DescribeInstanceAccessControlAttributeConfiguration | 
+| DeletePermissionSet | DescribePermissionSet | 
+| DeleteProfile | DescribePermissionSetProvisioningStatus | 
+| DescribePermissionsPolicies | DetachManagedPolicyFromPermissionSet | 
+| DisassociateDirectory | GetInlinePolicyForPermissionSet | 
+| DisassociateProfile | ListAccountAssignmentCreationStatus | 
+| GetApplicationInstance | ListAccountAssignmentDeletionStatus | 
+| GetApplicationTemplate | ListAccountAssignments | 
+| GetMfaDeviceManagementForDirectory | ListAccountsForProvisionedPermissionSet | 
+| GetPermissionSet | ListInstances | 
+| GetSSOStatus | ListManagedPoliciesInPermissionSet | 
+| ImportApplicationInstanceServiceProviderMetadata | ListPermissionSetProvisioningStatus | 
+| ListApplicationInstances | ListPermissionSets | 
+| ListApplicationInstanceCertificates | ListPermissionSetsProvisionedToAccount | 
+| ListApplicationTemplates | ListTagsForResource | 
+| ListDirectoryAssociations | ProvisionPermissionSet | 
+| ListPermissionSets | PutInlinePolicyToPermissionSet | 
+| ListProfileAssociations | TagResource | 
+| ListProfiles | UntagResource | 
+| ListSessions | UpdateInstanceAccessControlAttributeConfiguration | 
+| PutMfaDeviceManagementForDirectory | UpdatePermissionSet | 
+| PutPermissionsPolicy |  | 
+| StartSSO |  | 
+| UpdateApplicationInstanceActiveCertificate |  | 
 | UpdateApplicationInstanceDisplayData |  | 
 | UpdateApplicationInstanceServiceProviderConfiguration |  | 
 | UpdateApplicationInstanceStatus |  | 
@@ -57,9 +60,9 @@ The following AWS SSO CloudTrail operations are supported:
 | UpdateDirectoryAssociation |  | 
 | UpdateProfile |  | 
 
-For more information about AWS SSO’s public API operations, see the [AWS Single Sign\-On API Reference Guide](https://docs.aws.amazon.com/singlesignon/latest/APIReference/welcome.html)\.
+For more information about IAM Identity Center’s public API operations, see the [IAM Identity Center API Reference Guide](https://docs.aws.amazon.com/singlesignon/latest/APIReference/welcome.html)\.
 
-The following AWS SSO identity store CloudTrail operations are supported:
+The following IAM Identity Center identity store CloudTrail operations are supported:
 + `AddMemberToGroup`
 + `CompleteVirtualMfaDeviceRegistration`
 + `CompleteWebAuthnDeviceRegistration`
@@ -96,12 +99,12 @@ The following AWS SSO identity store CloudTrail operations are supported:
 + `UpdateUser`
 + `VerifyEmail`
 
-The following AWS SSO OIDC CloudTrail actions are supported:
+The following IAM Identity Center OIDC CloudTrail actions are supported:
 + `CreateToken`
 + `RegisterClient`
 + `StartDeviceAuthorization`
 
-The following AWS SSO Portal CloudTrail actions are supported:
+The following IAM Identity Center Portal CloudTrail actions are supported:
 + `Authenticate`
 + `Federate`
 
@@ -111,4 +114,4 @@ You can create a trail and store your log files in your Amazon S3 bucket for as 
 
 To be notified of log file delivery, configure CloudTrail to publish Amazon SNS notifications when new log files are delivered\. For more information, see [Configuring Amazon SNS notifications for CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/getting_notifications_top_level.html)\.
 
-You can also aggregate AWS SSO log files from multiple AWS Regions and multiple AWS accounts into a single Amazon S3 bucket\. For more information, see [Receiving CloudTrail log files from multiple Regions](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/receive-cloudtrail-log-files-from-multiple-regions.html) and [Receiving CloudTrail log files from multiple accounts](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-receive-logs-from-multiple-accounts.html)\.
+You can also aggregate IAM Identity Center log files from multiple AWS Regions and multiple AWS accounts into a single Amazon S3 bucket\. For more information, see [Receiving CloudTrail log files from multiple Regions](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/receive-cloudtrail-log-files-from-multiple-regions.html) and [Receiving CloudTrail log files from multiple accounts](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-receive-logs-from-multiple-accounts.html)\.

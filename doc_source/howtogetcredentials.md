@@ -1,8 +1,8 @@
 # Getting IAM role credentials for CLI access<a name="howtogetcredentials"></a>
 
-Use this procedure in the user portal when you need temporary security credentials for short\-term access to resources in an AWS account using the AWS CLI\. The user portal makes it easy for you to quickly select an AWS account and get the temporary credentials for a given IAM role\. You can then copy the necessary CLI syntax \(including all necessary credentials\) and paste them into your AWS CLI command prompt\. 
+Use this procedure in the AWS access portal when you need temporary security credentials for short\-term access to resources in an AWS account using the AWS CLI\. The AWS access portal makes it easy for you to quickly select an AWS account and get the temporary credentials for a given IAM role\. You can then copy the necessary CLI syntax \(including all necessary credentials\) and paste them into your AWS CLI command prompt\. 
 
-By default, credentials retrieved through the user portal are valid for 1 hour\. You can change this value up to 12 hours\. Once you have completed this procedure, you can run any AWS CLI command \(that your administrator has given you access to\) until those temporary credentials have expired\.
+By default, credentials retrieved through the AWS access portal are valid for 1 hour\. You can change this value up to 12 hours\. Once you have completed this procedure, you can run any AWS CLI command \(that your administrator has given you access to\) until those temporary credentials have expired\.
 
 **Note**  
 Before you get started with the steps in this procedure, you must first install the AWS CLI\. For instructions, see [Installing the AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/installing.html)\.

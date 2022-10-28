@@ -1,8 +1,8 @@
-# AWS SSO console and API authorization<a name="security-authorization"></a>
+# IAM Identity Center console and API authorization<a name="security-authorization"></a>
 
-Existing AWS SSO console APIs support dual authorization\. If you have existing AWS SSO instances that were created prior to October 15th 2020, you can use the following table to determine which API operations now map to newer API operations that were released after that date\.
+Existing IAM Identity Center console APIs support dual authorization\. If you have existing IAM Identity Center instances that were created prior to October 15th 2020, you can use the following table to determine which API operations now map to newer API operations that were released after that date\.
 
-SSO Instances created before October 15th 2020 will honor both old and new API actions as long as there is no explicit deny on any one of the actions\. SSO Instances created after October 15th 2020 will use the newer API actions for authorization in the AWS SSO console\. 
+IAM Identity Center instances created before October 15th 2020 honor both old and new API actions as long as there is no explicit deny on any of the actions\. Instances created after October 15th 2020 use the [newer API actions](https://docs.aws.amazon.com/singlesignon/latest/APIReference/API_Operations.html) for authorization in the IAM Identity Center console\. 
 
 
 ****  

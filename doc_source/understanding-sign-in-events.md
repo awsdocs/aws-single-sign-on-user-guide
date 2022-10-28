@@ -1,14 +1,14 @@
-# Understanding AWS SSO sign\-in events<a name="understanding-sign-in-events"></a>
+# Understanding IAM Identity Center sign\-in events<a name="understanding-sign-in-events"></a>
 
-AWS CloudTrail logs successful and unsuccessful sign\-in events for all AWS Single Sign\-On identity sources\. Native SSO and Active Directory \(AD Connector and AWS Managed Microsoft AD\) sourced identities will include additional sign\-in events that are captured each time a user is prompted to solve a specific credential challenge or factor, as well as the status of that particular credential verification request\. Only after a user has completed all required credential challenges will the user be signed in, which will result in a `UserAuthentication` event being logged\.
+AWS CloudTrail logs successful and unsuccessful sign\-in events for all AWS IAM Identity Center \(successor to AWS Single Sign\-On\) identity sources\. Native SSO and Active Directory \(AD Connector and AWS Managed Microsoft AD\) sourced identities will include additional sign\-in events that are captured each time a user is prompted to solve a specific credential challenge or factor, as well as the status of that particular credential verification request\. Only after a user has completed all required credential challenges will the user be signed in, which will result in a `UserAuthentication` event being logged\.
 
-The following table captures each of the AWS SSO sign\-in CloudTrail event names, their purpose, and applicability to different identity sources\.
+The following table captures each of the IAM Identity Center sign\-in CloudTrail event names, their purpose, and applicability to different identity sources\.
 
 
 | Event name | Event purpose | Identity source applicability | 
 | --- | --- | --- | 
-| CredentialChallenge | Used to notify that AWS SSO has requested the user to solve a specific credential challenge and specifies the CredentialType that was required \(For example, PASSWORD or TOTP\)\. | Native AWS SSO users, AD Connector, and AWS Managed Microsoft AD | 
-| CredentialVerification | Used to notify that the user has attempted to solve a specific CredentialChallenge request and specifies whether that credential succeeded or failed\. | Native AWS SSO users, AD Connector, and AWS Managed Microsoft AD | 
+| CredentialChallenge | Used to notify that IAM Identity Center has requested the user to solve a specific credential challenge and specifies the CredentialType that was required \(For example, PASSWORD or TOTP\)\. | Native IAM Identity Center users, AD Connector, and AWS Managed Microsoft AD | 
+| CredentialVerification | Used to notify that the user has attempted to solve a specific CredentialChallenge request and specifies whether that credential succeeded or failed\. | Native IAM Identity Center users, AD Connector, and AWS Managed Microsoft AD | 
 | UserAuthentication | Used to notify that all authentication requirements the user was challenged with have been successfully completed and that the user was successfully signed in\. Users failing to successfully complete the required credential challenges will result in no UserAuthentication event being logged\. | All identity sources | 
 
 The following table captures additional useful event data fields contained within specific sign\-in CloudTrail events\.
@@ -16,12 +16,12 @@ The following table captures additional useful event data fields contained withi
 
 | Event name | Event purpose | Sign\-in event applicability | Example values | 
 | --- | --- | --- | --- | 
-| AuthWorkflowID | Used to correlate all events emitted across an entire sign\-in sequence\. For each user sign\-in, multiple events may be emitted by AWS SSO\.  | CredentialChallenge, CredentialVerification, UserAuthentication | "AuthWorkflowID": "9de74b32\-8362\-4a01\-a524\-de21df59fd83" | 
+| AuthWorkflowID | Used to correlate all events emitted across an entire sign\-in sequence\. For each user sign\-in, multiple events may be emitted by IAM Identity Center\.  | CredentialChallenge, CredentialVerification, UserAuthentication | "AuthWorkflowID": "9de74b32\-8362\-4a01\-a524\-de21df59fd83" | 
 | CredentialType | Used to specify the credential or factor that was challenged\. UserAuthentication events will include all of the CredentialType values that were successfully verified across the user's sign\-in sequence\. | CredentialChallenge, CredentialVerification, UserAuthentication | CredentialType": "PASSWORD" or "CredentialType": "PASSWORD,TOTP" \(possible values include: PASSWORD, TOTP, WEBAUTHN, EXTERNAL\_IDP, RESYNC\_TOTP\) | 
 | DeviceEnrollmentRequired | Used to specify that the user was required to register an MFA device during sign\-in, and that the user successfully completed that request\. | UserAuthentication | "DeviceEnrollmentRequired": "true" | 
 | LoginTo | Used to specify the redirect location following a successful sign\-in sequence\. | UserAuthentication | "LoginTo": "https://mydirectory\.awsapps\.com/start/\.\.\.\.\." | 
 
-## Example events for AWS SSO sign\-in scenarios<a name="sign-in-events-examples"></a>
+## Example events for IAM Identity Center sign\-in scenarios<a name="sign-in-events-examples"></a>
 
 The following examples show the expected sequence of CloudTrail events for different sign\-in scenarios\.
 

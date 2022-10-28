@@ -1,0 +1,7 @@
+# Step 4: Set up AWS account access for additional users \(optional\)<a name="set-up-single-sign-on-access-to-accounts"></a>
+
+Now that you've created an administrative user in IAM Identity Center, you can grant additional users in your identity source single sign\-on access to one or more AWS accounts in your organization\. 
+
+After these users [accept their invitation](howtoactivateaccount.md) to activate their account and they sign into the AWS access portal, the only icons that appear in the portal are for the AWS accounts to which the users are assigned\. Users who are assigned to multiple permission sets can sign in to the AWS access portal, choose an account, and then choose a role that was created from an assigned permission set\. 
+
+For information about how to assign additional users single sign\-on access to your AWS accounts by using the console, see [Assign user access](useraccess.md#assignusers)\. Alternatively, you can use [AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_SSO.html) to create and assign permission sets and assign users to those permission sets\. Users can then [sign in to the AWS access portal](howtosignin.md) or use [AWS Command Line Interface \(AWS CLI\)](https://docs.aws.amazon.com/singlesignon/latest/userguide/integrating-aws-cli.html) commands\.

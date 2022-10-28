@@ -1,10 +1,11 @@
 # Getting started<a name="getting-started"></a>
 
-In this getting started exercise, you enable AWS Single Sign\-On, and then can optionally connect your directory, set up SSO to your AWS accounts, and/or set up SSO to your cloud applications\. Although not required, we recommend that you review [Understanding key AWS Single Sign\-On concepts](understanding-key-concepts.md) before you begin using the console so that you are familiar with the core features and terminology\.
+The topics in this section will help you get started with IAM Identity Center\. 
 
 **Topics**
-+ [AWS SSO prerequisites](prereqs.md)
-+ [Enable AWS SSO](step1.md)
-+ [Choose your identity source](step2.md)
-+ [Set up SSO to your AWS accounts](step3.md)
-+ [Set up SSO to your applications](step4.md)
++ [Prerequisites and considerations](get-started-prereqs-considerations.md)
++ [Step 1: Enable IAM Identity Center](get-started-enable-identity-center.md)
++ [Step 2: Create an administrative permission set](get-started-create-an-administrative-permission-set.md)
++ [Step 3: Choose your identity source and create an IAM Identity Center administrative user](get-started-choose-identity-source.md)
++ [Step 4: Set up AWS account access for additional users \(optional\)](set-up-single-sign-on-access-to-accounts.md)
++ [Step 5: Set up single sign\-on access to your applications \(optional\)](set-up-single-sign-on-access-to-applications.md)

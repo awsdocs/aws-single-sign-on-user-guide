@@ -1,26 +1,26 @@
 # Add users<a name="addusers"></a>
 
-Users and groups that you create in your AWS SSO identity store are available in AWS SSO only\. Use the following procedure to add users to your AWS SSO identity store\. 
+Users and groups that you create in your Identity Center directory are available in IAM Identity Center only\. Use the following procedure to add users to your Identity Center directory\. Alternatively, you can call the AWS API operation [CreateUser](https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_CreateUser.html) to add users\.
 
 **To add a user**
 
-1. Open the [AWS SSO console](https://console.aws.amazon.com/singlesignon)\.
+1. Open the [IAM Identity Center console](https://console.aws.amazon.com/singlesignon)\.
 
 1. Choose **Users**\.
 
 1. Choose **Add user** and provide the following required information:
 
-   1. **Username** – This user name will be required to sign in to the user portal and cannot be changed later\. It must be between 1 and 100 characters\.
+   1. **Username** – This user name will be required to sign in to the AWS access portal and can't be changed later\. It must be between 1 and 100 characters\.
 
-   1. **Password** – Choose from one of the following choices to send the user's password\.
+   1. **Password** – Choose from one of the following options to provide a password to the user\.
 
-      1. **Send an email to the user with password setup instructions\.** – This option automatically sends the user an email addressed from Amazon Web Services\. The email invites the user on behalf of your company to access the AWS SSO user portal\.
+      1. **Send an email to this user with password setup instructions\.** – This option automatically sends the user an email addressed from Amazon Web Services\. The email invites the user on behalf of your company to access the IAM Identity Center AWS access portal\.
 **Note**  
-All emails sent by the AWS SSO service will come from either the address [no-reply@signin.aws](no-reply@signin.aws) or [no-reply@login.awsapps.com](no-reply@login.awsapps.com)\. We recommend that you configure your email system so that it accepts emails from these sender email addresses and does not handle them as junk or spam\. 
+All emails sent by the IAM Identity Center service will come from either the address [no-reply@signin.aws](no-reply@signin.aws) or [no-reply@login.awsapps.com](no-reply@login.awsapps.com)\. We recommend that you configure your email system so that it accepts emails from these sender email addresses and does not handle them as junk or spam\. 
 
-      1. **Generate a one\-time password that you can share with the user\.** – This option provides you with the user portal URL and password details that you can manually send to the user from your email address\.
+      1. **Generate a one\-time password that you can share with this user\.** – This option provides you with the AWS access portal URL and password details that you can manually send to the user from your email address\.
 
-   1. **Email address** – The value you provide here must be unique\.
+   1. **Email address** – The email address must be unique\.
 
    1. **Confirm email address**
 
@@ -30,10 +30,12 @@ All emails sent by the AWS SSO service will come from either the address [no-rep
 
    1. **Display name**
 **Note**  
-\(Optional\) You can provide additional attributes such as **Employee number** and **Office 365 Immutable ID** to help map the user's identity in AWS SSO with certain business applications that the user needs to use\. 
+\(Optional\) If applicable, you can specify values for additional attributes such as the user's **Microsoft 365 immutable ID** to help provide the user with single sign\-on access to certain business applications\. 
 
 1. Choose **Next**\.
 
-1. Select one or more groups that you want the user to be a member of\. Then choose **Next**\.
+1. If applicable, select one or more groups to which you want to add the user, and choose **Next**\.
 
-1. Review your information from **Step 1: Specify user details** and **Step 2: Add user to groups \- optional**\. Choose **Edit** by either step to make any changes\. Once you are satisfied with what you have entered in Step 1 and Step 2, choose **Add user**\.
+1. Review the information that you specified for **Step 1: Specify user details** and **Step 2: Add user to groups \- optional**\. Choose **Edit** by either step to make any changes\. After you confirm that the correct information is specified for both steps, choose **Add user**\.
+**Note**  
+If you are adding your first administrative user in IAM Identity Center by following the steps in [set up AWS account access for an administrative user](get-started-use-identity-center-directory.md#create-admin-user-set-up-account-access-identity-center-directory), return to that procedure and proceed with step 3 to finish the account setup\.

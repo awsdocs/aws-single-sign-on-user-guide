@@ -1,21 +1,21 @@
-# Tagging AWS Single Sign\-On resources<a name="tagging"></a>
+# Tagging AWS IAM Identity Center \(successor to AWS Single Sign\-On\) resources<a name="tagging"></a>
 
 A *tag* is a metadata label that you assign or that AWS assigns to an AWS resource\. Each tag consists of a *key* and a *value*\. For tags that you assign, you define the key and value\. For example, you might define the key as `stage` and the value for one resource as `test`\.
 
 Tags help you do the following:
-+ Identify and organize your AWS resources\. Many AWS services support tagging, so you can assign the same tag to resources from different services to indicate that the resources are related\. For example, you can assign the same tag to a specific permission set in your AWS SSO instance\.
++ Identify and organize your AWS resources\. Many AWS services support tagging, so you can assign the same tag to resources from different services to indicate that the resources are related\. For example, you can assign the same tag to a specific permission set in your IAM Identity Center instance\.
 + Track your AWS costs\. You activate these tags on the AWS Billing and Cost Management dashboard\. AWS uses the tags to categorize your costs and deliver a monthly cost allocation report to you\. For more information, see [Use cost allocation tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *AWS Billing User Guide*\.
-+ Control access to your resources based on the tags that are assigned to the resources\. You control access by specifying tag keys and values in the conditions for an AWS Identity and Access Management \(IAM\) policy\. For example, you can allow an IAM user to update an AWS SSO instance, but only if the AWS SSO instance has an `owner` tag with a value of that user's name\. For more information, see [Controlling access using tags](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_tags.html) in the *IAM User Guide*\.
++ Control access to your resources based on the tags that are assigned to the resources\. You control access by specifying tag keys and values in the conditions for an AWS Identity and Access Management \(IAM\) policy\. For example, you can allow an IAM user to update an IAM Identity Center permission set, but only if the IAM Identity Center permission set has an `owner` tag with a value of that user's name\. For more information, see [Controlling access using tags](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_tags.html) in the *IAM User Guide*\.
 
-Currently, you can apply tags to permission sets only\. You can't apply tags to the corresponding roles that AWS SSO creates in AWS accounts\. You can use the AWS SSO console, AWS CLI or the AWS SSO APIs to add, edit, or delete tags for a permission set\.
+Currently, you can apply tags to permission sets only\. You can't apply tags to the corresponding roles that IAM Identity Center creates in AWS accounts\. You can use the IAM Identity Center console, AWS CLI or the IAM Identity Center APIs to add, edit, or delete tags for a permission set\.
 
 For tips on using tags, see the [AWS tagging strategies](https://aws.amazon.com/answers/account-management/aws-tagging-strategies/) post on the *AWS Answers* blog\. 
 
-The following sections provide more information about tags for AWS SSO\.
+The following sections provide more information about tags for IAM Identity Center\.
 
 ## Tag restrictions<a name="tagging-restrictions"></a>
 
-The following basic restrictions apply to tags on AWS SSO resources:
+The following basic restrictions apply to tags on IAM Identity Center resources:
 + The maximum number of tags that you can assign to a resource is 50\.
 + The maximum key length is 128 Unicode characters\.
 + The maximum value length is 256 Unicode characters\.
@@ -25,13 +25,13 @@ The following basic restrictions apply to tags on AWS SSO resources:
 + Keys and values are case sensitive\.
 + Don't use `aws:` as a prefix for keys; it's reserved for AWS use
 
-## Manage tags by using the AWS SSO console<a name="tagging-console"></a>
+## Manage tags by using the IAM Identity Center console<a name="tagging-console"></a>
 
-You can use the AWS SSO console to add, edit, and remove tags that are associated with your permission sets\.
+You can use the IAM Identity Center console to add, edit, and remove tags that are associated with your permission sets\.
 
-**To manage tags for an AWS SSO console**
+**To manage tags for an IAM Identity Center console**
 
-1. Open the [AWS SSO console](https://console.aws.amazon.com/singlesignon)\.
+1. Open the [IAM Identity Center console](https://console.aws.amazon.com/singlesignon)\.
 
 1. Choose **Permission sets**\.
 
@@ -65,7 +65,7 @@ $ aws sso tag-resource \
 > --tags Stage=Test
 ```
 This command includes the following parameters:  
-+ `instance-arn` – The Amazon Resource Name \(ARN\) of the AWS SSO instance under which the operation will be executed\. 
++ `instance-arn` – The Amazon Resource Name \(ARN\) of the IAM Identity Center instance under which the operation will be executed\. 
 + `resource-arn` – The ARN of the resource with the tags to be listed\. 
 + `tags` – The key\-value pairs of the tags\.
 To assign multiple tags at once, specify them in a comma\-separated list:  
@@ -117,11 +117,11 @@ $ aws sso create-permission-set \
 > --tags Stage=Test,CostCenter=80432,Owner=SysEng
 ```
 
-## Manage tags using the AWS SSO API<a name="tagging-api"></a>
+## Manage tags using the IAM Identity Center API<a name="tagging-api"></a>
 
-You can use the following actions in the AWS SSO API to manage the tags for your permission set\.
+You can use the following actions in the IAM Identity Center API to manage the tags for your permission set\.
 
-### API actions for AWS SSO instance tags<a name="tagging-api-user-pools"></a>
+### API actions for IAM Identity Center instance tags<a name="tagging-api-user-pools"></a>
 
 Use the following API actions to assign, view, and remove tags for a permission set\.
 + [TagResource](https://docs.aws.amazon.com/singlesignon/latest/APIReference/API_TagResource.html)

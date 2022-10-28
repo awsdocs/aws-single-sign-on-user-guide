@@ -1,8 +1,8 @@
-# Understanding AWS SSO log file entries<a name="understanding-sso-entries"></a>
+# Understanding IAM Identity Center log file entries<a name="understanding-sso-entries"></a>
 
 A trail is a configuration that enables delivery of events as log files to an Amazon S3 bucket that you specify\. CloudTrail log files contain one or more log entries\. An event represents a single request from any source and includes information about the requested action, the date and time of the action, request parameters, and so on\. CloudTrail log files are not an ordered stack trace of the public API calls, so they do not appear in any specific order\. 
 
-The following example shows a CloudTrail log entry for an administrator \(samadams@example\.com\) that took place in the AWS SSO console:
+The following example shows a CloudTrail log entry for an administrator \(samadams@example\.com\) that took place in the IAM Identity Center console:
 
 ```
 {
@@ -40,7 +40,7 @@ The following example shows a CloudTrail log entry for an administrator \(samada
 }
 ```
 
-The following example shows a CloudTrail log entry for an end\-user \(bobsmith@example\.com\) action that took place in the AWS SSO user portal:
+The following example shows a CloudTrail log entry for an end\-user \(bobsmith@example\.com\) action that took place in the AWS access portal:
 
 ```
 {
@@ -70,7 +70,7 @@ The following example shows a CloudTrail log entry for an end\-user \(bobsmith@e
 }
 ```
 
-The following example shows a CloudTrail log entry for an end\-user \(bobsmith@example\.com\) action that took place in AWS SSO OIDC:
+The following example shows a CloudTrail log entry for an end\-user \(bobsmith@example\.com\) action that took place in IAM Identity Center OIDC:
 
 ```
 {

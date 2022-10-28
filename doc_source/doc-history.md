@@ -1,10 +1,15 @@
 # Document history<a name="doc-history"></a>
 
-The following table describes important additions to the AWS Single Sign\-On documentation\. We also update the documentation frequently to address the feedback that you send us\.
-+ **Latest major documentation update: **May 11, 2022
+The following table describes important additions to the AWS IAM Identity Center \(successor to AWS Single Sign\-On\) documentation\. We also update the documentation frequently to address the feedback that you send us\.
++ **Latest major documentation update: **September 23, 2022
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Enhanced guidance for getting started with IAM Identity Center](https://docs.aws.amazon.com/singlesignon/latest/userguide/getting-started.html) | Added new content for getting started with IAM Identity Center and creating an administrative user | September 23, 2022 | 
+| [Updated users and groups in the Identity Center API Reference](https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/welcome.html) | This update includes references to the new Create, Update and Delete APIs in the Identity Center API Reference Guide\. | August 31, 2022 | 
+| [AWS Single Sign\-On \(AWS SSO\) renamed to AWS IAM Identity Center](https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html#renamed) | AWS introduces AWS IAM Identity Center \(successor to AWS Single Sign\-On\)\. IAM Identity Center expands the capabilities of AWS Identity and Access Management \(IAM\) to help you centrally manage account and access to cloud applications for your workforce users\. IAM Identity Center features include application assignments, multi\-account permissions, and an AWS access portal\. | July 26, 2022 | 
+| [Support for permissions boundaries and customer managed policies in permission sets](https://docs.aws.amazon.com/singlesignon/latest/userguide/permissionsets.html) | Added content for using AWS managed and customer managed AWS Identity and Access Management \(IAM\) policies with permission sets\. | July 14, 2022 | 
+| [Support for manually enabled AWS Regions](https://docs.aws.amazon.com/singlesignon/latest/userguide/regions.html) | Added content for using IAM Identity Center in manually enabled Regions\. | June 15, 2022 | 
 | [Updates for AWS managed policies](https://docs.aws.amazon.com/singlesignon/latest/userguide/security-iam-awsmanpol.html) | Updated permissions for the `AWSSSOServiceRolePolicy` AWS managed policy\. | May 11, 2022 | 
 | [Support for delegated administration](https://docs.aws.amazon.com/singlesignon/latest/userguide/delegated-admin.html) | Added content for the delegated administration feature\. | May 11, 2022 | 
 | [Updates for AWS managed policies](https://docs.aws.amazon.com/singlesignon/latest/userguide/security-iam-awsmanpol.html) | Updated permissions for the `AWSSSOMasterAccountAdministrator`, `AWSSSOMemberAccountAdministrator`, and `AWSSSOReadOnly` AWS managed policies\. | April 28, 2022 | 
@@ -22,10 +27,10 @@ The following table describes important additions to the AWS Single Sign\-On doc
 | [New MFA settings](https://docs.aws.amazon.com/singlesignon/latest/userguide/enable-mfa.html) | Removed two\-step verification topic and added new MFA topic in its place\. | October 24, 2019 | 
 | [New setting to add two\-step verification](https://docs.aws.amazon.com/singlesignon/latest/userguide/enable-mfa.html) | Added content on how to enable two\-step verification for users\. | January 16, 2019 | 
 | [Support for session duration on AWS accounts](https://docs.aws.amazon.com/singlesignon/latest/userguide/howtosessionduration.html) | Added content on how to set the session duration for an AWS account\. | October 30, 2018 | 
-| [New option to use AWS SSO directory](https://docs.aws.amazon.com/singlesignon/latest/userguide/manage-your-identity-source.html) | Added content for choosing either AWS SSO directory or connecting to an existing directory in Active Directory\. | October 17, 2018 | 
+| [New option to use Identity Center directory](https://docs.aws.amazon.com/singlesignon/latest/userguide/manage-your-identity-source.html) | Added content for choosing either Identity Center directory or connecting to an existing directory in Active Directory\. | October 17, 2018 | 
 | [Support for relay state and session duration on applications](https://docs.aws.amazon.com/singlesignon/latest/userguide/appproperties.html) | Added content about relay state and session duration for cloud applications\. | October 10, 2018 | 
 | [Additional support for new cloud applications](https://docs.aws.amazon.com/singlesignon/latest/userguide/saasapps.html) | Added 4me, BambooHR, Bonusly, Citrix ShareFile, ClickTime, Convo, Deputy, Deskpro, Dome9, DruvaInSync, Egnyte, Engagedly, Expensify, Freshdesk, IdeaScale, Igloo, Jitbit, Kudos, LiquidFiles, Lucidchart, PurelyHR, Samanage, ScreenSteps, Sli\.do, SmartSheet, Syncplicity, TalentLMS, Trello, UserVoice, Zoho, OpsGenie, DigiCert, WeekDone, ProdPad, and UserEcho to the application catalog\. | August 3, 2018 | 
-| [Support for SSO access to management accounts](https://docs.aws.amazon.com/singlesignon/latest/userguide/useraccess.html) | Added content about how to delegate SSO access to users in a management account\. | July 9, 2018 | 
+| [Support for multi\-account access to management accounts](https://docs.aws.amazon.com/singlesignon/latest/userguide/useraccess.html) | Added content about how to delegate multi\-account access to users in a management account\. | July 9, 2018 | 
 | [Support for new cloud applications](https://docs.aws.amazon.com/singlesignon/latest/userguide/saasapps.html) | Added DocuSign, Keeper Security, and SugarCRM to the application catalog\. | March 16, 2018 | 
 | [Get temporary credentials for CLI access](https://docs.aws.amazon.com/singlesignon/latest/userguide/howtogetcredentials.html) | Added information about how to get temporary credentials to run AWS CLI commands\. | February 22, 2018 | 
-| [New guide](https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html) | This is the first release of the AWS SSO User Guide\. | December 7, 2017 | 
+| [New guide](https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html) | This is the first release of the IAM Identity Center User Guide\. | December 7, 2017 | 

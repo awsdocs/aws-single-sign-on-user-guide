@@ -4,7 +4,7 @@ Use this procedure to remove user access to cloud applications or custom SAML 2\
 
 **To remove user access from an application**
 
-1. Open the [AWS SSO console](https://console.aws.amazon.com/singlesignon)\.
+1. Open the [IAM Identity Center console](https://console.aws.amazon.com/singlesignon)\.
 
 1. Choose **Applications**\.
 

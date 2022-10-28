@@ -1,6 +1,6 @@
-# How to manage MFA for AWS SSO<a name="mfa-how-to"></a>
+# How to manage MFA for IAM Identity Center<a name="mfa-how-to"></a>
 
-The following topics provide instructions for managing MFA in AWS SSO\.
+The following topics provide instructions for managing MFA in IAM Identity Center\.
 
 **Topics**
 + [Configure MFA types](how-to-configure-mfa-types.md)

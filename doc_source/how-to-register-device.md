@@ -1,19 +1,19 @@
 # Register an MFA device<a name="how-to-register-device"></a>
 
-Use the following procedure to set up a new MFA device for access by a specific user in the AWS SSO console\. You must have physical access to the user's MFA device in order to register it\. For example, you might configure MFA for a user who will use an MFA device running on a smartphone\. In that case, you must have the smartphone available in order to finish the wizard\. For this reason, you might want to let users configure and manage their own MFA devices\. For details on how to set this up, see [Allow users to register their own MFA devices](how-to-allow-user-registration.md)\.
+Use the following procedure to set up a new MFA device for access by a specific user in the IAM Identity Center console\. You must have physical access to the user's MFA device in order to register it\. For example, you might configure MFA for a user who will use an MFA device running on a smartphone\. In that case, you must have the smartphone available in order to finish the wizard\. For this reason, you might want to let users configure and manage their own MFA devices\. For details on how to set this up, see [Allow users to register their own MFA devices](how-to-allow-user-registration.md)\.
 
 **To register an MFA device**
 
-1. Open the [AWS SSO console](https://console.aws.amazon.com/singlesignon)\.
+1. Open the [IAM Identity Center console](https://console.aws.amazon.com/singlesignon)\.
 
-1. In the left navigation pane, choose **Users**\. Then choose a user in the list\.
+1. In the left navigation pane, choose **Users**\. Choose a user in the list\. Don't select the checkbox next to the user for this step\.
 
-1. Choose the **MFA devices** tab, and then choose **Register MFA device**\.
+1. On the user details page, choose the **MFA devices** tab, and then choose **Register MFA device**\.
 
 1. On the **Register MFA device** page, select one of the following MFA device types, and follow the instructions:
    + **Authenticator app**
 
-     1. On the **Set up the authenticator app** page, AWS SSO displays configuration information for the new MFA device, including a QR code graphic\. The graphic is a representation of the secret key that is available for manual entry on devices that do not support QR codes\.
+     1. On the **Set up the authenticator app** page, IAM Identity Center displays configuration information for the new MFA device, including a QR code graphic\. The graphic is a representation of the secret key that is available for manual entry on devices that do not support QR codes\.
 
      1. Using the physical MFA device, do the following:
 
@@ -25,7 +25,7 @@ Use the following procedure to set up a new MFA device for access by a specific 
 
            1. Choose **show secret key**, and then type that secret key into your MFA app\.
 **Important**  
-When you configure an MFA device for AWS SSO, we recommend that you save a copy of the QR code or secret key *in a secure place*\. This can help if the assigned user loses the phone or has to reinstall the MFA authenticator app\. If either of those things happen, you can quickly reconfigure the app to use the same MFA configuration\. This avoids the need to create a new MFA device in AWS SSO for the user\.
+When you configure an MFA device for IAM Identity Center, we recommend that you save a copy of the QR code or secret key *in a secure place*\. This can help if the assigned user loses the phone or has to reinstall the MFA authenticator app\. If either of those things happen, you can quickly reconfigure the app to use the same MFA configuration\. This avoids the need to create a new MFA device in IAM Identity Center for the user\.
 
      1. On the **Set up the authenticator app** page, under **Authenticator code**, type the one\-time password that currently appears on the physical MFA device\.
 **Important**  
@@ -36,4 +36,4 @@ Submit your request immediately after generating the code\. If you generate the 
 
      1. On the **Register your user's security key** page, follow the instructions given to you by your browser or platform\.
 **Note**  
-The experience here will vary based on the different operating systems and browsers, so please follow the instructions displayed by your browser or platform\. After your user's device has been successfully registered, you will be given the option to associate a friendly display name to your user's newly enrolled device\. If you want to change this, choose **Rename**, enter the new name, and then choose **Save**\. If you have enabled the option to allow users to manage their own devices, the user will see this friendly name in the user portal\.
+The experience here varies based on the different operating systems and browsers, so please follow the instructions displayed by your browser or platform\. After your user's device has been successfully registered, you will be given the option to associate a friendly display name to your user's newly enrolled device\. If you want to change this, choose **Rename**, enter the new name, and then choose **Save**\. If you have enabled the option to allow users to manage their own devices, the user will see this friendly name in the AWS access portal\.

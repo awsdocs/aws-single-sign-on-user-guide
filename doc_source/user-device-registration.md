@@ -1,13 +1,13 @@
 # Registering a device for MFA<a name="user-device-registration"></a>
 
-Use the following procedure within the user portal to register your new device for multi\-factor authentication \(MFA\)\.
+Use the following procedure within the AWS access portal to register your new device for multi\-factor authentication \(MFA\)\.
 
 **Note**  
 We recommend that you first download the appropriate Authenticator app onto your device before starting the steps in this procedure\. For a list of apps that you can use for MFA devices, see [Authenticator apps](mfa-types-apps.md)\.
 
 **To register your device for use with MFA**
 
-1. Sign in to your user portal\. For more information, see [Signing in to the user portal](howtosignin.md)\.
+1. Sign in to your AWS access portal\. For more information, see [Signing in to the AWS access portal](howtosignin.md)\.
 
 1. Near the top\-right of the page, choose **MFA devices**\.
 
@@ -30,7 +30,7 @@ If the **Register MFA device** option is grayed out, you will need to contact yo
 
            1. Choose **show secret key**, and then enter that secret key into your MFA app\.
 **Important**  
-When you configure an MFA device for AWS SSO, we recommend that you save a copy of the QR code or secret key *in a secure place*\. This can help if you lose the phone or have to reinstall the MFA authenticator app\. If either of those things happen, you can quickly reconfigure the app to use the same MFA configuration\.
+When you configure an MFA device for IAM Identity Center, we recommend that you save a copy of the QR code or secret key *in a secure place*\. This can help if you lose the phone or have to reinstall the MFA authenticator app\. If either of those things happen, you can quickly reconfigure the app to use the same MFA configuration\.
 
      1. On the **Set up the authenticator app** page, under **Authenticator code**, enter the one\-time password that currently appears on the physical MFA device\.
 **Important**  

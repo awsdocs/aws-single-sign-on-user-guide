@@ -1,58 +1,44 @@
-# AWS SSO\-integrated applications<a name="awsapps"></a>
+# Identity Center enabled applications<a name="awsapps"></a>
 
-With [AWS SSO\-integrated application enablement](app-enablement.md), AWS enterprise applications such as Amazon SageMaker or AWS IoT SiteWise, can exist in a child account in your organization but still use your AWS SSO identities\. This provides your application end users with an easy sign\-in experience and allows for delegation of administrator of your applications to operators in a child account\. 
+With [Identity Center enabled applications](app-enablement.md), AWS enterprise applications such as Amazon SageMaker or AWS IoT SiteWise, can exist in a child account in your organization but still use your IAM Identity Center identities\. This provides your application end users with an easy sign\-in experience and allows for delegation of administrator of your applications to operators in a child account\. 
 
-## Constraining AWS SSO\-integrated application use in AWS accounts<a name="awsapps-constrain"></a>
+## Constraining Identity Center enabled application use in AWS accounts<a name="awsapps-constrain"></a>
 
-If you want to constrain which of your AWS Organizations accounts that an integrated application can be used, you can do so using service control policies \(SCPs\)\. You can use SCPs to block access to the AWS SSO user and group information and to prevent the application from being started except in designated accounts\.
+If you want to constrain which of your AWS Organizations accounts that an Identity Center enabled application can be used, you can do so using service control policies \(SCPs\)\. You can use SCPs to block access to the IAM Identity Center user and group information and to prevent the application from being started except in designated accounts\.
 
-## Add and configure an AWS SSO\-integrated application<a name="awsapps-add-config-app"></a>
+## Add and configure an Identity Center enabled application<a name="awsapps-add-config-app"></a>
 
-To use AWS SSO\-integrated applications, you must first enable AWS SSO to allow them access\. For more information, see [AWS SSO\-integrated application enablement](app-enablement.md)\.
+To use Identity Center enabled applications, you must first enable IAM Identity Center to allow them access\. For more information, see [Identity Center enabled applications](app-enablement.md)\.
 
-After they are enabled, integrated applications can access user and group information directly from AWS SSO\. As a result, you won’t have to manage access in both AWS SSO and then again inside the application\. Instead, AWS SSO delegates application access to the application administrator\. To add users to integrated applications, use the console of the application where you created the application\.
+After they are enabled, Identity Center enabled applications can access user and group information directly from IAM Identity Center\. As a result, you won’t have to manage access in both IAM Identity Center and then again inside the application\. Instead, IAM Identity Center delegates application access to the application administrator\. To add users to Identity Center enabled applications, use the console of the application where you created the application\.
 
 **To add and configure your application**
 
-1. In the AWS SSO console, choose **Applications** in the left navigation pane\.
+1. Open the [IAM Identity Center console](https://console.aws.amazon.com/singlesignon)\.
 
-1. Choose **Add a new application**\.
+1. Choose **Applications**\.
 
-1. Select the application in the list\.
+1. Choose **Add application**\.
 
-1. Fill out the **Details**, **AWS SSO metadata**, **Application properties**, and **Application metadata**\.
+1. Under **Applications**, search for an application, and select the application from the list\. Choose **Next**\.
 
-1. Choose **Save changes**\.
+1. Under **Configure application**, the **Display name** and **Description** pre\-populates with the application you chose\. You can edit these\. Under **IAM Identity Center metadata**, download or copy any certificate you might need\. Under **Application properties**, optionally fill out the fields\. Under **Application metadata**, fill out all the fields\. Then, choose **Submit**\. You're taken to the details page of the application that you just added\.
 
-## Disable or enable an AWS SSO\-integrated application<a name="awsapps-disable-enable"></a>
+## Remove an Identity Center enabled application<a name="awsapps-remove"></a>
 
-If you only want to stop or restart user authentications to your application, use the following procedure to either disable or enable your application\.
-
-**To disable or enable your application**
-
-1. In the AWS SSO console, choose **Applications** in the left navigation pane\.
-
-1. Select the application in the list\.
-
-1. Choose **Actions**, and then choose either **Disable** or **Enable**\.
-
-## Remove an AWS SSO\-integrated application<a name="awsapps-remove"></a>
-
-To remove an integrated application, visit the AWS Management Console where you manage your application\. By removing the app this way, the application can gracefully remove resources that you might otherwise pay for\. For emergency purposes only, you can force\-remove an application from the AWS SSO console\. AWS strongly recommends that you avoid this as such an action is irreversible and you might not be able to recover data from the application\.
-
-Before you force\-remove, consider the following options:
-+ You can stop user authentications to this application without removing it by using the **Disable** option instead\. For more information, see [Disable or enable an AWS SSO\-integrated application](#awsapps-disable-enable)\.
-+ If you want to disconnect the application from AWS SSO permanently, use the AWS Management Console where you created the application and remove it there instead\. This helps to avoid unnecessary application\-related charges that may otherwise appear if you continue with force\-remove\. This process also removes the application from AWS SSO\. 
+To remove an Identity Center enabled application, you can remove the application from the IAM Identity Center console\. This action is irreversible and you might not be able to recover data from the application\.
 
 **Warning**  
-Force\-remove should only be used as a last resort\. This operation deletes all user permissions to this application, disconnects the application from AWS SSO, and renders the application inaccessible\.
+Removing an application deletes all user permissions to this application, disconnects the application from IAM Identity Center, and renders the application inaccessible\.
 
-**To force\-remove an AWS application**
+**To remove an AWS application**
 
-1. In the AWS SSO console, choose **Applications** in the left navigation pane\.
+1. Open the [IAM Identity Center console](https://console.aws.amazon.com/singlesignon)\.
 
-1. Choose the application you want to remove in the list\.
+1. Choose **Applications**\.
 
-1. On the application **Details** page, under **Remove Application**, choose **force\-remove**\.
+1. On the **Applications** page, under **Configured applications**, choose the application that you want to remove\.
 
-1. On the **Force\-remove application** page, review the warning message\. If you agree, enter **remove**, and then choose **Force\-remove**\.
+1. With the application selected, choose **Actions** and in the dropdown, choose **Remove**\.
+
+1. A **Remove application** dialog box appears\. Follow the prompt to type and confirm the application that you want to remove\. Choose **Remove application**\.

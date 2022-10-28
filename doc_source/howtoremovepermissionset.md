@@ -1,14 +1,14 @@
 # Delete permission sets<a name="howtoremovepermissionset"></a>
 
-Before you can delete a permission set from AWS SSO, you must remove it from all AWS accounts that use the permission set\.
+Before you can delete a permission set from IAM Identity Center, you must remove it from all AWS accounts that use the permission set\.
 
 **To remove a permission set from an AWS account**
 
-1. Open the [AWS SSO console](https://console.aws.amazon.com/singlesignon)\.
+1. Open the [IAM Identity Center console](https://console.aws.amazon.com/singlesignon)\.
 
-1. Choose **AWS accounts**\.
+1. Under **Multi\-account permissions**, choose **AWS accounts**\.
 
-1. On the **AWS Organization** page, a tree view list of your organization appears\. Select the name of the AWS account from which you want to remove the permission set\.
+1. On the **AWS accounts** page, a tree view list of your organization appears\. Select the name of the AWS account from which you want to remove the permission set\.
 
 1. On the **Overview** page for the AWS account, choose the **Permission sets** tab\.
 
@@ -23,9 +23,9 @@ All users and groups that have been assigned this permission set, regardless of 
 
 **To delete a permission set from an AWS account**
 
-1. Open the [AWS SSO console](https://console.aws.amazon.com/singlesignon)\.
+1. Open the [IAM Identity Center console](https://console.aws.amazon.com/singlesignon)\.
 
-1. Choose **Permission sets**\.
+1. Under **Multi\-account permissions**, choose **Permission sets**\.
 
 1. Select the permission set that you want to delete, and then choose **Delete**\.
 

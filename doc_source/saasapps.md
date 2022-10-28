@@ -1,12 +1,12 @@
 # Cloud applications<a name="saasapps"></a>
 
-You can use the AWS SSO application configuration wizard to include built\-in SAML integrations to many popular cloud applications\. Examples include Salesforce, Box, and Office 365\. For a complete list of applications that you can add from the wizard, see [Supported applications](#saasapps-supported)\.
+You can use the IAM Identity Center application configuration wizard to include built\-in SAML integrations to many popular cloud applications\. Examples include Salesforce, Box, and Office 365\. For a complete list of applications that you can add from the wizard, see [Supported applications](#saasapps-supported)\.
 
-Most cloud applications come with detailed instructions on how to set up the trust between AWS SSO and the application's service provider\. You can find these instructions on the cloud applications configuration page during the setup process and after the application has been set up\. After the application has been configured, you can assign access to the groups or users that require it\.
+Most cloud applications come with detailed instructions on how to set up the trust between IAM Identity Center and the application's service provider\. You can find these instructions on the cloud applications configuration page during the setup process and after the application has been set up\. After the application has been configured, you can assign access to the groups or users that require it\.
 
 ## Supported applications<a name="saasapps-supported"></a>
 
-AWS SSO has built\-in support for the following commonly used cloud applications\.
+IAM Identity Center has built\-in support for the following commonly used cloud applications\.
 
 **Note**  
 AWS Support engineers can assist customers who have Business and Enterprise support plans with some integration tasks that involve third\-party software\. For a current list of supported platforms and applications, see [Third\-Party Software Support](https://aws.amazon.com/premiumsupport/faqs/#what3rdParty) on the *AWS Support Features* page\.
@@ -80,21 +80,25 @@ AWS Support engineers can assist customers who have Business and Enterprise supp
 
 ## Add and configure a cloud application<a name="saasapps-addconfigapp"></a>
 
-Use this procedure when you need to set up a SAML trust relationship between AWS SSO and your cloud application's service provider\. Before you begin this procedure, make sure you have the service provider's metadata exchange file so that you can more efficiently set up the trust\. If you do not have this file, you can still use this procedure to configure it manually\.
+Use this procedure when you need to set up a SAML trust relationship between IAM Identity Center and your cloud application's service provider\. Before you begin this procedure, make sure you have the service provider's metadata exchange file so that you can more efficiently set up the trust\. If you do not have this file, you can still use this procedure to configure it manually\.
 
 **To add and configure a cloud application**
 
-1. In the AWS SSO console, choose **Applications** in the left navigation pane\. Then choose **Add a new application**\.
+1. Open the [IAM Identity Center console](https://console.aws.amazon.com/singlesignon)\.
 
-1. Select the application you want to add from the list\. Then choose **Add application**\. 
+1. Choose **Applications**\.
 
-1. On the **Configure <application name>** page, under **Details**, enter a **Display name** for the application, such as **Salesforce**\.
+1. Choose **Add application**\.
 
-1. Under **AWS SSO metadata**, do the following:
+1. Under **Applications**, search for an application, and select the application from the list\. Choose **Next**\.
 
-   1. Next to **AWS SSO SAML metadata****file**, choose **Download** to download the identity provider metadata\.
+1. Under **Configure application**, the **Display name** and **Description** pre\-populates with the application you chose\. You can edit these\.
 
-   1. Next to **AWS SSO certificate**, choose **Download certificate** to download the identity provider certificate\.
+1. Under **IAM Identity Center metadata**, do the following:
+
+   1. Under **IAM Identity Center SAML metadata file**, choose **Download** to download the identity provider metadata\.
+
+   1. Under **IAM Identity Center certificate**, choose **Download certificate** to download the identity provider certificate\.
 **Note**  
 You will need these files later when you set up the cloud application from the service provider's website\. Follow the instructions from that provider\. 
 
@@ -102,8 +106,8 @@ You will need these files later when you set up the cloud application from the s
 
 1. Under **Application metadata**, do one of the following: 
 
-   1. Next to **AWS SSO SAML metadata****file**, choose **Browse** to find and select the metadata file\.
+   1. Choose **Upload application SAML metadata file**\. Then, select **Choose file** to find and select the metadata file\.
 
-   1. If you do not have a metadata file, choose the link **If you don't have a metadata file, you can manually type your metadata values\.**, and then provide the **Application ACS URL** and **Application SAML audience** values\.
+   1. If you do not have a metadata file, choose **Manually type your metadata values**, and then provide the **Application ACS URL** and **Application SAML audience** values\.
 
-1. Choose **Save changes** to save the configuration\.
+1. Choose **Submit**\. You're taken to the details page of the application that you just added\.

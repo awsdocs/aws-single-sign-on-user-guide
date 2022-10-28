@@ -1,16 +1,16 @@
 # Reset a user password<a name="resetuserpwd"></a>
 
-Use the following procedure to reset the password for a user in your AWS SSO identity store\. 
+Use the following procedure to reset the password for a user in your Identity Center directory\. 
 
 **To reset a user password**
 
-1. Open the [AWS SSO console](https://console.aws.amazon.com/singlesignon)\.
+1. Open the [IAM Identity Center console](https://console.aws.amazon.com/singlesignon)\.
 
 1. Choose **Users**\.
 
-1. Choose the user whose password you want to reset\.
+1. Choose the username whose password you want to reset\.
 
-1. On the top right corner of the page, choose **Reset password**\.
+1. On the user details page, choose **Reset password**\.
 
 1. In the **Reset password** dialog box, select one of the following choices, and then choose **Reset password**:
 

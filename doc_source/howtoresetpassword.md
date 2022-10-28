@@ -4,7 +4,7 @@ From time to time you may need to reset your password, depending on your company
 
 **To reset your password**
 
-1. Open a browser and go to the sign\-in page for your user portal\.
+1. Open a browser and go to the sign\-in page for your AWS access portal\.
 
 1. Under the **Sign In** button, choose **Forgot Password?**\.
 

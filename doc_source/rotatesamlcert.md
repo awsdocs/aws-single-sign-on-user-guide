@@ -7,9 +7,9 @@ You should also consider that some IdPs might not support multiple certificates\
 **Note**  
 As a security best practice, upon any signs of compromise or mishandling of an existing SAML certificate, you should immediately remove and rotate the certificate\.
 
-Rotating an AWS SSO certificate is a multistep process that involves the following:
+Rotating an IAM Identity Center certificate is a multistep process that involves the following:
 + Obtaining a new certificate from the IdP
-+ Importing the new certificate into AWS SSO
++ Importing the new certificate into IAM Identity Center
 + Activating the new certificate in the IdP
 + Deleting the older certificate
 
@@ -19,11 +19,11 @@ Use all of the following procedures to complete the certificate rotation process
 
 Go to the IdP website and download their SAML 2\.0 certificate\. Make sure that the certificate file is downloaded in PEM encoded format\. Most providers allow you to create multiple SAML 2\.0 certificates in the IdP\. It is likely that these will be marked as disabled or inactive\. 
 
-**Step 2: Import the new certificate into AWS SSO**
+**Step 2: Import the new certificate into IAM Identity Center**
 
-Use the following procedure to import the new certificate using the AWS SSO console\.
+Use the following procedure to import the new certificate using the IAM Identity Center console\.
 
-1. In the [AWS SSO console](https://console.aws.amazon.com/singlesignon), choose **Settings**\.
+1. In the [IAM Identity Center console](https://console.aws.amazon.com/singlesignon), choose **Settings**\.
 
 1. On the **Settings** page, choose the **Identity source** tab, and then choose **Actions > Manage authentication**\.
 
@@ -31,7 +31,7 @@ Use the following procedure to import the new certificate using the AWS SSO cons
 
 1. On the **Import SAML 2\.0 certificate** dialog, choose **Choose file**, navigate to your certificate file and select it, and then choose **Import certificate**\.
 
-At this point, AWS SSO will trust all incoming SAML messages signed from both of the certificates that you have imported\.
+At this point, IAM Identity Center will trust all incoming SAML messages signed from both of the certificates that you have imported\.
 
 **Step 3: Activate the new certificate in the IdP**
 

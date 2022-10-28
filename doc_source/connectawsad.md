@@ -1,12 +1,12 @@
-# Connect AWS SSO to an AWS Managed Microsoft AD directory<a name="connectawsad"></a>
+# Connect IAM Identity Center to an AWS Managed Microsoft AD directory<a name="connectawsad"></a>
 
-Use the following procedure to connect an AWS Managed Microsoft AD directory that is managed by AWS Directory Service to AWS SSO\. 
+Use the following procedure to connect an AWS Managed Microsoft AD directory that is managed by AWS Directory Service to IAM Identity Center\. 
 
-**To connect AWS SSO to AWS Managed Microsoft AD**
+**To connect IAM Identity Center to AWS Managed Microsoft AD**
 
-1. Open the [AWS SSO console](https://console.aws.amazon.com/singlesignon)\.
+1. Open the [IAM Identity Center console](https://console.aws.amazon.com/singlesignon)\.
 **Note**  
-Make sure that the AWS SSO console is using one of the Regions where your AWS Managed Microsoft AD directory is located before you move to the next step\.
+Make sure that the IAM Identity Center console is using one of the Regions where your AWS Managed Microsoft AD directory is located before you move to the next step\.
 
 1. Choose **Settings**\.
 
