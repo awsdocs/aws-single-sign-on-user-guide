@@ -8,6 +8,9 @@ Before you change the identity source for IAM Identity Center, review the follow
 
 If you're already managing users and groups in Active Directory, we recommend that you consider connecting your directory when you enable IAM Identity Center and choose your identity source\. This should be done before you create any users and groups in the default Identity Center directory and make any assignments\. If you're already managing users and groups in the default Identity Center directory, changing your identity source to Active Directory deletes your users and groups from the Identity Center directory\. This change also removes your assignments\. In this case, after you change to Active Directory, you must synchronize your users and groups from Active Directory into the Identity Center directory, and then reapply their assignments\. If you choose to not use Active Directory, you must create your users and groups in the Identity Center directory, and then make assignments\. 
 
+**Note**  
+Changing your identity source between IAM Identity Center and Active Directory also changes the URL for the AWS access portal\.
+
 For information about how IAM Identity Center provisions users and groups, see [Connect to a Microsoft AD directory](manage-your-identity-source-ad.md)\.
 
 ## Changing between IAM Identity Center and an external identity provider \(IdP\)<a name="changing-between-sso-and-azure-active-directory"></a>

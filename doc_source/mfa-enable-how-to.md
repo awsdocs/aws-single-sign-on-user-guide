@@ -11,14 +11,16 @@ If you’re using an external IdP, you will not see the **Multi\-factor authenti
 
 1. In the left navigation pane, choose **Settings**\.
 
-1. On the **Settings** page, choose the **Network & security** tab, and then choose **Configure**\.
+1. On the **Settings** page, choose the **Authentication** tab\.
+
+1. In the **Multi\-factor authentication** section, choose **Configure**\.
 
 1. On the **Configure multi\-factor authentication** page, choose one of the following authentication modes based on the level of security that your business needs:
    + **Only when their sign\-in context changes \(context\-aware\)**
 
-     In this mode \(the default\), IAM Identity Center analyzes the sign\-in context \(browser, location, and devices\) for each user\. IAM Identity Center then determines whether the user is signing in with a previously trusted context\. If a user is signing in from an unknown IP address or is using an unknown device, IAM Identity Center prompts the user for MFA\. This prompt comes in addition to their email address and password credentials\.
+     In this mode \(the default\), IAM Identity Center provides users the option to trust their device during sign\-in\. After a user indicates that they want to trust a device, IAM Identity Center prompts the user for MFA once and analyzes the sign\-in context \(such as device, browser, and location\) for the user’s subsequent sign\-ins\. For subsequent sign\-ins, IAM Identity Center determines if the user is signing in with a previously trusted context\. If the user’s sign\-in context changes, IAM Identity Center prompts the user for MFA in addition to their email address and password credentials\.
 
-     This mode provides additional protection for users who frequently sign in from their offices\. This mode is also easier for those users because they do not need to complete MFA on every sign\-in\. IAM Identity Center prompts users with MFA once and permits them to trust their device\. Once a user indicates that they want to trust a device, IAM Identity Center does not challenge the user for MFA for that device\. Users are required to provide additional verification only when their sign\-in context changes\. Such changes include signing in from a new device, a new browser, or an unknown IP address\.
+     This mode provides ease of use for users who frequently sign in from their workplace, so they don’t need to complete MFA on every sign\-in\. They are only prompted for MFA if their sign\-in context changes\.
    + **Every time they sign in \(always\-on\)**
 
      In this mode, IAM Identity Center requires that users with a registered MFA device will be prompted every time they sign in\. You should use this mode if you have organizational or compliance policies that require your users to complete MFA every time they sign in to the user portal\. For example, PCI DSS strongly recommends MFA during every sign\-in to access applications that support high\-risk payment transactions\.

@@ -19,6 +19,6 @@ The following sections explain how to configure user access to your AWS applicat
 + [Custom SAML 2\.0 applications](samlapps.md)
 + [Manage IAM Identity Center certificates](managecerts.md)
 + [Application properties](appproperties.md)
-+ [Assign user access](assignuserstoapp.md)
++ [Assign user access to applications](assignuserstoapp.md)
 + [Remove user access](removeaccessfromapp.md)
 + [Map attributes in your application to IAM Identity Center attributes](mapawsssoattributestoapp.md)

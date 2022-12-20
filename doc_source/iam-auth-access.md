@@ -4,7 +4,7 @@ Access to IAM Identity Center requires credentials that AWS can use to authentic
 
 Authentication to the AWS access portal is controlled by the directory that you have connected to IAM Identity Center\. However, authorization to the AWS accounts that are available to end users from within the AWS access portal is determined by two factors:
 
-1. Who has been assigned access to those AWS accounts in the IAM Identity Center console\. For more information, see [Single sign\-on access](useraccess.md)\.
+1. Who has been assigned access to those AWS accounts in the IAM Identity Center console\. For more information, see [Single sign\-on access to AWS accounts](useraccess.md)\.
 
 1. What level of permissions have been granted to the end users in the IAM Identity Center console to allow them the appropriate access to those AWS accounts\. For more information, see [Create and manage permission sets](permissionsets.md)\.
 
@@ -17,7 +17,7 @@ The following sections explain how you as an administrator can control access to
 You can access AWS as any of the following types of identities:
 + **AWS account root user**
 
-    When you create an AWS account, you begin with one sign\-in identity that has complete access to all AWS services and resources in the account\. This identity is called the AWS account *root user* and is accessed by signing in with the email address and password that you used to create the account\. We strongly recommend that you do not use the root user for your everyday tasks\. Safeguard your root user credentials and use them to perform the tasks that only the root user can perform\. For the complete list of tasks that require you to sign in as the root user, see [Tasks that require root user credentials](https://docs.aws.amazon.com/general/latest/gr/root-vs-iam.html#aws_tasks-that-require-root) in the *AWS General Reference*\. 
+    When you create an AWS account, you begin with one sign\-in identity that has complete access to all AWS services and resources in the account\. This identity is called the AWS account *root user* and is accessed by signing in with the email address and password that you used to create the account\. We strongly recommend that you don't use the root user for your everyday tasks\. Safeguard your root user credentials and use them to perform the tasks that only the root user can perform\. For the complete list of tasks that require you to sign in as the root user, see [Tasks that require root user credentials](https://docs.aws.amazon.com/accounts/latest/reference/root-user-tasks.html) in the *AWS Account Management Reference Guide*\. 
 + **IAM users and groups**  
 
   An *[IAM user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html)* is an identity within your AWS account that has specific permissions for a single person or application\. Where possible, we recommend relying on temporary credentials instead of creating IAM users who have long\-term credentials such as passwords and access keys\. However, if you have specific use cases that require long\-term credentials with IAM users, we recommend that you rotate access keys\. For more information, see [Rotate access keys regularly for use cases that require long\-term credentials](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#rotate-credentials) in the *IAM User Guide*\.

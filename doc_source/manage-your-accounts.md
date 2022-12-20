@@ -14,12 +14,14 @@ Users follow a simple sign\-in process:
 
 Permission sets are a way to define permissions centrally in IAM Identity Center so that they can be applied to all of your AWS accounts\. These permission sets are provisioned to each AWS account as an IAM role\. The AWS access portal gives users the ability to retrieve temporary credentials for the IAM role of a given AWS account so they can use it for short\-term access to the AWS CLI\. For more information, see [Getting IAM role credentials for CLI access](howtogetcredentials.md)\.
 
-To use IAM Identity Center with AWS Organizations, you must first enable IAM Identity Center, which grants IAM Identity Center the capability to create [Service\-linked roles](slrconcept.md) in each account in your organization\. These roles are not created until after you [Assign user access](useraccess.md#assignusers) for a given account\.
+To use IAM Identity Center with AWS Organizations, you must first enable IAM Identity Center, which grants IAM Identity Center the capability to create [Service\-linked roles](slrconcept.md) in each account in your organization\. These roles are not created until after you [Assign user access to AWS accounts](useraccess.md#assignusers) for a given account\.
 
 You can also connect an AWS account that is not part of your organization by setting up the account as a custom SAML 2\.0 application in IAM Identity Center\. In this scenario, you provision and manage the IAM roles and trust relationships that are required to enable SSO access\. For more information on how to do this, see [Add and configure a custom SAML 2\.0 application](samlapps.md#addconfigcustomapp)\.
 
 **Topics**
 + [Delegated administration](delegated-admin.md)
-+ [Single sign\-on access](useraccess.md)
++ [Single sign\-on access to AWS accounts](useraccess.md)
 + [Create and manage permission sets](permissionsets.md)
-+ [Resiliency design and Regional behavior](resiliency-regional-behavior.md)
++ [Attribute\-based access control](abac.md)
++ [IAM identity provider](idp.md)
++ [Service\-linked roles](slrconcept.md)

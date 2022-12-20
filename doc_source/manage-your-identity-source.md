@@ -6,7 +6,7 @@ You can have only one identity source per organization in AWS Organizations\. Yo
 
 
 + **Identity Center directory –** When you enable IAM Identity Center for the first time, it is automatically configured with an Identity Center directory as your default identity source\. This is where you create your users and groups, and assign their level of access to your AWS accounts and applications\. 
-+ **Active Directory –** Choose this option if you want to continue managing users in either your self\-managed directory in Active Directory \(AD\) or your AWS Managed Microsoft AD directory using AWS Directory Service\. 
++ **Active Directory –** Choose this option if you want to continue managing users in either your AWS Managed Microsoft AD directory using AWS Directory Service or your self\-managed directory in Active Directory \(AD\)\. 
 + **External identity provider –** Choose this option if you want to manage users in an external identity provider \(IdP\) such as Okta or Azure Active Directory\. 
 
 **Note**  

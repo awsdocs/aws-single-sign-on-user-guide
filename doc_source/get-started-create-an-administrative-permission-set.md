@@ -1,4 +1,4 @@
-# Step 2: Create an administrative permission set<a name="get-started-create-an-administrative-permission-set"></a>
+# Step 3: Create an administrative permission set<a name="get-started-create-an-administrative-permission-set"></a>
 
 Permission sets are stored in IAM Identity Center and define the level of access that users and groups have to an AWS account\. Perform the following steps to create a permission set that grants administrative permissions\. 
 

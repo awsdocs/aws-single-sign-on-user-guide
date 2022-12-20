@@ -10,11 +10,11 @@ Users and groups that you create in your Identity Center directory are available
 
 1. Choose **Add user** and provide the following required information:
 
-   1. **Username** – This user name will be required to sign in to the AWS access portal and can't be changed later\. It must be between 1 and 100 characters\.
+   1. **Username** – This user name is required to sign in to the AWS access portal and can't be changed later\. It must be between 1 and 100 characters\.
 
-   1. **Password** – Choose from one of the following options to provide a password to the user\.
+   1. **Password** – You can either send an email with the password setup instructions \(this is the default option\) or generate a one\-time password\. If you are creating an administrative user and you choose to send an email, make sure that you specify an email address that you can access\.
 
-      1. **Send an email to this user with password setup instructions\.** – This option automatically sends the user an email addressed from Amazon Web Services\. The email invites the user on behalf of your company to access the IAM Identity Center AWS access portal\.
+      1. **Send an email to this user with password setup instructions\.** – This option automatically sends the user an email addressed from Amazon Web Services, with the subject line **Invitation to join AWS Single Sign\-On**\. The email invites the user on behalf of your company to access the IAM Identity Center AWS access portal\.
 **Note**  
 All emails sent by the IAM Identity Center service will come from either the address [no-reply@signin.aws](no-reply@signin.aws) or [no-reply@login.awsapps.com](no-reply@login.awsapps.com)\. We recommend that you configure your email system so that it accepts emails from these sender email addresses and does not handle them as junk or spam\. 
 
@@ -38,4 +38,4 @@ All emails sent by the IAM Identity Center service will come from either the add
 
 1. Review the information that you specified for **Step 1: Specify user details** and **Step 2: Add user to groups \- optional**\. Choose **Edit** by either step to make any changes\. After you confirm that the correct information is specified for both steps, choose **Add user**\.
 **Note**  
-If you are adding your first administrative user in IAM Identity Center by following the steps in [set up AWS account access for an administrative user](get-started-use-identity-center-directory.md#create-admin-user-set-up-account-access-identity-center-directory), return to that procedure and proceed with step 3 to finish the account setup\.
+If you are adding your first administrative user in IAM Identity Center by following the steps to [create a user](get-started-use-identity-center-directory-create-user-in-identity-center.md), return to that procedure and follow the steps to finish activating the user account\.

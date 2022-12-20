@@ -34,7 +34,7 @@ The following are important considerations about Okta that can affect how you im
 
 You will need the following before you can get started:
 + An Okta account \([free trial](https://www.okta.com/free-trial/)\) with Okta's [IAM Identity Center application](https://www.okta.com/integrations/aws-single-sign-on/) installed\. Note also that for paid Okta products, you might need to confirm that your Okta license supports “lifecycle management” or similar capabilities that enable outbound provisioning\. These features might be necessary to configure SCIM from Okta to IAM Identity Center\.
-+ A SAML connection from your Okta account to IAM Identity Center, as described in [How to Configure SAML 2\.0 for IAM Identity Center](https://saml-doc.okta.com/SAML_Docs/How-to-Configure-SAML-2.0-for-Amazon-Web-Service.html)\.
++ A SAML connection from your Okta account to IAM Identity Center, as described in [How to Configure SAML 2\.0 for IAM Identity Center](https://saml-doc.okta.com/SAML_Docs/How-to-Configure-SAML-2.0-for-AWS-Identity-Manager-Center.html)\.
 + An IAM Identity Center\-enabled account \([free](https://aws.amazon.com/single-sign-on/)\)\. For more information, see [Enable IAM Identity Center](https://docs.aws.amazon.com/singlesignon/latest/userguide/step1.html)\.
 
 ## Step 1: Enable provisioning in IAM Identity Center<a name="okta-step1"></a>
@@ -112,8 +112,8 @@ These chosen groups must be different from those assigned to the application\. T
    Then choose **Save**\. The group status changes to **Active** after the group and its members have successfully been pushed to IAM Identity Center\.
 
 To grant your Okta users access to AWS accounts and cloud applications, complete the following applicable procedures from the IAM Identity Center console:
-+ To grant access to AWS accounts, see [Assign user access](useraccess.md#assignusers)\.
-+ To grant access to cloud applications, see [Assign user access](assignuserstoapp.md)\.
++ To grant access to AWS accounts, see [Assign user access to AWS accounts](useraccess.md#assignusers)\.
++ To grant access to cloud applications, see [Assign user access to applications](assignuserstoapp.md)\.
 
 ## \(Optional\) Step 4: Configure user attributes in Okta for access control in IAM Identity Center<a name="okta-step4"></a>
 

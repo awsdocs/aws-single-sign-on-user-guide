@@ -25,9 +25,9 @@ The following topics provide guidance for setting up IAM Identity Center for spe
 If you're already managing users and groups in Active Directory or an external IdP, we recommend that you consider connecting this identity source when you enable IAM Identity Center and choose your identity source\. Doing this before you create any users and groups in the default Identity Center directory will help you avoid the additional configuration that is required if you change your identity source later\. 
 
 If you want to use Active Directory as your identity source, your configuration must meet the following prerequisites:
-+ You must have an existing AD Connector or AWS Managed Microsoft AD directory set up in AWS Directory Service, and it must reside within your AWS Organizations management account\. You can connect only one AWS Managed Microsoft AD directory at a time\. For more information, see:
-  + [Connect IAM Identity Center to an AWS Managed Microsoft AD directory](connectawsad.md)
-  + [Connect IAM Identity Center to a self\-managed directory in Active Directory](connectonpremad.md)
++ You must have an existing AD Connector or AWS Managed Microsoft AD directory set up in AWS Directory Service, and it must reside within your AWS Organizations management account\. You can connect only one AD Connector directory or one directory in AWS Managed Microsoft AD at a time\. If you need to support multiple domains or forests, use AWS Managed Microsoft AD\. For more information, see:
+  + [Connect a directory in AWS Managed Microsoft AD to IAM Identity Center](connectawsad.md)
+  + [Connect a self\-managed directory in Active Directory to IAM Identity Center](connectonpremad.md)
 + If you're using AWS Managed Microsoft AD, you must enable IAM Identity Center in the same AWS Region where your AWS Managed Microsoft AD directory is set up\. IAM Identity Center stores the assignment data in the same Region as the directory\. To administer IAM Identity Center, you might need to switch to the Region where IAM Identity Center is configured\. Also, note that the AWS access portal uses the same access URL as your directory\.
 
 ### AWS Organizations<a name="prereqs-organizations"></a>

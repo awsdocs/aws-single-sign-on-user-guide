@@ -8,7 +8,7 @@ Use the following procedure to configure which device types your users can use w
 
 1. In the left navigation pane, choose **Settings**\.
 
-1. On the **Settings** page, choose the **Network & security** tab\.
+1. On the **Settings** page, choose the **Authentication** tab\.
 
 1. In the **Multi\-factor authentication** section, choose **Configure**\.
 

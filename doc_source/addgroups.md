@@ -14,4 +14,4 @@ Use the following procedure to add groups to your Identity Center directory\. Al
 
 1. Choose **Create group**\.
 
-After you add this group to your Identity Center directory, you can assign single sign\-on access to this group\. For more information, see [Assign user access](useraccess.md#assignusers)\.
+After you add this group to your Identity Center directory, you can assign single sign\-on access to this group\. For more information, see [Assign user access to AWS accounts](useraccess.md#assignusers)\.

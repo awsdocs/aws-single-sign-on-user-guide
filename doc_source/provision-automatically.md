@@ -16,7 +16,6 @@ IAM Identity Center supports automatic provisioning \(synchronization\) of user 
 Before you begin deploying SCIM, we recommend that you first review the following important considerations about how it works with IAM Identity Center\. For additional provisioning considerations applicable to your IdP, see [Supported identity providers](supported-idps.md)\.
 + If you are provisioning a primary email address, this attribute value must be unique for each user\. In some IdPs, the primary email address might not be a real email address\. For example, it might be a Universal Principal Name \(UPN\) that only looks like an email\. These IdPs may have a secondary or “other” email address that contains the user’s real email address\. You must configure SCIM in your IdP to map the non\-Null unique email address to the IAM Identity Center primary email address attribute\. And you must map the users non\-Null unique sign\-in identifier to the IAM Identity Center user name attribute\. Check to see whether your IdP has a single value that is both the sign\-in identifier and the user’s email name\. If so, you can map that IdP field to both the IAM Identity Center primary email and the IAM Identity Center user name\.
 + For SCIM synchronization to work, every user must have a **First name**, **Last name**, **Username** and **Display name** value specified\. If any of these values are missing from a user, that user will not be provisioned\.
-+ The following special characters are invalid when used in attributes that are synchronized with SCIM: `<>;:%`
 + If you need to use third\-party applications, you will first need to map the outbound SAML subject attribute to the user name attribute\. If the third\-party application needs a routable email address, you must provide the email attribute to your IdP\.
 + SCIM provisioning and update intervals are controlled by your identity provider\. Changes to users and groups in your identity provider are only reflected in IAM Identity Center after your identity provider sends those changes to IAM Identity Center\. Check with your identity provider for details on the frequency of user and group updates\.
 + Currently, multivalue attributes \(such as multiple emails or phone numbers for a given user\) are not provisioned with SCIM\. Attempts to synchronize multivalue attributes into IAM Identity Center with SCIM will fail\. To avoid failures, ensure that only a single value is passed for each attribute\. If you have users with multivalue attributes, remove or modify the duplicate attribute mappings in SCIM at your IdP for the connection to IAM Identity Center\.
@@ -27,7 +26,7 @@ For more information about IAM Identity Center’s SCIM implementation, see the 
 
 ## How to monitor access token expiry<a name="access-token-expiry"></a>
 
-SCIM access tokens are generated with a validity of one year\. When your SCIM access token is set to expire in 90 days or less, AWS sends you reminders in the IAM Identity Center console and over the AWS Health Dashboard to help you rotate the token\. By rotating the SCIM access token before it expires, you continually secure automatic provisioning of user and group information\. If the SCIM access token expires, the synchronization of user and group information from your identity provider into IAM Identity Center stops, so automatic provisioning can no longer make updates or create and delete information\.
+SCIM access tokens are generated with a validity of one year\. When your SCIM access token is set to expire in 90 days or less, AWS sends you reminders in the IAM Identity Center console and over the AWS Health Dashboard to help you rotate the token\. By rotating the SCIM access token before it expires, you continually secure automatic provisioning of user and group information\. If the SCIM access token expires, the synchronization of user and group information from your identity provider into IAM Identity Center stops, so automatic provisioning can no longer make updates or create and delete information\. Disruption to automatic provisioning may impose increased security risks and impact access to your services\.
 
 The Identity Center console reminders persist until you rotate the SCIM access token\. The AWS Health Dashboard events are renewed weekly between 90 to 60 days, twice per week from 60 to 30 days, three times per week from 30 to 15 days, and daily from 15 days until the SCIM access tokens expires\. 
 
@@ -55,9 +54,6 @@ Before you begin this procedure, we recommend that you first review provisioning
 1. Choose **Close**\.
 
 After you complete this procedure, you must configure automatic provisioning in your IdP\. For more information, see [Supported identity providers](supported-idps.md)\.
-
-**Note**  
-If you are setting up an administrative user in IAM Identity Center for the first time, see [Set up AWS account access for an administrative user](get-started-connect-id-source-ad-idp.md#assign-account-access-admin-user-ad-idp)\.
 
 ## How to disable automatic provisioning<a name="disable-provisioning"></a>
 

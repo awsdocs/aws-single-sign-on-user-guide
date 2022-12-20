@@ -1,18 +1,18 @@
-# Single sign\-on access<a name="useraccess"></a>
+# Single sign\-on access to AWS accounts<a name="useraccess"></a>
 
 You can assign users in your connected directory permissions to the management account or member accounts in your AWS Organizations organization based on [common job functions](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html)\. Or you can use custom permissions to meet your specific security requirements\. For example, you can grant database administrators broad permissions to Amazon RDS in development accounts but limit their permissions in production accounts\. IAM Identity Center configures all the necessary user permissions in your AWS accounts automatically\.
 
 **Note**  
 You might need to grant users or groups permissions to operate in the AWS Organizations management account\. Because it is a highly privileged account, additional security restrictions require you to have the [IAMFullAccess](https://console.aws.amazon.com/iam/home#policies/arn:aws:iam::aws:policy/IAMFullAccess) policy or equivalent permissions before you can set this up\. These additional security restrictions are not required for any of the member accounts in your AWS organization\.
 
-## Assign user access<a name="assignusers"></a>
+## Assign user access to AWS accounts<a name="assignusers"></a>
 
 Use the following procedure to assign single sign\-on access to users and groups in your connected directory and use permission sets to determine their level of access\.
 
 **Note**  
 To simplify administration of access permissions, we recommended that you assign access directly to groups rather than to individual users\. With groups you can grant or deny permissions to groups of users rather than having to apply those permissions to each individual\. If a user moves to a different organization, you simply move that user to a different group and they automatically receive the permissions that are needed for the new organization\.
 
-**To assign access to users or groups**
+**To assign user or group access to AWS accounts**
 
 1. Open the [IAM Identity Center console](https://console.aws.amazon.com/singlesignon)\.
 **Note**  
@@ -100,6 +100,6 @@ Use the following steps to delegate permissions to manage single sign\-on access
 
    1. Review the selections you made, and then choose **Create**\.
 
-1. Follow the steps in [Assign user access](#assignusers) to assign the appropriate users and groups to the permission set that you just created\.
+1. Follow the steps in [Assign user access to AWS accounts](#assignusers) to assign the appropriate users and groups to the permission set that you just created\.
 
 1. Communicate the following to the assigned users: When they sign in to the AWS access portal and select the **AWS Account** icon, they must choose the appropriate role name to be authenticated with the permissions that you just delegated\.

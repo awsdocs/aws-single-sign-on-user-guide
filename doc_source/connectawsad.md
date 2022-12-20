@@ -1,8 +1,8 @@
-# Connect IAM Identity Center to an AWS Managed Microsoft AD directory<a name="connectawsad"></a>
+# Connect a directory in AWS Managed Microsoft AD to IAM Identity Center<a name="connectawsad"></a>
 
-Use the following procedure to connect an AWS Managed Microsoft AD directory that is managed by AWS Directory Service to IAM Identity Center\. 
+Use the following procedure to connect a directory in AWS Managed Microsoft AD that is managed by AWS Directory Service to IAM Identity Center\. 
 
-**To connect IAM Identity Center to AWS Managed Microsoft AD**
+**To connect AWS Managed Microsoft AD to IAM Identity Center**
 
 1. Open the [IAM Identity Center console](https://console.aws.amazon.com/singlesignon)\.
 **Note**  
@@ -14,6 +14,8 @@ Make sure that the IAM Identity Center console is using one of the Regions where
 
 1. Under **Choose identity source**, select **Active Directory**, and then choose **Next**\.
 
-1. Under **Connect active directory**, choose an existing AWS Managed Microsoft AD directory from the list, and then choose **Next**\.
+1. Under **Connect active directory**, choose a directory in AWS Managed Microsoft AD from the list, and then choose **Next**\.
 
 1. Under **Confirm change**, review the information and when ready type **ACCEPT**, and then choose **Change identity source**\.
+**Important**  
+To specify a user in Active Directory as an administrative user in IAM Identity Center, you must first synchronize the user to whom you want to grant administrative permissions from Active Directory into IAM Identity Center\. To do so, follow the steps in [Synchronize an administrative user into IAM Identity Center](get-started-connect-id-source-ad-idp-specify-user.md#sync-admin-user-from-ad)\.

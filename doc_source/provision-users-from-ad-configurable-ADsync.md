@@ -15,26 +15,20 @@ Before you use configurable AD sync, be aware of the following prerequisites and
 + **Specifying users and groups in Active Directory to sync**
 
   Before you can use IAM Identity Center to assign new users and groups access to AWS accounts and to applications \[Identity Center enabled applications, cloud applications, or custom Security Assertion Markup Language \(SAML 2\.0\) applications\], you must specify the users and groups in Active Directory to sync, and then sync them into IAM Identity Center\.
-
-  With AD sync, when you make assignments for new users and groups by using the IAM Identity Center console or related assignment API actions, IAM Identity Center searches the domain controller directly for the specified users or groups, completes the assignment, and then periodically syncs the user or group metadata into IAM Identity Center\.
-
-  With configurable AD sync, IAM Identity Center doesn't search your domain controller directly for users and groups\. Instead, you must first specify the list of users and groups to sync\. You can configure this list, also known as the *sync scope*, in one of the following ways, depending on whether you have users and groups that are already synced into IAM Identity Center, or you have new users and groups that you are syncing for the first time by using configurable AD sync\.
-  + Existing users and groups: If you have users and groups that are already synced into IAM Identity Center, the sync scope in configurable AD sync is prepopulated with a list of those users and groups\. To assign new users or groups, you must specifically add them to the sync scope\.
-  + New users and groups: If you are assigning new users and groups access to AWS accounts and to applications, you must specify which users and groups to add to the sync scope in configurable AD sync before you can use IAM Identity Center to make the assignment\.
+  + **AD sync** – When you make assignments for new users and groups by using the IAM Identity Center console or related assignment API actions, IAM Identity Center searches the domain controller directly for the specified users or groups, completes the assignment, and then periodically syncs the user or group metadata into IAM Identity Center\.
+  + **Configurable AD sync** – IAM Identity Center doesn't search your domain controller directly for users and groups\. Instead, you must first specify the list of users and groups to sync\. You can configure this list, also known as the *sync scope*, in one of the following ways, depending on whether you have users and groups that are already synced into IAM Identity Center, or you have new users and groups that you are syncing for the first time by using configurable AD sync\.
+    + Existing users and groups: If you have users and groups that are already synced into IAM Identity Center, the sync scope in configurable AD sync is prepopulated with a list of those users and groups\. To assign new users or groups, you must specifically add them to the sync scope\. For more information, see [Add users and groups to your sync scope](#manage-sync-add-users-groups-configurable-ADsync)\.
+    + New users and groups: If you want to assign new users and groups access to AWS accounts and to applications, you must specify which users and groups to add to the sync scope in configurable AD sync before you can use IAM Identity Center to make the assignment\. For more information, see [Add users and groups to your sync scope](#manage-sync-add-users-groups-configurable-ADsync)\.
 + **Making assignments to nested groups in Active Directory**
 
   Using configurable AD sync to make assignments to a group in Active Directory that contains other groups \(nested groups\) might increase the scope of users who have access to AWS accounts or to applications\.
-
-  With AD sync, when you make assignments to a group in Active Directory that contains other groups \(nested groups\), only the direct members of the group can access the account\. For example, if you assign access to Group A, and Group B is a member of Group A, only the direct members of Group A can access the account\. No members of Group B inherit the access\.
-
-  With configurable AD sync, when you make assignments to a group in Active Directory that contains nested groups, the assignment applies to all users, including those in nested groups\. For example, if you assign access to Group A, and Group B is a member of Group A, members of Group B also inherit this access\.
+  + **AD sync** – When you make assignments to a group in Active Directory that contains other groups \(nested groups\), only the direct members of the group can access the account\. For example, if you assign access to Group A, and Group B is a member of Group A, only the direct members of Group A can access the account\. No members of Group B inherit the access\.
+  + **Configurable AD sync** – When you make assignments to a group in Active Directory that contains nested groups, the assignment applies to all users, including those in nested groups\. For example, if you assign access to Group A, and Group B is a member of Group A, members of Group B also inherit this access\.
 + **Updating automated workflows**
 
   If you have automated workflows that use the IAM Identity Center identity store API actions and IAM Identity Center assignment API actions to assign new users and groups access to accounts and to applications, and to sync them into IAM Identity Center, you must adjust those workflows by April 15, 2022 so that they function as expected with configurable AD sync\. Configurable AD sync changes the order in which user and group assignment and provisioning occur, and the way in which queries are performed\.
-
-  With AD sync, the process of assignments occurs first\. You assign users and groups access to AWS accounts and to applications\. After the users and groups are assigned access, they are automatically provisioned \(synced into IAM Identity Center\)\. If you have an automated workflow, this means that when you add a new user to Active Directory, your automated workflow can query Active Directory for the user by using the identity store `ListUser` API action, and then assign the user access by using the IAM Identity Center assignment API actions\. Because the user has an assignment, that user is automatically provisioned into IAM Identity Center\.
-
-  With configurable AD sync, provisioning occurs first, and it is not automatically performed\. Instead, you must first explicitly add users and groups to the identity store by adding them to your sync scope\. For information about the recommended steps for automating your sync configuration for configurable AD sync, see [Automate your sync configuration for configurable AD sync](#automate-sync-configuration-configurable-ADsync)\. 
+  + **AD sync** – The process of assignments occurs first\. You assign users and groups access to AWS accounts and to applications\. After the users and groups are assigned access, they are automatically provisioned \(synced into IAM Identity Center\)\. If you have an automated workflow, this means that when you add a new user to Active Directory, your automated workflow can query Active Directory for the user by using the identity store `ListUser` API action, and then assign the user access by using the IAM Identity Center assignment API actions\. Because the user has an assignment, that user is automatically provisioned into IAM Identity Center\.
+  + **Configurable AD sync** – Provisioning occurs first, and it is not automatically performed\. Instead, you must first explicitly add users and groups to the identity store by adding them to your sync scope\. For information about the recommended steps for automating your sync configuration for configurable AD sync, see [Automate your sync configuration for configurable AD sync](#automate-sync-configuration-configurable-ADsync)\. 
 
 ## How configurable AD sync works<a name="how-it-works-configurable-ADsync"></a>
 
@@ -104,13 +98,15 @@ Make sure that the IAM Identity Center console is using one of the AWS Regions w
 
 1. On the **Manage Sync** page, choose the **Users** tab, and then choose **Add users and groups**\.
 
-1. Choose the **Users** tab\. Under **User**, enter the exact user name and choose **Add**\.
+1. On the **Users** tab, under **User**, enter the exact user name and choose **Add**\.
 
-1. Under **Selected Users and Groups**, review the users that you want to add\.
-
-   1. To remove a user from this list, select the check box beside the entry and choose **Remove**\.
+1. Under **Added Users and Groups**, review the user that you want to add\.
 
 1. Choose **Submit**\.
+
+1. In the navigation pane, choose **Users**\.
+
+1. On the **Users** page, it might take some time for the user that you specified to appear in the list\. Choose the refresh icon to update the list of users\.
 
 **To add groups**
 
@@ -124,11 +120,13 @@ Make sure that the IAM Identity Center console is using one of the AWS Regions w
 
 1. Choose the **Groups** tab\. Under **Group**, enter the exact group name and choose **Add**\.
 
-1. Under **Selected Users and Groups**, review the groups that you want to add\.
-
-   1. To remove a group from this list, select the check box beside the entry and choose **Remove**\.
+1. Under **Added Users and Groups**, review the group that you want to add\.
 
 1. Choose **Submit**\.
+
+1. In the navigation pane, choose **Groups**\.
+
+1. On the **Groups** page, it might take some time for the group that you specified to appear in the list\. Choose the refresh icon to update the list of groups\. 
 
 ### Remove users and groups from your sync scope<a name="manage-sync-remove-users-groups-configurable-ADsync"></a>
 

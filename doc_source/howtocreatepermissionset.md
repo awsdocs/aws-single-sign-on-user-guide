@@ -72,4 +72,4 @@ Use this procedure to create a predefined permission set that uses a single AWS 
 
 1. On the **Review and create** page, review the selections that you made, and then choose **Create**\.
 
-1. By default, when you create a permission set, the permission set isn't provisioned \(used in any AWS accounts\)\. To provision a permission set in an AWS account, you must assign IAM Identity Center access to users and groups in the account, and then apply the permission set to those users and groups\. For more information, see [Single sign\-on access](useraccess.md)\.
+1. By default, when you create a permission set, the permission set isn't provisioned \(used in any AWS accounts\)\. To provision a permission set in an AWS account, you must assign IAM Identity Center access to users and groups in the account, and then apply the permission set to those users and groups\. For more information, see [Single sign\-on access to AWS accounts](useraccess.md)\.

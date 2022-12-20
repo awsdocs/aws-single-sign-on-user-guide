@@ -36,9 +36,11 @@ For more information about AWS managed policies, see [AWS managed policies](http
 
 You can attach *customer managed policies* to your permission set\. Customer managed policies are IAM policies in your account that you create and maintain\. In contrast, [AWS managed policies](#permissionsetsampconcept) are IAM policies in your account that AWS maintains\. You can assign an customer managed policy as permissions for the role that IAM Identity Center creates, or as a [permissions boundary](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html)\.
 
-When you create a permission set with a customer managed policy, you must create an IAM policy with the same name in each AWS account where IAM Identity Center assigns your permission set\. IAM Identity Center attaches the IAM policy to the IAM role that it creates in your AWS account\. As a best practice, apply the same permissions to the policy in each account where you assign the permission set\. For more information, see [Use IAM policies in permission sets](howtocmp.md)\.
+When you create a permission set with a customer managed policy, you must create an IAM policy with the same name and path in each AWS account where IAM Identity Center assigns your permission set\. If you are specifying a custom path, make sure to specify the same path in each AWS account\. For more information, see [Friendly names and paths](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-friendly-names) in the *IAM User Guide*\. IAM Identity Center attaches the IAM policy to the IAM role that it creates in your AWS account\. As a best practice, apply the same permissions to the policy in each account where you assign the permission set\. For more information, see [Use IAM policies in permission sets](howtocmp.md)\.
 
 For more information, see [Customer managed policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#customer-managed-policies) in the IAM User Guide\.
+
+
 
 ## Permissions boundaries<a name="permissionsetsboundaryconcept"></a>
 

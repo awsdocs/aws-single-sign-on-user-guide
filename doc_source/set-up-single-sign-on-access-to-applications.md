@@ -1,4 +1,4 @@
-# Step 5: Set up single sign\-on access to your applications \(optional\)<a name="set-up-single-sign-on-access-to-applications"></a>
+# Step 7: Set up single sign\-on access to your applications \(optional\)<a name="set-up-single-sign-on-access-to-applications"></a>
 
 With IAM Identity Center, you can use AWS applications that are integrated with IAM Identity Center, cloud applications for which AWS provides preintegration, and custom SAML 2\.0 applications\. The configuration steps for setting up single sign\-on access to applications vary based on the application type\. 
 + [Add and configure an Identity Center enabled application](awsapps.md#awsapps-add-config-app)
